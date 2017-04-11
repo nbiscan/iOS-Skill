@@ -11,20 +11,22 @@ import UIKit
 class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     var dataStore : DataStore?
+    var band : Band?
     
     var views : [UIViewController] = []
     
-    convenience init(dataStore : DataStore){
+    convenience init(dataStore : DataStore, band : Band){
         self.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         self.dataStore = dataStore
+        self.band = band
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
         
-        views.append(FavouriteBandViewController(dataStore : dataStore!))
-        views.append(BandBioViewController(dataStore : dataStore!))
+        views.append(FavouriteBandViewController(dataStore : dataStore!, band : band!))
+        views.append(BandBioViewController(dataStore : dataStore!, band : band!))
         
         self.setViewControllers([views[0]], direction: .forward, animated: true, completion: nil)
         

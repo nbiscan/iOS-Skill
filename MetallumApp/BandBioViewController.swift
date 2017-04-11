@@ -10,17 +10,22 @@ import UIKit
 
 class BandBioViewController: UIViewController {
 
-    var dataStore : DataStore?
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
     
-    convenience init(dataStore: DataStore){
+    var dataStore : DataStore?
+    var band : Band?
+    
+    convenience init(dataStore: DataStore, band : Band){
         self.init()
         self.dataStore = dataStore
+        self.band = band
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "bio"
-        // Do any additional setup after loading the view.
+        self.navigationItem.title = "Band biography"
+        textView.text = band?.bio
     }
 
     

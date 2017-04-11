@@ -66,7 +66,9 @@ class FavouriteBandsViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let band = self.fetchedResultsController?.object(at: indexPath) as! Band
+        let bandPageViewController = PageViewController(dataStore : dataStore!, band : band)
+        navigationController?.pushViewController(bandPageViewController, animated: true)
     }
     
     
