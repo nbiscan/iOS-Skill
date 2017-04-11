@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0220B83D1E9CC49600EA7E2D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220B83B1E9CC49600EA7E2D /* HomeViewController.swift */; };
+		0220B83E1E9CC49600EA7E2D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0220B83C1E9CC49600EA7E2D /* HomeViewController.xib */; };
+		0220B8411E9CC72C00EA7E2D /* UpcomingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220B83F1E9CC72C00EA7E2D /* UpcomingTableViewController.swift */; };
+		0220B84A1E9CE52200EA7E2D /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220B8481E9CE52200EA7E2D /* AlbumViewController.swift */; };
+		0220B84B1E9CE52200EA7E2D /* AlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0220B8491E9CE52200EA7E2D /* AlbumViewController.xib */; };
+		0220B84E1E9CF87600EA7E2D /* BandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220B84C1E9CF87600EA7E2D /* BandViewController.swift */; };
+		0220B84F1E9CF87600EA7E2D /* BandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0220B84D1E9CF87600EA7E2D /* BandViewController.xib */; };
 		52270FD01E9B8E82004A41D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52270FCF1E9B8E82004A41D0 /* AppDelegate.swift */; };
 		52270FD21E9B8E82004A41D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52270FD11E9B8E82004A41D0 /* ViewController.swift */; };
 		52270FD51E9B8E82004A41D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52270FD31E9B8E82004A41D0 /* Main.storyboard */; };
@@ -24,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0220B83B1E9CC49600EA7E2D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0220B83C1E9CC49600EA7E2D /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		0220B83F1E9CC72C00EA7E2D /* UpcomingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingTableViewController.swift; sourceTree = "<group>"; };
+		0220B8481E9CE52200EA7E2D /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		0220B8491E9CE52200EA7E2D /* AlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumViewController.xib; sourceTree = "<group>"; };
+		0220B84C1E9CF87600EA7E2D /* BandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandViewController.swift; sourceTree = "<group>"; };
+		0220B84D1E9CF87600EA7E2D /* BandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BandViewController.xib; sourceTree = "<group>"; };
 		52270FCC1E9B8E82004A41D0 /* MetallumApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetallumApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52270FCF1E9B8E82004A41D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52270FD11E9B8E82004A41D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +67,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0220B8431E9CCA3F00EA7E2D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0220B83B1E9CC49600EA7E2D /* HomeViewController.swift */,
+				0220B83C1E9CC49600EA7E2D /* HomeViewController.xib */,
+				0220B83F1E9CC72C00EA7E2D /* UpcomingTableViewController.swift */,
+				0220B8481E9CE52200EA7E2D /* AlbumViewController.swift */,
+				0220B8491E9CE52200EA7E2D /* AlbumViewController.xib */,
+				0220B84C1E9CF87600EA7E2D /* BandViewController.swift */,
+				0220B84D1E9CF87600EA7E2D /* BandViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		52270FC31E9B8E82004A41D0 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +100,7 @@
 		52270FCE1E9B8E82004A41D0 /* MetallumApp */ = {
 			isa = PBXGroup;
 			children = (
+				0220B8431E9CCA3F00EA7E2D /* ViewControllers */,
 				5276F0CB1E9BBCDF0038AFF8 /* Services */,
 				52270FE11E9B8EA9004A41D0 /* CoreData */,
 				52270FCF1E9B8E82004A41D0 /* AppDelegate.swift */,
@@ -170,6 +199,9 @@
 				52270FDA1E9B8E82004A41D0 /* LaunchScreen.storyboard in Resources */,
 				52270FD71E9B8E82004A41D0 /* Assets.xcassets in Resources */,
 				52270FD51E9B8E82004A41D0 /* Main.storyboard in Resources */,
+				0220B84F1E9CF87600EA7E2D /* BandViewController.xib in Resources */,
+				0220B83E1E9CC49600EA7E2D /* HomeViewController.xib in Resources */,
+				0220B84B1E9CE52200EA7E2D /* AlbumViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,11 +218,15 @@
 				5276F0CD1E9BBCF60038AFF8 /* DataStore.swift in Sources */,
 				52270FD01E9B8E82004A41D0 /* AppDelegate.swift in Sources */,
 				5276F0C91E9BBB4F0038AFF8 /* Band+CoreDataClass.swift in Sources */,
+				0220B84E1E9CF87600EA7E2D /* BandViewController.swift in Sources */,
+				0220B84A1E9CE52200EA7E2D /* AlbumViewController.swift in Sources */,
 				5276F0CA1E9BBB4F0038AFF8 /* Band+CoreDataProperties.swift in Sources */,
 				5276F0C61E9BBB4F0038AFF8 /* Album+CoreDataProperties.swift in Sources */,
 				52270FE41E9B8EC4004A41D0 /* DataBase.xcdatamodeld in Sources */,
 				5276F0C81E9BBB4F0038AFF8 /* Artist+CoreDataProperties.swift in Sources */,
 				5276F0CF1E9BC1650038AFF8 /* DataStoreBandExtension.swift in Sources */,
+				0220B83D1E9CC49600EA7E2D /* HomeViewController.swift in Sources */,
+				0220B8411E9CC72C00EA7E2D /* UpcomingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
