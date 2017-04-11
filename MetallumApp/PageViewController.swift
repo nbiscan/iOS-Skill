@@ -58,11 +58,11 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     }
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return views.count
+        return 0
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return 0
+        return views.count
     }
     
 }
