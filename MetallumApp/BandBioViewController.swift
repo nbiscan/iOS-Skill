@@ -26,6 +26,19 @@ class BandBioViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Band biography"
         textView.text = band?.bio
+        
+        if let checkedUrl = URL(string: (band?.photoURL)!) {
+            
+            dataStore?.getDataFromUrl(url: checkedUrl) { (data, response, error)  in
+                guard let data = data, error == nil else { return }
+                DispatchQueue.main.async() { () -> Void in
+                    self.imageView.image = UIImage(data: data)
+                }
+            }
+            
+        }
+
+        
     }
 
     
