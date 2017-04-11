@@ -37,8 +37,8 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Album" positionX="-27" positionY="-162" width="128" height="120"/>
-        <element name="Artist" positionX="-27" positionY="-28" width="128" height="120"/>
+        <element name="Album" positionX="-36" positionY="-307" width="128" height="118"/>
+        <element name="Artist" positionX="-27" positionY="-28" width="128" height="118"/>
         <element name="Band" positionX="169" positionY="-274" width="128" height="270"/>
     </elements>
 </model>
