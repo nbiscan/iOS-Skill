@@ -1,5 +1,5 @@
 //
-//  FavouriteBandViewController.swift
+//  BandBioViewController.swift
 //  MetallumApp
 //
 //  Created by Five on 11/04/2017.
@@ -8,21 +8,20 @@
 
 import UIKit
 
-class FavouriteBandViewController: UIViewController {
+class BandBioViewController: UIViewController {
 
     var dataStore : DataStore?
     
-    convenience init(dataStore : DataStore){
+    convenience init(dataStore: DataStore){
         self.init()
         self.dataStore = dataStore
-        self.navigationItem.title = "band"
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        self.navigationItem.title = "bio"
+        // Do any additional setup after loading the view.
     }
 
+    
 }

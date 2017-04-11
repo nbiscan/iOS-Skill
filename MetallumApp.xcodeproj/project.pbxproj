@@ -28,6 +28,10 @@
 		5276F0F81E9CD07F0038AFF8 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5276F0F61E9CD07F0038AFF8 /* TableViewCell.xib */; };
 		5276F0FB1E9CE5310038AFF8 /* FavouriteBandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276F0F91E9CE5310038AFF8 /* FavouriteBandViewController.swift */; };
 		5276F0FC1E9CE5310038AFF8 /* FavouriteBandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5276F0FA1E9CE5310038AFF8 /* FavouriteBandViewController.xib */; };
+		5276F1011E9D0BE70038AFF8 /* BandBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276F0FF1E9D0BE70038AFF8 /* BandBioViewController.swift */; };
+		5276F1021E9D0BE70038AFF8 /* BandBioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5276F1001E9D0BE70038AFF8 /* BandBioViewController.xib */; };
+		5276F1091E9D1E9C0038AFF8 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276F1071E9D1E9C0038AFF8 /* PageViewController.swift */; };
+		5276F10A1E9D1E9C0038AFF8 /* PageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5276F1081E9D1E9C0038AFF8 /* PageViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		5276F0F61E9CD07F0038AFF8 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		5276F0F91E9CE5310038AFF8 /* FavouriteBandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteBandViewController.swift; sourceTree = "<group>"; };
 		5276F0FA1E9CE5310038AFF8 /* FavouriteBandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavouriteBandViewController.xib; sourceTree = "<group>"; };
+		5276F0FF1E9D0BE70038AFF8 /* BandBioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandBioViewController.swift; sourceTree = "<group>"; };
+		5276F1001E9D0BE70038AFF8 /* BandBioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BandBioViewController.xib; sourceTree = "<group>"; };
+		5276F1071E9D1E9C0038AFF8 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		5276F1081E9D1E9C0038AFF8 /* PageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,8 @@
 		5276F0EE1E9CCA160038AFF8 /* Favourites */ = {
 			isa = PBXGroup;
 			children = (
+				5276F1071E9D1E9C0038AFF8 /* PageViewController.swift */,
+				5276F1081E9D1E9C0038AFF8 /* PageViewController.xib */,
 				5276F0EF1E9CCA530038AFF8 /* FavouriteBandsViewController.swift */,
 				5276F0F31E9CCB900038AFF8 /* FavouriteBandsNSFetch.swift */,
 				5276F0F01E9CCA530038AFF8 /* FavouriteBandsViewController.xib */,
@@ -132,6 +142,8 @@
 				5276F0F61E9CD07F0038AFF8 /* TableViewCell.xib */,
 				5276F0F91E9CE5310038AFF8 /* FavouriteBandViewController.swift */,
 				5276F0FA1E9CE5310038AFF8 /* FavouriteBandViewController.xib */,
+				5276F0FF1E9D0BE70038AFF8 /* BandBioViewController.swift */,
+				5276F1001E9D0BE70038AFF8 /* BandBioViewController.xib */,
 			);
 			name = Favourites;
 			sourceTree = "<group>";
@@ -199,7 +211,9 @@
 				52270FDA1E9B8E82004A41D0 /* LaunchScreen.storyboard in Resources */,
 				5276F0F81E9CD07F0038AFF8 /* TableViewCell.xib in Resources */,
 				52270FD71E9B8E82004A41D0 /* Assets.xcassets in Resources */,
+				5276F10A1E9D1E9C0038AFF8 /* PageViewController.xib in Resources */,
 				5276F0FC1E9CE5310038AFF8 /* FavouriteBandViewController.xib in Resources */,
+				5276F1021E9D0BE70038AFF8 /* BandBioViewController.xib in Resources */,
 				5276F0F21E9CCA530038AFF8 /* FavouriteBandsViewController.xib in Resources */,
 				52270FD51E9B8E82004A41D0 /* Main.storyboard in Resources */,
 			);
@@ -213,12 +227,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				52270FD21E9B8E82004A41D0 /* ViewController.swift in Sources */,
+				5276F1011E9D0BE70038AFF8 /* BandBioViewController.swift in Sources */,
 				5276F0C51E9BBB4F0038AFF8 /* Album+CoreDataClass.swift in Sources */,
 				5276F0C71E9BBB4F0038AFF8 /* Artist+CoreDataClass.swift in Sources */,
 				5276F0CD1E9BBCF60038AFF8 /* DataStore.swift in Sources */,
 				52270FD01E9B8E82004A41D0 /* AppDelegate.swift in Sources */,
 				5276F0F71E9CD07F0038AFF8 /* TableViewCell.swift in Sources */,
 				5276F0C91E9BBB4F0038AFF8 /* Band+CoreDataClass.swift in Sources */,
+				5276F1091E9D1E9C0038AFF8 /* PageViewController.swift in Sources */,
 				5276F0CA1E9BBB4F0038AFF8 /* Band+CoreDataProperties.swift in Sources */,
 				5276F0C61E9BBB4F0038AFF8 /* Album+CoreDataProperties.swift in Sources */,
 				5276F0F41E9CCB900038AFF8 /* FavouriteBandsNSFetch.swift in Sources */,
