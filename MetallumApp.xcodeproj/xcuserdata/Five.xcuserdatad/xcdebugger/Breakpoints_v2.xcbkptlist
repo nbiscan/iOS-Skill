@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MetallumApp/ViewController.swift"
+            timestampString = "513534064.820067"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "extract_json(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetallumApp.ViewController.(extract_json in _02EDABF2DBF2EA428A5D0EBD98596E4C) (Foundation.Data) -&gt; ()"
+                  moduleName = "MetallumApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Five/Documents/Developer/MetallumApp/MetallumApp/ViewController.swift"
+                  timestampString = "513533001.853072"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "549">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetallumApp.ViewController.(extract_json in _02EDABF2DBF2EA428A5D0EBD98596E4C) (Foundation.Data) -&gt; ()"
+                  moduleName = "MetallumApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Five/Documents/Developer/MetallumApp/MetallumApp/ViewController.swift"
+                  timestampString = "513533001.856856"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "1007">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MetallumApp/DataStoreBandExtension.swift"
+            timestampString = "513533562.712096"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "insertBand(id:name:location:countryOfOrigin:genre:logoURL:lyricalThemes:photoURL:status:formedIn:currentlabel:yearsActive:bio:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
