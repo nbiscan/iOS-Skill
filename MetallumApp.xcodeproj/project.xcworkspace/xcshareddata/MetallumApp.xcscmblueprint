@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D9FFA7DDD612BBE6CB37CF3CF061E07E0D6E7DE5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D9FFA7DDD612BBE6CB37CF3CF061E07E0D6E7DE5" : 9223372036854775807,
+    "200F83942AEB075E5B28C12B2AA381CD981DEEE2" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FE814A6A-5EEE-48F8-BF17-38FEF5747443",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D9FFA7DDD612BBE6CB37CF3CF061E07E0D6E7DE5" : "iOS-Skill\/",
+    "200F83942AEB075E5B28C12B2AA381CD981DEEE2" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MetallumApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MetallumApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kovacicluka\/PPIJ.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "200F83942AEB075E5B28C12B2AA381CD981DEEE2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nbiscan\/iOS-Skill",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D9FFA7DDD612BBE6CB37CF3CF061E07E0D6E7DE5"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Album" representedClassName="Album" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
@@ -37,7 +37,7 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Album" positionX="-27" positionY="-162" width="128" height="120"/>
+        <element name="Album" positionX="-27" positionY="-162" width="128" height="118"/>
         <element name="Artist" positionX="-27" positionY="-28" width="128" height="120"/>
         <element name="Band" positionX="169" positionY="-274" width="128" height="270"/>
     </elements>
