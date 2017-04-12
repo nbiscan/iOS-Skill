@@ -14,14 +14,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataStore.deleteEverything()
+        // dataStore.deleteEverything()
         dataStore.printDatabaseStatistics()
         loadReviews()
     }
     
     
     func loadReviews(){
-        let urlString = "http://em.wemakesites.net/band/186?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
+        let urlString = "http://em.wemakesites.net/band/22?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
         guard let url = URL(string: urlString) else { return }
         let session = URLSession.shared
         

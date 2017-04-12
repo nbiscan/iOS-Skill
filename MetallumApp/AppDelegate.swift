@@ -16,13 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame : UIScreen.main.bounds)
         let dataStore = DataStore()
-        // let pageController = PageViewController(dataStore : dataStore)
         let viewController = FavouriteBandsViewController(dataStore : dataStore)
         // let viewController = ViewController()
         let nc = UINavigationController(rootViewController : viewController)
-        nc.navigationBar.barStyle = .blackOpaque
-        nc.navigationBar.barTintColor = UIColor.black
-        nc.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.red]
+        
+        nc.navigationBar.barStyle = .blackTranslucent
+        
         window?.rootViewController = nc
         window?.makeKeyAndVisible()
         return true

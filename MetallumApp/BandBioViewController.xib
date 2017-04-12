@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,10 +23,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZLm-Zw-bcW">
-                    <rect key="frame" x="67" y="40" width="240" height="128"/>
+                    <rect key="frame" x="26" y="46" width="322" height="198"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ZLm-Zw-bcW" secondAttribute="height" multiplier="161:99" id="aUb-EM-UWR"/>
+                    </constraints>
                 </imageView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y1I-aP-m1A">
-                    <rect key="frame" x="16" y="192" width="343" height="455"/>
+                    <rect key="frame" x="23" y="252" width="328" height="395"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -36,14 +40,14 @@
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="Y1I-aP-m1A" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8vz-LW-Yyl"/>
-                <constraint firstItem="Y1I-aP-m1A" firstAttribute="top" secondItem="ZLm-Zw-bcW" secondAttribute="bottom" constant="24" id="9lE-MX-EXV"/>
-                <constraint firstAttribute="bottom" secondItem="ZLm-Zw-bcW" secondAttribute="bottom" constant="499" id="SM2-TD-8PS"/>
-                <constraint firstItem="ZLm-Zw-bcW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="cy5-jA-69w"/>
-                <constraint firstItem="ZLm-Zw-bcW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="67" id="n7I-l4-HA2"/>
-                <constraint firstItem="Y1I-aP-m1A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="sFT-BM-vce"/>
-                <constraint firstAttribute="trailing" secondItem="ZLm-Zw-bcW" secondAttribute="trailing" constant="68" id="vG0-Um-Utu"/>
-                <constraint firstAttribute="bottom" secondItem="Y1I-aP-m1A" secondAttribute="bottom" constant="20" id="xE1-9k-jgi"/>
+                <constraint firstItem="Y1I-aP-m1A" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1Hi-ah-acy"/>
+                <constraint firstItem="Y1I-aP-m1A" firstAttribute="top" secondItem="ZLm-Zw-bcW" secondAttribute="bottom" constant="8" id="El9-gX-i0x"/>
+                <constraint firstItem="ZLm-Zw-bcW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Fpa-pe-bqB"/>
+                <constraint firstItem="Y1I-aP-m1A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="23" id="M2O-DJ-NMO"/>
+                <constraint firstAttribute="bottom" secondItem="Y1I-aP-m1A" secondAttribute="bottom" constant="20" id="PzP-8B-wl5"/>
+                <constraint firstAttribute="trailing" secondItem="Y1I-aP-m1A" secondAttribute="trailing" constant="24" id="VVt-3n-oW2"/>
+                <constraint firstItem="ZLm-Zw-bcW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="46" id="acQ-2R-FoI"/>
+                <constraint firstItem="ZLm-Zw-bcW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="m3y-5F-Q5T"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>

@@ -25,7 +25,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         super.viewDidLoad()
         self.dataSource = self
         
-        print(dataStore?.checkIfBandExists(id: (band?.id)!))
+        self.edgesForExtendedLayout = []
         
         views.append(FavouriteBandViewController(dataStore : dataStore!, band : band!))
         views.append(BandBioViewController(dataStore : dataStore!, band : band!))

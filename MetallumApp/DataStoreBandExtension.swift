@@ -117,6 +117,11 @@ extension DataStore {
         }catch _ {}
     }
     
+    func deleteBand(band : Band){
+        managedObjectContext.delete(band)
+        self.saveContext()
+    }
+    
     func deleteEverything(){
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Band")
         do{

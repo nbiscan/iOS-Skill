@@ -33,6 +33,7 @@ class FavouriteBandsViewController: UIViewController, UITableViewDelegate, UITab
         
         initializeFetchResultsContoller()
         // dataStore?.printDatabaseStatistics()
+        
     }
     
     func initializeFetchResultsContoller(){
