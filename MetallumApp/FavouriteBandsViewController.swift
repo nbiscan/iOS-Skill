@@ -52,7 +52,7 @@ class FavouriteBandsViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print((fetchedResultsController.sections?[section].numberOfObjects)!)
+        // print((fetchedResultsController.sections?[section].numberOfObjects)!)
         return (fetchedResultsController.sections?[section].numberOfObjects)!
     }
     

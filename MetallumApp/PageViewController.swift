@@ -32,6 +32,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         
         views.append(FavouriteBandViewController(dataStore : dataStore!, band : band!))
         views.append(BandBioViewController(dataStore : dataStore!, band : band!))
+        views.append(BandArtistsViewController(band : band!))
+        views.append(BandAlbumsViewController(band : band!))
         
 //        views[0].modalPresentationStyle = .currentContext
 //        views[1].modalPresentationStyle = .currentContext
@@ -44,16 +46,25 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         
         if (viewController is FavouriteBandViewController){
             return views[1]
+        } else if (viewController is BandBioViewController){
+            return views[2]
+        } else if (viewController is BandArtistsViewController) {
+            return views[3]
         } else {
             return views[0]
         }
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        
         if (viewController is FavouriteBandViewController){
+            return views[3]
+        } else if (viewController is BandBioViewController){
+            return views[0]
+        } else if (viewController is BandArtistsViewController) {
             return views[1]
         } else {
-            return views[0]
+            return views[2]
         }
     }
     

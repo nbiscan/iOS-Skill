@@ -58,18 +58,15 @@ class TableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        //print("cell reuse")
         imageDownloadQueue.cancelAllOperations()
     }
     
     func setup(with rowIndex: Int, band : Band) {
-        //print("setup")
         self.textLabel?.text = band.name
         self.detailTextLabel?.text = band.countryOfOrigin
         
         if let imageURL = band.logoURL {
             let downloadOperation = imageDownloadOperation(with: imageURL) { [weak self] result in
-            //print("image set")
             self?.imageView?.image = result
             self?.setNeedsLayout()
         }

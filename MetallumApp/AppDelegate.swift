@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let dataStore = DataStore()
         // let pageController = PageViewController(dataStore : dataStore)
         let viewController = FavouriteBandsViewController(dataStore : dataStore)
+        // let viewController = ViewController()
         let nc = UINavigationController(rootViewController : viewController)
         nc.navigationBar.barTintColor = UIColor.black
         nc.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.red]

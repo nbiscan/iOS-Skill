@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
             endingLineNumber = "32"
-            landmarkName = "insertBand(id:name:location:countryOfOrigin:genre:logoURL:lyricalThemes:photoURL:status:formedIn:currentlabel:yearsActive:bio:)"
+            landmarkName = "insertBand(id:name:location:countryOfOrigin:genre:logoURL:lyricalThemes:photoURL:status:formedIn:currentlabel:yearsActive:bio:artists:albums:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/PageViewController.swift"
-            timestampString = "513621687.85825"
+            timestampString = "513682853.026202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75">
+            startingLineNumber = "86"
+            endingLineNumber = "86">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -40,11 +40,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/PageViewController.swift"
-            timestampString = "513621687.85825"
+            timestampString = "513682853.026202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85">
+            startingLineNumber = "96"
+            endingLineNumber = "96">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MetallumApp/ViewController.swift"
+            timestampString = "513680868.377276"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "extract_json(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
