@@ -41,8 +41,8 @@ class BandAlbumsViewController: UIViewController, UITableViewDataSource, UITable
         
         let album = albums[indexPath.row]
         
-        cell.textLabel?.text = album.title
-        cell.detailTextLabel?.text = album.year
+        cell.mainLabel?.text = album.title
+        cell.label?.text = album.year
         
         return cell
     }

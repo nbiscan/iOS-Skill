@@ -45,8 +45,8 @@ class BandArtistsViewController: UIViewController, UITableViewDelegate, UITableV
         
         let artist = artists[indexPath.row]
         
-        cell.textLabel?.text = artist.name?.replacingOccurrences(of: "&quot;", with: "")
-        cell.detailTextLabel?.text = artist.instrument?.replacingOccurrences(of: "&nbsp;", with: "")
+        cell.mainLabel?.text = artist.name?.replacingOccurrences(of: "&quot;", with: "")
+        cell.label?.text = artist.instrument?.replacingOccurrences(of: "&nbsp;", with: "")
         
         return cell
         

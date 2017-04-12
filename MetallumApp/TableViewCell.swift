@@ -50,6 +50,11 @@ class ImageDownloadOperation: Operation {
 
 class TableViewCell: UITableViewCell {
     
+    
+    @IBOutlet weak var newImageView: UIImageView!
+    @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var label: UILabel!
+    
     private let imageDownloadQueue = OperationQueue()
     
     override func awakeFromNib() {
@@ -62,12 +67,12 @@ class TableViewCell: UITableViewCell {
     }
     
     func setup(with rowIndex: Int, band : Band) {
-        self.textLabel?.text = band.name
-        self.detailTextLabel?.text = band.countryOfOrigin
+        self.mainLabel?.text = band.name
+        self.label?.text = band.countryOfOrigin
         
         if let imageURL = band.logoURL {
             let downloadOperation = imageDownloadOperation(with: imageURL) { [weak self] result in
-            self?.imageView?.image = result
+            self?.newImageView?.image = result
             self?.setNeedsLayout()
         }
             imageDownloadQueue.addOperation(downloadOperation)
