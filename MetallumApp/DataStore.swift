@@ -67,6 +67,16 @@ class DataStore {
             }
         }
     }
+    
+    func checkIfBandExists(id : Int32) -> Bool {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Band")
+        request.predicate = NSPredicate(format: "id == %ld", id)
+        
+        if let _ = (try? managedObjectContext.fetch(request))?.first as? Band {
+            return true
+        }
+        return false
+    }
 
     
 }
