@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchTypeViewController" customModule="MetallumApp" customModuleProvider="target">
+            <connections>
+                <outlet property="segmentedControl" destination="oOY-uK-R0k" id="p21-kA-Aap"/>
+                <outlet property="tableView" destination="oQI-lm-GtD" id="Mp6-Zf-0Lw"/>
+                <outlet property="textField" destination="8WZ-5v-TjD" id="saE-bn-N4c"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8WZ-5v-TjD">
+                    <rect key="frame" x="16" y="84" width="343" height="30"/>
+                    <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3d-3G-rMh">
+                    <rect key="frame" x="311" y="123" width="48" height="30"/>
+                    <state key="normal" title="Search">
+                        <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="search:" destination="-1" eventType="touchUpInside" id="hTS-B7-lTQ"/>
+                    </connections>
+                </button>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oOY-uK-R0k">
+                    <rect key="frame" x="16" y="124" width="107" height="29"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <segments>
+                        <segment title="Band"/>
+                        <segment title="Album"/>
+                    </segments>
+                    <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oQI-lm-GtD">
+                    <rect key="frame" x="0.0" y="179" width="375" height="488"/>
+                    <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="oQI-lm-GtD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7eD-VU-eEb"/>
+                <constraint firstItem="oOY-uK-R0k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="8oT-bk-Xfw"/>
+                <constraint firstItem="8WZ-5v-TjD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="R19-hz-V6X"/>
+                <constraint firstItem="8WZ-5v-TjD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="Tag-5M-Rg3"/>
+                <constraint firstItem="8WZ-5v-TjD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="boE-WV-Zcw"/>
+                <constraint firstAttribute="trailing" secondItem="8WZ-5v-TjD" secondAttribute="trailing" constant="16" id="c06-Li-01N"/>
+                <constraint firstItem="oOY-uK-R0k" firstAttribute="top" secondItem="8WZ-5v-TjD" secondAttribute="bottom" constant="10" id="dnS-Hr-gL7"/>
+                <constraint firstAttribute="trailing" secondItem="X3d-3G-rMh" secondAttribute="trailing" constant="16" id="huF-8y-goz"/>
+                <constraint firstAttribute="bottom" secondItem="oQI-lm-GtD" secondAttribute="bottom" id="mm7-S2-dAu"/>
+                <constraint firstItem="oQI-lm-GtD" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="nOz-EU-2UQ"/>
+                <constraint firstItem="oQI-lm-GtD" firstAttribute="top" secondItem="oOY-uK-R0k" secondAttribute="bottom" constant="27" id="zhu-T7-BmA"/>
+                <constraint firstItem="X3d-3G-rMh" firstAttribute="top" secondItem="8WZ-5v-TjD" secondAttribute="bottom" constant="9" id="zvA-pu-551"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+            <point key="canvasLocation" x="33.5" y="108.5"/>
+        </view>
+    </objects>
+</document>

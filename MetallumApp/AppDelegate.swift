@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let dataStore = DataStore()
         let viewController = FavouriteBandsViewController(dataStore : dataStore)
         // let viewController = ViewController()
-        let nc = UINavigationController(rootViewController : viewController)
+        let search = SearchTypeViewController()
+        let nc = UINavigationController(rootViewController : search)
         
         nc.navigationBar.barStyle = .blackTranslucent
         

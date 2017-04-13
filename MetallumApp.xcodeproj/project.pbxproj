@@ -38,6 +38,9 @@
 		52BE705B1E9E1DE400A1E11E /* BandAlbumsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE70591E9E1DE400A1E11E /* BandAlbumsViewController.xib */; };
 		52BE705E1E9F641900A1E11E /* NoImageCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE705C1E9F641900A1E11E /* NoImageCellTableViewCell.swift */; };
 		52BE705F1E9F641900A1E11E /* NoImageCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE705D1E9F641900A1E11E /* NoImageCellTableViewCell.xib */; };
+		52BE70621E9F9C9000A1E11E /* SearchTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70601E9F9C9000A1E11E /* SearchTypeViewController.swift */; };
+		52BE70631E9F9C9000A1E11E /* SearchTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE70611E9F9C9000A1E11E /* SearchTypeViewController.xib */; };
+		52BE70651E9FA6C500A1E11E /* SearchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70641E9FA6C500A1E11E /* SearchExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +77,9 @@
 		52BE70591E9E1DE400A1E11E /* BandAlbumsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BandAlbumsViewController.xib; sourceTree = "<group>"; };
 		52BE705C1E9F641900A1E11E /* NoImageCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoImageCellTableViewCell.swift; sourceTree = "<group>"; };
 		52BE705D1E9F641900A1E11E /* NoImageCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoImageCellTableViewCell.xib; sourceTree = "<group>"; };
+		52BE70601E9F9C9000A1E11E /* SearchTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTypeViewController.swift; sourceTree = "<group>"; };
+		52BE70611E9F9C9000A1E11E /* SearchTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTypeViewController.xib; sourceTree = "<group>"; };
+		52BE70641E9FA6C500A1E11E /* SearchExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,9 @@
 				52BE70591E9E1DE400A1E11E /* BandAlbumsViewController.xib */,
 				52BE705C1E9F641900A1E11E /* NoImageCellTableViewCell.swift */,
 				52BE705D1E9F641900A1E11E /* NoImageCellTableViewCell.xib */,
+				52BE70601E9F9C9000A1E11E /* SearchTypeViewController.swift */,
+				52BE70641E9FA6C500A1E11E /* SearchExtension.swift */,
+				52BE70611E9F9C9000A1E11E /* SearchTypeViewController.xib */,
 			);
 			name = Favourites;
 			sourceTree = "<group>";
@@ -234,6 +243,7 @@
 				52BE705B1E9E1DE400A1E11E /* BandAlbumsViewController.xib in Resources */,
 				52BE705F1E9F641900A1E11E /* NoImageCellTableViewCell.xib in Resources */,
 				5276F1021E9D0BE70038AFF8 /* BandBioViewController.xib in Resources */,
+				52BE70631E9F9C9000A1E11E /* SearchTypeViewController.xib in Resources */,
 				5276F0F21E9CCA530038AFF8 /* FavouriteBandsViewController.xib in Resources */,
 				52BE70571E9E112300A1E11E /* BandArtistsViewController.xib in Resources */,
 				52270FD51E9B8E82004A41D0 /* Main.storyboard in Resources */,
@@ -248,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52270FD21E9B8E82004A41D0 /* ViewController.swift in Sources */,
+				52BE70621E9F9C9000A1E11E /* SearchTypeViewController.swift in Sources */,
 				5276F1011E9D0BE70038AFF8 /* BandBioViewController.swift in Sources */,
 				5276F0C51E9BBB4F0038AFF8 /* Album+CoreDataClass.swift in Sources */,
 				52BE705A1E9E1DE400A1E11E /* BandAlbumsViewController.swift in Sources */,
@@ -267,6 +278,7 @@
 				5276F0CF1E9BC1650038AFF8 /* DataStoreBandExtension.swift in Sources */,
 				52BE70561E9E112300A1E11E /* BandArtistsViewController.swift in Sources */,
 				5276F0FB1E9CE5310038AFF8 /* FavouriteBandViewController.swift in Sources */,
+				52BE70651E9FA6C500A1E11E /* SearchExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
