@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MetallumApp" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="PSi-dV-XWk" id="4gc-4b-sBu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PSi-dV-XWk">
+                    <rect key="frame" x="16" y="81" width="343" height="140"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="PSi-dV-XWk" secondAttribute="height" multiplier="49:20" id="t82-dp-dFf"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVV-nf-Zwb">
+                    <rect key="frame" x="-0.5" y="278" width="375" height="30"/>
+                    <state key="normal" title="Search Metallum">
+                        <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="search:" destination="-1" eventType="touchUpInside" id="S8b-dW-fvX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oed-4i-dEW">
+                    <rect key="frame" x="-0.5" y="318" width="375" height="30"/>
+                    <state key="normal" title="Upcoming albums">
+                        <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="upcomingAlbums:" destination="-1" eventType="touchUpInside" id="dT2-Nk-qaS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwL-rt-N66">
+                    <rect key="frame" x="-0.5" y="356" width="375" height="30"/>
+                    <state key="normal" title="Random Band">
+                        <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="randomBand:" destination="-1" eventType="touchUpInside" id="E79-tO-sWh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To6-3f-gjv">
+                    <rect key="frame" x="-0.5" y="394" width="375" height="30"/>
+                    <state key="normal" title="Saved Bands">
+                        <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="savedBands:" destination="-1" eventType="touchUpInside" id="vWX-Zy-0KI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="cwL-rt-N66" firstAttribute="top" secondItem="oed-4i-dEW" secondAttribute="bottom" constant="8" id="4CH-kn-QAn"/>
+                <constraint firstItem="PSi-dV-XWk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="81" id="58w-Ry-wzG"/>
+                <constraint firstItem="fVV-nf-Zwb" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="H0V-s7-aw3"/>
+                <constraint firstAttribute="bottom" secondItem="PSi-dV-XWk" secondAttribute="bottom" constant="446" id="KKd-Um-xk2"/>
+                <constraint firstItem="cwL-rt-N66" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="L2T-wG-by5"/>
+                <constraint firstItem="To6-3f-gjv" firstAttribute="top" secondItem="cwL-rt-N66" secondAttribute="bottom" constant="8" id="TRk-0U-2KO"/>
+                <constraint firstItem="fVV-nf-Zwb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VBV-U9-DTN"/>
+                <constraint firstItem="oed-4i-dEW" firstAttribute="top" secondItem="fVV-nf-Zwb" secondAttribute="bottom" constant="10" id="VKF-7I-Qxa"/>
+                <constraint firstItem="cwL-rt-N66" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XLt-VE-xQ5"/>
+                <constraint firstItem="fVV-nf-Zwb" firstAttribute="top" secondItem="PSi-dV-XWk" secondAttribute="bottom" constant="57" id="ZZs-qO-cJh"/>
+                <constraint firstItem="oed-4i-dEW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iQC-Fb-cge"/>
+                <constraint firstItem="PSi-dV-XWk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sQG-jf-GPb"/>
+                <constraint firstItem="To6-3f-gjv" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="tMA-Xy-61h"/>
+                <constraint firstItem="To6-3f-gjv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tO9-Y8-B4n"/>
+                <constraint firstItem="oed-4i-dEW" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="ykf-su-ZUo"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

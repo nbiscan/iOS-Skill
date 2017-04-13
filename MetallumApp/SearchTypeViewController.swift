@@ -34,11 +34,6 @@ class SearchTypeViewController: UIViewController, UITableViewDelegate, UITableVi
             }
             break
         }
-        
-//        DispatchQueue.main.async(execute: {
-//            self.tableView.reloadData()
-//        })
-        
     }
     
     var bandResults : [band] = []

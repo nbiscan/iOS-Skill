@@ -41,6 +41,8 @@
 		52BE70621E9F9C9000A1E11E /* SearchTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70601E9F9C9000A1E11E /* SearchTypeViewController.swift */; };
 		52BE70631E9F9C9000A1E11E /* SearchTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE70611E9F9C9000A1E11E /* SearchTypeViewController.xib */; };
 		52BE70651E9FA6C500A1E11E /* SearchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70641E9FA6C500A1E11E /* SearchExtension.swift */; };
+		52BE706A1EA0023200A1E11E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70681EA0023200A1E11E /* HomeViewController.swift */; };
+		52BE706B1EA0023200A1E11E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE70691EA0023200A1E11E /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		52BE70601E9F9C9000A1E11E /* SearchTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTypeViewController.swift; sourceTree = "<group>"; };
 		52BE70611E9F9C9000A1E11E /* SearchTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTypeViewController.xib; sourceTree = "<group>"; };
 		52BE70641E9FA6C500A1E11E /* SearchExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchExtension.swift; sourceTree = "<group>"; };
+		52BE70681EA0023200A1E11E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		52BE70691EA0023200A1E11E /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 		52270FCE1E9B8E82004A41D0 /* MetallumApp */ = {
 			isa = PBXGroup;
 			children = (
+				52BE706D1EA0024300A1E11E /* Home */,
+				52BE70671EA001D900A1E11E /* Search */,
 				5276F0EE1E9CCA160038AFF8 /* Favourites */,
 				5276F0CB1E9BBCDF0038AFF8 /* Services */,
 				52270FE11E9B8EA9004A41D0 /* CoreData */,
@@ -168,11 +174,27 @@
 				52BE70591E9E1DE400A1E11E /* BandAlbumsViewController.xib */,
 				52BE705C1E9F641900A1E11E /* NoImageCellTableViewCell.swift */,
 				52BE705D1E9F641900A1E11E /* NoImageCellTableViewCell.xib */,
+			);
+			name = Favourites;
+			sourceTree = "<group>";
+		};
+		52BE70671EA001D900A1E11E /* Search */ = {
+			isa = PBXGroup;
+			children = (
 				52BE70601E9F9C9000A1E11E /* SearchTypeViewController.swift */,
 				52BE70641E9FA6C500A1E11E /* SearchExtension.swift */,
 				52BE70611E9F9C9000A1E11E /* SearchTypeViewController.xib */,
 			);
-			name = Favourites;
+			name = Search;
+			sourceTree = "<group>";
+		};
+		52BE706D1EA0024300A1E11E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				52BE70681EA0023200A1E11E /* HomeViewController.swift */,
+				52BE70691EA0023200A1E11E /* HomeViewController.xib */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +259,7 @@
 			files = (
 				52270FDA1E9B8E82004A41D0 /* LaunchScreen.storyboard in Resources */,
 				5276F0F81E9CD07F0038AFF8 /* TableViewCell.xib in Resources */,
+				52BE706B1EA0023200A1E11E /* HomeViewController.xib in Resources */,
 				52270FD71E9B8E82004A41D0 /* Assets.xcassets in Resources */,
 				5276F10A1E9D1E9C0038AFF8 /* PageViewController.xib in Resources */,
 				5276F0FC1E9CE5310038AFF8 /* FavouriteBandViewController.xib in Resources */,
@@ -263,6 +286,7 @@
 				5276F0C51E9BBB4F0038AFF8 /* Album+CoreDataClass.swift in Sources */,
 				52BE705A1E9E1DE400A1E11E /* BandAlbumsViewController.swift in Sources */,
 				5276F0C71E9BBB4F0038AFF8 /* Artist+CoreDataClass.swift in Sources */,
+				52BE706A1EA0023200A1E11E /* HomeViewController.swift in Sources */,
 				5276F0CD1E9BBCF60038AFF8 /* DataStore.swift in Sources */,
 				52270FD01E9B8E82004A41D0 /* AppDelegate.swift in Sources */,
 				5276F0F71E9CD07F0038AFF8 /* TableViewCell.swift in Sources */,

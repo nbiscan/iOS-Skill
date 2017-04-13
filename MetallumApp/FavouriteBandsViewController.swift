@@ -17,7 +17,7 @@ class FavouriteBandsViewController: UIViewController, UITableViewDelegate, UITab
     
     var fetchedResultsController : NSFetchedResultsController<NSFetchRequestResult>!
     
-    var dataStore : DataStore?
+    var dataStore : DataStore = (UIApplication.shared.delegate as! AppDelegate).dataStore
     
     convenience init(dataStore: DataStore){
         self.init()
@@ -25,6 +25,7 @@ class FavouriteBandsViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.navigationItem.title = "Favourite Bands"
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: cellIndentifier)
@@ -32,7 +33,6 @@ class FavouriteBandsViewController: UIViewController, UITableViewDelegate, UITab
         tableView.dataSource = self
         
         initializeFetchResultsContoller()
-        // dataStore?.printDatabaseStatistics()
         
     }
     
@@ -41,7 +41,7 @@ class FavouriteBandsViewController: UIViewController, UITableViewDelegate, UITab
         let bandIdSort = NSSortDescriptor(key: "id", ascending: true)
         request.sortDescriptors = [bandIdSort]
         
-        fetchedResultsController =  NSFetchedResultsController(fetchRequest: request, managedObjectContext: (dataStore?.managedObjectContext)!, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController =  NSFetchedResultsController(fetchRequest: request, managedObjectContext: dataStore.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         
         fetchedResultsController.delegate = self
         
@@ -68,7 +68,7 @@ class FavouriteBandsViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let band = self.fetchedResultsController?.object(at: indexPath) as! Band
-        let bandPageViewController = PageViewController(dataStore : dataStore!, band : band)
+        let bandPageViewController = PageViewController(dataStore : dataStore, band : band)
         navigationController?.pushViewController(bandPageViewController, animated: true)
     }
     
