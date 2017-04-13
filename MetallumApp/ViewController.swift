@@ -92,7 +92,7 @@ class ViewController: UIViewController {
                     }
                 }
                 
-                dataStore.insertBand(id: Int32(id!)!, name: name!, location: location!, countryOfOrigin: countryOfOrigin!, genre: genre!, logoURL: logoURL!, lyricalThemes: lyricalThemes!, photoURL: photoURL!, status: status!, formedIn: formedIn!, currentlabel: currentLabel!, yearsActive: yearsActive!, bio: bio!, artists: artists, albums: albums)
+                dataStore.insertBand(id: Int32(id!)!, name: name, location: location, countryOfOrigin: countryOfOrigin, genre: genre, logoURL: logoURL, lyricalThemes: lyricalThemes, photoURL: photoURL, status: status, formedIn: formedIn, currentlabel: currentLabel, yearsActive: yearsActive, bio: bio, artists: artists, albums: albums)
                 
                 dataStore.printDatabaseStatistics()
                 
