@@ -35,6 +35,12 @@
 		5276F1021E9D0BE70038AFF8 /* BandBioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5276F1001E9D0BE70038AFF8 /* BandBioViewController.xib */; };
 		5276F1091E9D1E9C0038AFF8 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276F1071E9D1E9C0038AFF8 /* PageViewController.swift */; };
 		5276F10A1E9D1E9C0038AFF8 /* PageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5276F1081E9D1E9C0038AFF8 /* PageViewController.xib */; };
+		528464141EA024AA00799850 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528464121EA024AA00799850 /* BioViewController.swift */; };
+		528464151EA024AA00799850 /* BioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528464131EA024AA00799850 /* BioViewController.xib */; };
+		528464181EA0263200799850 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528464161EA0263200799850 /* ArtistsViewController.swift */; };
+		528464191EA0263200799850 /* ArtistsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528464171EA0263200799850 /* ArtistsViewController.xib */; };
+		5284641C1EA0279700799850 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284641A1EA0279700799850 /* AlbumsViewController.swift */; };
+		5284641D1EA0279700799850 /* AlbumsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5284641B1EA0279700799850 /* AlbumsViewController.xib */; };
 		52BE70561E9E112300A1E11E /* BandArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70541E9E112300A1E11E /* BandArtistsViewController.swift */; };
 		52BE70571E9E112300A1E11E /* BandArtistsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE70551E9E112300A1E11E /* BandArtistsViewController.xib */; };
 		52BE705A1E9E1DE400A1E11E /* BandAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70581E9E1DE400A1E11E /* BandAlbumsViewController.swift */; };
@@ -81,6 +87,12 @@
 		5276F1001E9D0BE70038AFF8 /* BandBioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BandBioViewController.xib; sourceTree = "<group>"; };
 		5276F1071E9D1E9C0038AFF8 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		5276F1081E9D1E9C0038AFF8 /* PageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageViewController.xib; sourceTree = "<group>"; };
+		528464121EA024AA00799850 /* BioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
+		528464131EA024AA00799850 /* BioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BioViewController.xib; sourceTree = "<group>"; };
+		528464161EA0263200799850 /* ArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsViewController.swift; sourceTree = "<group>"; };
+		528464171EA0263200799850 /* ArtistsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistsViewController.xib; sourceTree = "<group>"; };
+		5284641A1EA0279700799850 /* AlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		5284641B1EA0279700799850 /* AlbumsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumsViewController.xib; sourceTree = "<group>"; };
 		52BE70541E9E112300A1E11E /* BandArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandArtistsViewController.swift; sourceTree = "<group>"; };
 		52BE70551E9E112300A1E11E /* BandArtistsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BandArtistsViewController.xib; sourceTree = "<group>"; };
 		52BE70581E9E1DE400A1E11E /* BandAlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandAlbumsViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +228,12 @@
 				524C64F91EA00D710010CD1C /* BandPageExtension.swift */,
 				52BE70791EA00B4400A1E11E /* BandViewController.swift */,
 				52BE707A1EA00B4400A1E11E /* BandViewController.xib */,
+				528464121EA024AA00799850 /* BioViewController.swift */,
+				528464131EA024AA00799850 /* BioViewController.xib */,
+				528464161EA0263200799850 /* ArtistsViewController.swift */,
+				528464171EA0263200799850 /* ArtistsViewController.xib */,
+				5284641A1EA0279700799850 /* AlbumsViewController.swift */,
+				5284641B1EA0279700799850 /* AlbumsViewController.xib */,
 			);
 			name = DefaultViews;
 			sourceTree = "<group>";
@@ -283,8 +301,10 @@
 				52270FDA1E9B8E82004A41D0 /* LaunchScreen.storyboard in Resources */,
 				5276F0F81E9CD07F0038AFF8 /* TableViewCell.xib in Resources */,
 				52BE706B1EA0023200A1E11E /* HomeViewController.xib in Resources */,
+				528464191EA0263200799850 /* ArtistsViewController.xib in Resources */,
 				52270FD71E9B8E82004A41D0 /* Assets.xcassets in Resources */,
 				5276F10A1E9D1E9C0038AFF8 /* PageViewController.xib in Resources */,
+				5284641D1EA0279700799850 /* AlbumsViewController.xib in Resources */,
 				5276F0FC1E9CE5310038AFF8 /* FavouriteBandViewController.xib in Resources */,
 				52BE705B1E9E1DE400A1E11E /* BandAlbumsViewController.xib in Resources */,
 				52BE707C1EA00B4400A1E11E /* BandViewController.xib in Resources */,
@@ -293,6 +313,7 @@
 				52BE70631E9F9C9000A1E11E /* SearchTypeViewController.xib in Resources */,
 				5276F0F21E9CCA530038AFF8 /* FavouriteBandsViewController.xib in Resources */,
 				52BE70571E9E112300A1E11E /* BandArtistsViewController.xib in Resources */,
+				528464151EA024AA00799850 /* BioViewController.xib in Resources */,
 				52270FD51E9B8E82004A41D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,14 +329,17 @@
 				524C64FC1EA00DC70010CD1C /* Structures.swift in Sources */,
 				52BE70621E9F9C9000A1E11E /* SearchTypeViewController.swift in Sources */,
 				5276F1011E9D0BE70038AFF8 /* BandBioViewController.swift in Sources */,
+				528464181EA0263200799850 /* ArtistsViewController.swift in Sources */,
 				5276F0C51E9BBB4F0038AFF8 /* Album+CoreDataClass.swift in Sources */,
 				52BE705A1E9E1DE400A1E11E /* BandAlbumsViewController.swift in Sources */,
 				524C64FA1EA00D710010CD1C /* BandPageExtension.swift in Sources */,
+				528464141EA024AA00799850 /* BioViewController.swift in Sources */,
 				5276F0C71E9BBB4F0038AFF8 /* Artist+CoreDataClass.swift in Sources */,
 				52BE706A1EA0023200A1E11E /* HomeViewController.swift in Sources */,
 				5276F0CD1E9BBCF60038AFF8 /* DataStore.swift in Sources */,
 				52270FD01E9B8E82004A41D0 /* AppDelegate.swift in Sources */,
 				5276F0F71E9CD07F0038AFF8 /* TableViewCell.swift in Sources */,
+				5284641C1EA0279700799850 /* AlbumsViewController.swift in Sources */,
 				52BE705E1E9F641900A1E11E /* NoImageCellTableViewCell.swift in Sources */,
 				5276F0C91E9BBB4F0038AFF8 /* Band+CoreDataClass.swift in Sources */,
 				5276F1091E9D1E9C0038AFF8 /* PageViewController.swift in Sources */,

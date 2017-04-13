@@ -107,7 +107,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
             endingLineNumber = "14"
-            landmarkName = "loadReviews(id:)"
+            landmarkName = "loadBand(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

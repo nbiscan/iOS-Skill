@@ -10,8 +10,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var dataStore : DataStore?
-    
     @IBOutlet weak var imageView: UIImageView!
 
     @IBAction func search(_ sender: UIButton) {
@@ -30,13 +28,6 @@ class HomeViewController: UIViewController {
     @IBAction func savedBands(_ sender: UIButton) {
         let savedBands = FavouriteBandsViewController()
         self.navigationController?.pushViewController(savedBands, animated: true)
-    }
-    
-    
-    convenience init(dataStore: DataStore){
-        self.init()
-        
-        
     }
     
     override func viewDidLoad() {

@@ -19,11 +19,6 @@ class FavouriteBandsViewController: UIViewController, UITableViewDelegate, UITab
     
     var dataStore : DataStore = (UIApplication.shared.delegate as! AppDelegate).dataStore
     
-    convenience init(dataStore: DataStore){
-        self.init()
-        self.dataStore = dataStore
-    }
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
