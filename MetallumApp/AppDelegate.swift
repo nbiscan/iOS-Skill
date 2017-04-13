@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let dataStore = DataStore()
         let viewController = HomeViewController(dataStore: dataStore)
         let nc = UINavigationController(rootViewController : viewController)
+        nc.navigationBar.barStyle = .blackTranslucent
         window?.rootViewController = nc
         window?.makeKeyAndVisible()
         return true

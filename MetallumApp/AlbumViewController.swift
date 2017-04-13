@@ -15,11 +15,13 @@ class AlbumViewController: UIViewController {
     @IBOutlet weak var formatLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var bandLabel: UILabel!
+    @IBOutlet weak var homeBtn: UIButton!
     
     
     var actualAlbum:album?
     var actualBand:band?
     
+    var bandID:String?
     var albumid:Int32?
     
     convenience init(albumid: Int32){
@@ -31,14 +33,23 @@ class AlbumViewController: UIViewController {
         super.viewDidLoad()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(AlbumViewController.tapFunction))
+        let tapHome = UITapGestureRecognizer(target: self, action: #selector(AlbumViewController.tapHome))
+
+        
 
         bandLabel.isUserInteractionEnabled = true
         bandLabel.addGestureRecognizer(tap)
+        
+        homeBtn.addGestureRecognizer(tapHome)
         
         loadUpcomingAlbums()
         
 
         
+    }
+    
+    func tapHome(){
+        _ = navigationController?.popToRootViewController(animated: true)
     }
     
     func loadUpcomingAlbums(){
@@ -90,6 +101,7 @@ class AlbumViewController: UIViewController {
                 
                 typeLabel.text = type
                 titleLabel.text = title
+                self.title = title
                 formatLabel.text = format
                 
                 actualAlbum = album(id: Int32(id!), type:type, title: title, albumCover: albumCover, format: format)
@@ -104,8 +116,11 @@ class AlbumViewController: UIViewController {
                 let bandId = first1["id"] as? String
                 
                 bandLabel.text = bandName
+                bandLabel.textColor = UIColor.purple
                 
                 actualBand = band(id: Int32(bandId!), name: bandName)
+                bandID = bandId
+
             }
 
         }
@@ -137,7 +152,7 @@ class AlbumViewController: UIViewController {
     }
     
     func tapFunction(sender:UITapGestureRecognizer) {
-        let thirdViewController = BandViewController(id: (actualBand?.id!)!)
+        let thirdViewController = ArtistsTableViewController(id: bandID!)
         navigationController?.pushViewController(thirdViewController, animated: true)
     }
 

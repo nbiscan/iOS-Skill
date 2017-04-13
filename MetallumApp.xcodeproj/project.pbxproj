@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021270CC1E9E61CC00F6E6D9 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021270CA1E9E61CC00F6E6D9 /* ArtistViewController.swift */; };
+		021270CD1E9E61CC00F6E6D9 /* ArtistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 021270CB1E9E61CC00F6E6D9 /* ArtistViewController.xib */; };
+		021270E81E9E721400F6E6D9 /* RandomBandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021270E61E9E721400F6E6D9 /* RandomBandViewController.swift */; };
+		021270E91E9E721400F6E6D9 /* RandomBandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 021270E71E9E721400F6E6D9 /* RandomBandViewController.xib */; };
+		021270F01E9EA9A800F6E6D9 /* ArtistsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021270EE1E9EA9A800F6E6D9 /* ArtistsTableViewController.swift */; };
+		021270F11E9EA9A800F6E6D9 /* ArtistsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 021270EF1E9EA9A800F6E6D9 /* ArtistsTableViewController.xib */; };
 		0220B83D1E9CC49600EA7E2D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220B83B1E9CC49600EA7E2D /* HomeViewController.swift */; };
 		0220B83E1E9CC49600EA7E2D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0220B83C1E9CC49600EA7E2D /* HomeViewController.xib */; };
 		0220B8411E9CC72C00EA7E2D /* UpcomingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220B83F1E9CC72C00EA7E2D /* UpcomingTableViewController.swift */; };
@@ -14,6 +20,8 @@
 		0220B84B1E9CE52200EA7E2D /* AlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0220B8491E9CE52200EA7E2D /* AlbumViewController.xib */; };
 		0220B84E1E9CF87600EA7E2D /* BandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220B84C1E9CF87600EA7E2D /* BandViewController.swift */; };
 		0220B84F1E9CF87600EA7E2D /* BandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0220B84D1E9CF87600EA7E2D /* BandViewController.xib */; };
+		02BB42BB1E9F60E30003158B /* BandPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BB42B91E9F60E30003158B /* BandPageViewController.swift */; };
+		02BB42BC1E9F60E30003158B /* BandPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02BB42BA1E9F60E30003158B /* BandPageViewController.xib */; };
 		52270FD01E9B8E82004A41D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52270FCF1E9B8E82004A41D0 /* AppDelegate.swift */; };
 		52270FD21E9B8E82004A41D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52270FD11E9B8E82004A41D0 /* ViewController.swift */; };
 		52270FD51E9B8E82004A41D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52270FD31E9B8E82004A41D0 /* Main.storyboard */; };
@@ -31,6 +39,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021270CA1E9E61CC00F6E6D9 /* ArtistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
+		021270CB1E9E61CC00F6E6D9 /* ArtistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistViewController.xib; sourceTree = "<group>"; };
+		021270E61E9E721400F6E6D9 /* RandomBandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomBandViewController.swift; sourceTree = "<group>"; };
+		021270E71E9E721400F6E6D9 /* RandomBandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RandomBandViewController.xib; sourceTree = "<group>"; };
+		021270EE1E9EA9A800F6E6D9 /* ArtistsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsTableViewController.swift; sourceTree = "<group>"; };
+		021270EF1E9EA9A800F6E6D9 /* ArtistsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistsTableViewController.xib; sourceTree = "<group>"; };
 		0220B83B1E9CC49600EA7E2D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0220B83C1E9CC49600EA7E2D /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		0220B83F1E9CC72C00EA7E2D /* UpcomingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingTableViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +52,8 @@
 		0220B8491E9CE52200EA7E2D /* AlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumViewController.xib; sourceTree = "<group>"; };
 		0220B84C1E9CF87600EA7E2D /* BandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandViewController.swift; sourceTree = "<group>"; };
 		0220B84D1E9CF87600EA7E2D /* BandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BandViewController.xib; sourceTree = "<group>"; };
+		02BB42B91E9F60E30003158B /* BandPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandPageViewController.swift; sourceTree = "<group>"; };
+		02BB42BA1E9F60E30003158B /* BandPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BandPageViewController.xib; sourceTree = "<group>"; };
 		52270FCC1E9B8E82004A41D0 /* MetallumApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetallumApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52270FCF1E9B8E82004A41D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52270FD11E9B8E82004A41D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,8 +91,16 @@
 				0220B83F1E9CC72C00EA7E2D /* UpcomingTableViewController.swift */,
 				0220B8481E9CE52200EA7E2D /* AlbumViewController.swift */,
 				0220B8491E9CE52200EA7E2D /* AlbumViewController.xib */,
+				02BB42B91E9F60E30003158B /* BandPageViewController.swift */,
+				02BB42BA1E9F60E30003158B /* BandPageViewController.xib */,
 				0220B84C1E9CF87600EA7E2D /* BandViewController.swift */,
 				0220B84D1E9CF87600EA7E2D /* BandViewController.xib */,
+				021270EE1E9EA9A800F6E6D9 /* ArtistsTableViewController.swift */,
+				021270EF1E9EA9A800F6E6D9 /* ArtistsTableViewController.xib */,
+				021270CA1E9E61CC00F6E6D9 /* ArtistViewController.swift */,
+				021270CB1E9E61CC00F6E6D9 /* ArtistViewController.xib */,
+				021270E61E9E721400F6E6D9 /* RandomBandViewController.swift */,
+				021270E71E9E721400F6E6D9 /* RandomBandViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -196,9 +220,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021270E91E9E721400F6E6D9 /* RandomBandViewController.xib in Resources */,
 				52270FDA1E9B8E82004A41D0 /* LaunchScreen.storyboard in Resources */,
+				02BB42BC1E9F60E30003158B /* BandPageViewController.xib in Resources */,
 				52270FD71E9B8E82004A41D0 /* Assets.xcassets in Resources */,
 				52270FD51E9B8E82004A41D0 /* Main.storyboard in Resources */,
+				021270F11E9EA9A800F6E6D9 /* ArtistsTableViewController.xib in Resources */,
+				021270CD1E9E61CC00F6E6D9 /* ArtistViewController.xib in Resources */,
 				0220B84F1E9CF87600EA7E2D /* BandViewController.xib in Resources */,
 				0220B83E1E9CC49600EA7E2D /* HomeViewController.xib in Resources */,
 				0220B84B1E9CE52200EA7E2D /* AlbumViewController.xib in Resources */,
@@ -216,6 +244,7 @@
 				5276F0C51E9BBB4F0038AFF8 /* Album+CoreDataClass.swift in Sources */,
 				5276F0C71E9BBB4F0038AFF8 /* Artist+CoreDataClass.swift in Sources */,
 				5276F0CD1E9BBCF60038AFF8 /* DataStore.swift in Sources */,
+				021270F01E9EA9A800F6E6D9 /* ArtistsTableViewController.swift in Sources */,
 				52270FD01E9B8E82004A41D0 /* AppDelegate.swift in Sources */,
 				5276F0C91E9BBB4F0038AFF8 /* Band+CoreDataClass.swift in Sources */,
 				0220B84E1E9CF87600EA7E2D /* BandViewController.swift in Sources */,
@@ -223,7 +252,10 @@
 				5276F0CA1E9BBB4F0038AFF8 /* Band+CoreDataProperties.swift in Sources */,
 				5276F0C61E9BBB4F0038AFF8 /* Album+CoreDataProperties.swift in Sources */,
 				52270FE41E9B8EC4004A41D0 /* DataBase.xcdatamodeld in Sources */,
+				021270E81E9E721400F6E6D9 /* RandomBandViewController.swift in Sources */,
+				021270CC1E9E61CC00F6E6D9 /* ArtistViewController.swift in Sources */,
 				5276F0C81E9BBB4F0038AFF8 /* Artist+CoreDataProperties.swift in Sources */,
+				02BB42BB1E9F60E30003158B /* BandPageViewController.swift in Sources */,
 				5276F0CF1E9BC1650038AFF8 /* DataStoreBandExtension.swift in Sources */,
 				0220B83D1E9CC49600EA7E2D /* HomeViewController.swift in Sources */,
 				0220B8411E9CC72C00EA7E2D /* UpcomingTableViewController.swift in Sources */,

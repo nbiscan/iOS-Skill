@@ -21,6 +21,7 @@ class UpcomingTableViewController: UITableViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
         title = "Upcoming albums"
+        
         tableView.backgroundColor = UIColor.black
         tableView.separatorColor = UIColor.black
         

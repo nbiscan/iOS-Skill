@@ -24,12 +24,12 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         image.image = #imageLiteral(resourceName: "bcgrd")
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.tapFunction))
+        let tapRandom = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.tapFunctionRandom))
 
         
-        getUpcomingBtn.isUserInteractionEnabled = true
         getUpcomingBtn.addGestureRecognizer(tap)
+        randomBandBtn.addGestureRecognizer(tapRandom)
         
     }
     
@@ -39,4 +39,11 @@ class HomeViewController: UIViewController {
         let newViewController = UpcomingTableViewController()
         navigationController?.pushViewController(newViewController, animated: true)
     }
+    
+    func tapFunctionRandom(){
+        let newViewController = RandomBandViewController()
+        navigationController?.pushViewController(newViewController, animated: true)
+    }
+
+
 }

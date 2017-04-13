@@ -1,16 +1,22 @@
 //
-//  BandViewController.swift
+//  RandomBandViewController.swift
 //  MetallumApp
 //
-//  Created by Natko Biscan on 11/04/2017.
+//  Created by Natko Biscan on 12/04/2017.
 //  Copyright © 2017 Five. All rights reserved.
 //
 
 import UIKit
 
-class BandViewController: UIViewController {
+class RandomBandViewController: UIViewController {
+    @IBOutlet weak var bandnameLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var genreLabel: UILabel!
+    @IBOutlet weak var yearsactiveLabel: UILabel!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var saveFavoriteBtn: UIButton!
     
-    var ID:String?
+    var artistId:String?
     
     var id:String?
     var name:String?
@@ -27,44 +33,25 @@ class BandViewController: UIViewController {
     var bio : String?
     
     let datastore = DataStore()
+
     
-    
-    @IBOutlet weak var logoIV: UIImageView!
-    @IBOutlet weak var bandNameLabel: UILabel!
-    @IBOutlet weak var typeLabel: UILabel!
-    @IBOutlet weak var yearsActiveLabel: UILabel!
-    @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var homeBtn: UIButton!
-    @IBOutlet weak var makeFavoriteBtn: UIButton!
-    
-    convenience init (ID:String){
-        self.init()
-        self.ID = ID
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadBands()
+        loadRandomBand()
+
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(RandomBandViewController.tapFunction))
+        let fav = UITapGestureRecognizer(target: self, action: #selector(RandomBandViewController.favFunc))
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(BandViewController.tapFunction))
-        let fav = UITapGestureRecognizer(target: self, action: #selector(BandViewController.favFunc))
+
+        bandnameLabel.isUserInteractionEnabled = true
+        bandnameLabel.addGestureRecognizer(tap)
         
+        saveFavoriteBtn.addGestureRecognizer(fav)
+                
         
-        
-        homeBtn.isUserInteractionEnabled = true
-        homeBtn.addGestureRecognizer(tap)
-        
-        makeFavoriteBtn.isUserInteractionEnabled = true
-        makeFavoriteBtn.addGestureRecognizer(fav)
-        
-        
-        
-    }
-    
-    func tapFunction(){
-        _ = navigationController?.popToRootViewController(animated: true)
     }
     
     func favFunc(){
@@ -86,19 +73,11 @@ class BandViewController: UIViewController {
         print("saved to DB")
         
     }
-    
-    //get data from url
-    
-    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
-        URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
-            completion(data, response, error)
-            }.resume()
-    }
+
     
     
-    func loadBands(){
-        let urlString = "http://em.wemakesites.net/band/\(ID!)?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
+    func loadRandomBand(){
+        let urlString = "http://em.wemakesites.net/band/random?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
         guard let url = URL(string: urlString) else { return }
         let session = URLSession.shared
         
@@ -118,9 +97,11 @@ class BandViewController: UIViewController {
         task.resume()
         
     }
+
     
     private func extract_json(_ data : Data){
         let json = try? JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
+        //  let dataStore = DataStore()
         if let results = json?["data"] as? [String: AnyObject] {
             
             let idJ = results["id"] as? String
@@ -129,17 +110,13 @@ class BandViewController: UIViewController {
             let photoURLJ = results["photo"] as? String
             let bioJ = results["bio"] as? String
             
-            
-            bandNameLabel.text = nameJ
-            self.title = nameJ
+            bandnameLabel.text = name
             
             id = idJ
             name = nameJ
             logoURL = logoURLJ
             photoURL = photoURLJ
             bio = bioJ
-            
-            
             
             //skidanje slike
             
@@ -148,11 +125,12 @@ class BandViewController: UIViewController {
                 getDataFromUrl(url: checkedUrl) { (data, response, error)  in
                     guard let data = data, error == nil else { return }
                     DispatchQueue.main.async() { () -> Void in
-                        self.logoIV.image = UIImage(data: data)
+                        self.image.image = UIImage(data: data)
                     }
                 }
                 
             }
+
             
             
             if let details = results["details"] as? [String:AnyObject]{
@@ -173,18 +151,19 @@ class BandViewController: UIViewController {
                 lyricalThemes = lyricalThemesJ
                 currentlabel = currentLabelJ
                 yearsActive = yearsActiveJ
+
                 
-                yearsActiveLabel.text = yearsActiveJ
-                typeLabel.text = genreJ
+                genreLabel.text = genreJ
                 statusLabel.text = statusJ
+                yearsactiveLabel.text = yearsActiveJ
                 
                 var albums : [Album] = []
                 if let discography = results["discography"] as? [[String : AnyObject]]{
                     for album in discography{
-                        let title = album["title"] as? String
-                        let id = album["id"] as? String
-                        let type = album["type"] as? String
-                        let year = album["year"] as? String
+                        let titleJ = album["title"] as? String
+                        let idJ = album["id"] as? String
+                        let typeJ = album["type"] as? String
+                        let yearJ = album["year"] as? String
                         
                     }
                     
@@ -194,13 +173,29 @@ class BandViewController: UIViewController {
             var artists : [Artist] = []
             if let lineup = results["current_lineup"] as? [[String : AnyObject]]{
                 for artist in lineup{
-                    let name = artist["name"] as? String
-                    let id = artist["id"] as? String
-                    let instrument = artist["instrument"] as? String
-                    let years = artist["years"] as? String
+                    let nameJ = artist["name"] as? String
+                    let idJ = artist["id"] as? String
+                    let instrumentJ = artist["instrument"] as? String
+                    let yearsJ = artist["years"] as? String
                 }
             }
         }
         
     }
+    
+    
+    //get data from url
+    
+    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+        URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            completion(data, response, error)
+            }.resume()
+    }
+    
+    func tapFunction(){
+        print("finish this")
+
+    }
+
 }
