@@ -2,7 +2,7 @@
 //  Band+CoreDataProperties.swift
 //  MetallumApp
 //
-//  Created by Five on 10/04/2017.
+//  Created by Five on 13/04/2017.
 //  Copyright © 2017 Five. All rights reserved.
 //
 
@@ -21,7 +21,7 @@ extension Band {
     @NSManaged public var currentLabel: String?
     @NSManaged public var formedIn: String?
     @NSManaged public var genre: String?
-    @NSManaged public var id: Int32
+    @NSManaged public var id: Int64
     @NSManaged public var location: String?
     @NSManaged public var logoURL: String?
     @NSManaged public var lyricalThemes: String?

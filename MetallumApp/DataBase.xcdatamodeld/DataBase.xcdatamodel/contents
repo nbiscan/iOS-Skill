@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Album" representedClassName="Album" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="band" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Band" inverseName="album" inverseEntity="Band" syncable="YES"/>
     </entity>
     <entity name="Artist" representedClassName="Artist" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="instrument" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="years" optional="YES" attributeType="String" syncable="YES"/>
@@ -20,7 +20,7 @@
         <attribute name="currentLabel" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="formedIn" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="logoURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lyricalThemes" optional="YES" attributeType="String" syncable="YES"/>
@@ -37,8 +37,8 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Album" positionX="-36" positionY="-307" width="128" height="118"/>
-        <element name="Artist" positionX="-27" positionY="-28" width="128" height="118"/>
+        <element name="Album" positionX="-36" positionY="-307" width="128" height="120"/>
+        <element name="Artist" positionX="-27" positionY="-28" width="128" height="120"/>
         <element name="Band" positionX="169" positionY="-274" width="128" height="270"/>
     </elements>
 </model>

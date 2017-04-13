@@ -2,7 +2,7 @@
 //  Artist+CoreDataProperties.swift
 //  MetallumApp
 //
-//  Created by Five on 10/04/2017.
+//  Created by Five on 13/04/2017.
 //  Copyright © 2017 Five. All rights reserved.
 //
 
@@ -16,7 +16,7 @@ extension Artist {
         return NSFetchRequest<Artist>(entityName: "Artist")
     }
 
-    @NSManaged public var id: Int32
+    @NSManaged public var id: Int64
     @NSManaged public var instrument: String?
     @NSManaged public var name: String?
     @NSManaged public var years: String?

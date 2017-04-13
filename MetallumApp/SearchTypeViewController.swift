@@ -86,24 +86,33 @@ class SearchTypeViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            let band = bandResults[indexPath.row]
+            let view = BandPageViewController(id: band.id!)
+            self.navigationController?.pushViewController(view, animated: true)
+            break
+        default:
+            break
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     struct band {
         var name : String?
-        var id : Int32?
+        var id : Int64?
         var genre : String?
         var country : String?
     }
     
     struct album {
         var band_name : String?
-        var band_id : Int32?
+        var band_id : Int64?
         
         var title : String?
         var type : String?
         var release_date : String?
-        var id : Int32?
+        var id : Int64?
     }
     
     

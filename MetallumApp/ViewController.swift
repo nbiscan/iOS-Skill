@@ -72,7 +72,7 @@ class ViewController: UIViewController {
                         let type = album["type"] as? String
                         let year = album["year"] as? String
                        
-                        if let album = dataStore.insertAlbum(id: Int32(id!)!, title: title, year: year, type: type){
+                        if let album = dataStore.insertAlbum(id: Int64(id!)!, title: title, year: year, type: type){
                             albums.append(album)
                         }
                         
@@ -86,13 +86,13 @@ class ViewController: UIViewController {
                         let id = artist["id"] as? String
                         let instrument = artist["instrument"] as? String
                         let years = artist["years"] as? String
-                        if let artist = dataStore.insertArtist(id: Int32(id!)!, name: name, instrument: instrument, years: years){
+                        if let artist = dataStore.insertArtist(id: Int64(id!)!, name: name, instrument: instrument, years: years){
                             artists.append(artist)
                         }
                     }
                 }
                 
-                dataStore.insertBand(id: Int32(id!)!, name: name, location: location, countryOfOrigin: countryOfOrigin, genre: genre, logoURL: logoURL, lyricalThemes: lyricalThemes, photoURL: photoURL, status: status, formedIn: formedIn, currentlabel: currentLabel, yearsActive: yearsActive, bio: bio, artists: artists, albums: albums)
+                dataStore.insertBand(id: Int64(id!)!, name: name, location: location, countryOfOrigin: countryOfOrigin, genre: genre, logoURL: logoURL, lyricalThemes: lyricalThemes, photoURL: photoURL, status: status, formedIn: formedIn, currentlabel: currentLabel, yearsActive: yearsActive, bio: bio, artists: artists, albums: albums)
                 
                 dataStore.printDatabaseStatistics()
                 

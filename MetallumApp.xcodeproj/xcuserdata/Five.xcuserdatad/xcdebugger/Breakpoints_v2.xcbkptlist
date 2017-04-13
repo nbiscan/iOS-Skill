@@ -85,13 +85,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MetallumApp/SearchExtension.swift"
-            timestampString = "513782048.47915"
+            filePath = "MetallumApp/BandPageExtension.swift"
+            timestampString = "513809234.386821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "searchBands(keyword:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "extract_json(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MetallumApp/BandPageExtension.swift"
+            timestampString = "513809310.069749"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "loadReviews(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

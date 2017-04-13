@@ -8,10 +8,10 @@
 
 import UIKit
 
-class FavouriteBandViewController: UIViewController {
-
+class BandViewController: UIViewController {
+    
     var dataStore : DataStore?
-    var band : Band?
+    var band : BandStructure?
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -20,17 +20,15 @@ class FavouriteBandViewController: UIViewController {
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var lyricalThemesLabel: UILabel!
     @IBOutlet weak var yearsActiveLabel: UILabel!
-   
+    
     @IBAction func removeButton(_ sender: UIButton) {
-        dataStore?.deleteBand(band: band!)
         if let navigation = self.navigationController {
-           navigation.popViewController(animated: true)
+            navigation.popViewController(animated: true)
         }
     }
     
-    convenience init(dataStore : DataStore, band : Band){
+    convenience init(band : BandStructure){
         self.init()
-        self.dataStore = dataStore
         self.band = band
     }
     
@@ -46,17 +44,19 @@ class FavouriteBandViewController: UIViewController {
         lyricalThemesLabel.text = band?.lyricalThemes
         yearsActiveLabel.text = band?.yearsActive
         
-        if let checkedUrl = URL(string: (band?.logoURL)!) {
-            
-            DataStore.getDataFromUrl(url: checkedUrl) { (data, response, error)  in
-                guard let data = data, error == nil else { return }
-                DispatchQueue.main.async() { () -> Void in
-                    self.imageView.image = UIImage(data: data)
+        if let logoURL = band?.logoURL {
+            if let checkedUrl = URL(string: logoURL) {
+                
+                DataStore.getDataFromUrl(url: checkedUrl) { (data, response, error)  in
+                    guard let data = data, error == nil else { return }
+                    DispatchQueue.main.async() { () -> Void in
+                        self.imageView.image = UIImage(data: data)
+                    }
                 }
+                
             }
-            
         }
         
     }
-
+    
 }

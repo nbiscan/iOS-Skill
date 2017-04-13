@@ -12,7 +12,7 @@ import CoreData
 extension DataStore {
     
     
-    func insertBand(id : Int32,
+    func insertBand(id : Int64,
                     name : String?,
                     location : String?,
                     countryOfOrigin: String?,
@@ -60,7 +60,7 @@ extension DataStore {
         }
     }
     
-    func insertArtist(id : Int32,
+    func insertArtist(id : Int64,
                       name : String?,
                       instrument : String?,
                       years : String?) -> Artist? {
@@ -84,7 +84,7 @@ extension DataStore {
         return nil
     }
     
-    func insertAlbum( id : Int32,
+    func insertAlbum( id : Int64,
                       title : String?,
                       year : String?,
                       type : String?) -> Album? {
@@ -134,7 +134,7 @@ extension DataStore {
         } catch _ {}
     }
     
-    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+    static func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
         URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             completion(data, response, error)

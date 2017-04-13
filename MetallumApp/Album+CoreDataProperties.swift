@@ -2,7 +2,7 @@
 //  Album+CoreDataProperties.swift
 //  MetallumApp
 //
-//  Created by Five on 10/04/2017.
+//  Created by Five on 13/04/2017.
 //  Copyright © 2017 Five. All rights reserved.
 //
 
@@ -16,7 +16,7 @@ extension Album {
         return NSFetchRequest<Album>(entityName: "Album")
     }
 
-    @NSManaged public var id: Int32
+    @NSManaged public var id: Int64
     @NSManaged public var title: String?
     @NSManaged public var type: String?
     @NSManaged public var year: String?

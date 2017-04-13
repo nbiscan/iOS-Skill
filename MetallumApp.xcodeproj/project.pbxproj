@@ -13,6 +13,9 @@
 		52270FD71E9B8E82004A41D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52270FD61E9B8E82004A41D0 /* Assets.xcassets */; };
 		52270FDA1E9B8E82004A41D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52270FD81E9B8E82004A41D0 /* LaunchScreen.storyboard */; };
 		52270FE41E9B8EC4004A41D0 /* DataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52270FE21E9B8EC4004A41D0 /* DataBase.xcdatamodeld */; };
+		524C64F81EA00CC10010CD1C /* BandPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C64F71EA00CC10010CD1C /* BandPageViewController.swift */; };
+		524C64FA1EA00D710010CD1C /* BandPageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C64F91EA00D710010CD1C /* BandPageExtension.swift */; };
+		524C64FC1EA00DC70010CD1C /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C64FB1EA00DC70010CD1C /* Structures.swift */; };
 		5276F0C51E9BBB4F0038AFF8 /* Album+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276F0BF1E9BBB4F0038AFF8 /* Album+CoreDataClass.swift */; };
 		5276F0C61E9BBB4F0038AFF8 /* Album+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276F0C01E9BBB4F0038AFF8 /* Album+CoreDataProperties.swift */; };
 		5276F0C71E9BBB4F0038AFF8 /* Artist+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276F0C11E9BBB4F0038AFF8 /* Artist+CoreDataClass.swift */; };
@@ -43,6 +46,8 @@
 		52BE70651E9FA6C500A1E11E /* SearchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70641E9FA6C500A1E11E /* SearchExtension.swift */; };
 		52BE706A1EA0023200A1E11E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70681EA0023200A1E11E /* HomeViewController.swift */; };
 		52BE706B1EA0023200A1E11E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE70691EA0023200A1E11E /* HomeViewController.xib */; };
+		52BE707B1EA00B4400A1E11E /* BandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70791EA00B4400A1E11E /* BandViewController.swift */; };
+		52BE707C1EA00B4400A1E11E /* BandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE707A1EA00B4400A1E11E /* BandViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,9 @@
 		52270FD91E9B8E82004A41D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52270FDB1E9B8E82004A41D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52270FE31E9B8EC4004A41D0 /* DataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataBase.xcdatamodel; sourceTree = "<group>"; };
+		524C64F71EA00CC10010CD1C /* BandPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandPageViewController.swift; sourceTree = "<group>"; };
+		524C64F91EA00D710010CD1C /* BandPageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandPageExtension.swift; sourceTree = "<group>"; };
+		524C64FB1EA00DC70010CD1C /* Structures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		5276F0BF1E9BBB4F0038AFF8 /* Album+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Album+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5276F0C01E9BBB4F0038AFF8 /* Album+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Album+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5276F0C11E9BBB4F0038AFF8 /* Artist+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Artist+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -84,6 +92,8 @@
 		52BE70641E9FA6C500A1E11E /* SearchExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchExtension.swift; sourceTree = "<group>"; };
 		52BE70681EA0023200A1E11E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		52BE70691EA0023200A1E11E /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		52BE70791EA00B4400A1E11E /* BandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandViewController.swift; sourceTree = "<group>"; };
+		52BE707A1EA00B4400A1E11E /* BandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BandViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,7 @@
 		52270FCE1E9B8E82004A41D0 /* MetallumApp */ = {
 			isa = PBXGroup;
 			children = (
+				52BE70721EA0081D00A1E11E /* DefaultViews */,
 				52BE706D1EA0024300A1E11E /* Home */,
 				52BE70671EA001D900A1E11E /* Search */,
 				5276F0EE1E9CCA160038AFF8 /* Favourites */,
@@ -123,6 +134,7 @@
 				52270FE11E9B8EA9004A41D0 /* CoreData */,
 				52270FCF1E9B8E82004A41D0 /* AppDelegate.swift */,
 				52270FD11E9B8E82004A41D0 /* ViewController.swift */,
+				524C64FB1EA00DC70010CD1C /* Structures.swift */,
 				52270FD31E9B8E82004A41D0 /* Main.storyboard */,
 				52270FD61E9B8E82004A41D0 /* Assets.xcassets */,
 				52270FD81E9B8E82004A41D0 /* LaunchScreen.storyboard */,
@@ -197,6 +209,17 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
+		52BE70721EA0081D00A1E11E /* DefaultViews */ = {
+			isa = PBXGroup;
+			children = (
+				524C64F71EA00CC10010CD1C /* BandPageViewController.swift */,
+				524C64F91EA00D710010CD1C /* BandPageExtension.swift */,
+				52BE70791EA00B4400A1E11E /* BandViewController.swift */,
+				52BE707A1EA00B4400A1E11E /* BandViewController.xib */,
+			);
+			name = DefaultViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,6 +287,7 @@
 				5276F10A1E9D1E9C0038AFF8 /* PageViewController.xib in Resources */,
 				5276F0FC1E9CE5310038AFF8 /* FavouriteBandViewController.xib in Resources */,
 				52BE705B1E9E1DE400A1E11E /* BandAlbumsViewController.xib in Resources */,
+				52BE707C1EA00B4400A1E11E /* BandViewController.xib in Resources */,
 				52BE705F1E9F641900A1E11E /* NoImageCellTableViewCell.xib in Resources */,
 				5276F1021E9D0BE70038AFF8 /* BandBioViewController.xib in Resources */,
 				52BE70631E9F9C9000A1E11E /* SearchTypeViewController.xib in Resources */,
@@ -281,10 +305,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				52270FD21E9B8E82004A41D0 /* ViewController.swift in Sources */,
+				524C64FC1EA00DC70010CD1C /* Structures.swift in Sources */,
 				52BE70621E9F9C9000A1E11E /* SearchTypeViewController.swift in Sources */,
 				5276F1011E9D0BE70038AFF8 /* BandBioViewController.swift in Sources */,
 				5276F0C51E9BBB4F0038AFF8 /* Album+CoreDataClass.swift in Sources */,
 				52BE705A1E9E1DE400A1E11E /* BandAlbumsViewController.swift in Sources */,
+				524C64FA1EA00D710010CD1C /* BandPageExtension.swift in Sources */,
 				5276F0C71E9BBB4F0038AFF8 /* Artist+CoreDataClass.swift in Sources */,
 				52BE706A1EA0023200A1E11E /* HomeViewController.swift in Sources */,
 				5276F0CD1E9BBCF60038AFF8 /* DataStore.swift in Sources */,
@@ -295,11 +321,13 @@
 				5276F1091E9D1E9C0038AFF8 /* PageViewController.swift in Sources */,
 				5276F0CA1E9BBB4F0038AFF8 /* Band+CoreDataProperties.swift in Sources */,
 				5276F0C61E9BBB4F0038AFF8 /* Album+CoreDataProperties.swift in Sources */,
+				52BE707B1EA00B4400A1E11E /* BandViewController.swift in Sources */,
 				5276F0F41E9CCB900038AFF8 /* FavouriteBandsNSFetch.swift in Sources */,
 				52270FE41E9B8EC4004A41D0 /* DataBase.xcdatamodeld in Sources */,
 				5276F0F11E9CCA530038AFF8 /* FavouriteBandsViewController.swift in Sources */,
 				5276F0C81E9BBB4F0038AFF8 /* Artist+CoreDataProperties.swift in Sources */,
 				5276F0CF1E9BC1650038AFF8 /* DataStoreBandExtension.swift in Sources */,
+				524C64F81EA00CC10010CD1C /* BandPageViewController.swift in Sources */,
 				52BE70561E9E112300A1E11E /* BandArtistsViewController.swift in Sources */,
 				5276F0FB1E9CE5310038AFF8 /* FavouriteBandViewController.swift in Sources */,
 				52BE70651E9FA6C500A1E11E /* SearchExtension.swift in Sources */,

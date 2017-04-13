@@ -38,7 +38,7 @@ extension SearchTypeViewController {
             if let results = search["search_results"] as? [[String: AnyObject]]{
                 for result in results {
                     var b = band()
-                    b.id = Int32((result["id"] as? String)!)
+                    b.id = Int64((result["id"] as? String)!)
                     b.name = result["name"] as? String
                     b.country = result["country"] as? String
                     b.genre = result["genre"] as? String
@@ -84,11 +84,11 @@ extension SearchTypeViewController {
                     var a = album()
                     
                     if let band = result["band"] as? [String:AnyObject]{
-                        a.band_id = Int32((band["id"] as? String)!)
+                        a.band_id = Int64((band["id"] as? String)!)
                         a.band_name = band["name"] as? String
                         
                         if let album = result["album"] as? [String:AnyObject] {
-                            a.id = Int32((album["id"] as? String)!)
+                            a.id = Int64((album["id"] as? String)!)
                             a.title = album["title"] as? String
                             
                             albumResults.append(a)
