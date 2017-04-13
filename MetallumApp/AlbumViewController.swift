@@ -32,20 +32,16 @@ class AlbumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadUpcomingAlbums()
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(AlbumViewController.tapFunction))
         let tapHome = UITapGestureRecognizer(target: self, action: #selector(AlbumViewController.tapHome))
-
-        
 
         bandLabel.isUserInteractionEnabled = true
         bandLabel.addGestureRecognizer(tap)
         
         homeBtn.addGestureRecognizer(tapHome)
-        
-        loadUpcomingAlbums()
-        
 
-        
     }
     
     func tapHome(){
@@ -86,6 +82,23 @@ class AlbumViewController: UIViewController {
                 let format = first["format"] as? String
                 
                 
+                if let first1 = a["band"] as? [String:AnyObject]{
+                    let bandName = first1["band_name"] as? String
+                    let bandId = first1["id"] as? String
+                    
+                    DispatchQueue.main.async(execute: {
+                        self.bandID = bandId
+                        self.actualBand = band(id: Int32(bandId!), name: bandName)
+                        self.actualAlbum = album(id: Int32(id!), type:type, title: title, albumCover: albumCover, format: format)
+                        self.title = title
+                        
+                        self.bandLabel.text = bandName
+                        self.typeLabel.text = type
+                        self.titleLabel.text = title
+                        self.formatLabel.text = format
+                    })
+                }
+                
                 //skidanje slike
                 
                 if let checkedUrl = URL(string: (albumCover)!) {
@@ -99,35 +112,15 @@ class AlbumViewController: UIViewController {
                     
                 }
                 
-                typeLabel.text = type
-                titleLabel.text = title
-                self.title = title
-                formatLabel.text = format
-                
-                actualAlbum = album(id: Int32(id!), type:type, title: title, albumCover: albumCover, format: format)
-                
-    
-
                 
             }
             
-            if let first1 = a["band"] as? [String:AnyObject]{
-                let bandName = first1["band_name"] as? String
-                let bandId = first1["id"] as? String
-                
-                bandLabel.text = bandName
-                bandLabel.textColor = UIColor.purple
-                
-                actualBand = band(id: Int32(bandId!), name: bandName)
-                bandID = bandId
-
-            }
+            
 
         }
         
 
     }
-    
     
     struct album {
         var id:Int32?

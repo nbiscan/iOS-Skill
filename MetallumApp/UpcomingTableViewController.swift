@@ -31,7 +31,6 @@ class UpcomingTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
     
@@ -46,13 +45,11 @@ class UpcomingTableViewController: UITableViewController {
         cell.backgroundColor = UIColor.black
         cell.textLabel?.textColor = UIColor.red
         
-        if let name = actualAlbum[indexPath.row].name{
+        if let name = actualAlbum[indexPath.row].name {
             cell.textLabel?.text = "\(name) - \(actualAlbum[indexPath.row].title!)"
         } else{
-            cell.textLabel?.text = "unknown"
+            cell.textLabel?.text = "N/A"
         }
-        
-        
         
         return cell
         

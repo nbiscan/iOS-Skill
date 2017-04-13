@@ -76,7 +76,7 @@ class ArtistsTableViewController: UITableViewController {
             }
         }
         
-        self.tableView.reloadData()
+        DispatchQueue.main.async(execute: {self.tableView.reloadData()})
     }
     
     
