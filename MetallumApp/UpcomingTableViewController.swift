@@ -19,7 +19,7 @@ class UpcomingTableViewController: UITableViewController {
         loadUpcomingAlbums()
         
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+        tableView.register(UINib(nibName: "NoImageCellTableViewCell", bundle:nil), forCellReuseIdentifier: "reuseIdentifier")
         title = "Upcoming albums"
         
         tableView.backgroundColor = UIColor.black
@@ -40,13 +40,11 @@ class UpcomingTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        
-        cell.backgroundColor = UIColor.black
-        cell.textLabel?.textColor = UIColor.red
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! NoImageCellTableViewCell
         
         if let name = actualAlbum[indexPath.row].name {
-            cell.textLabel?.text = "\(name) - \(actualAlbum[indexPath.row].title!)"
+            cell.textLabel?.text = name
+            cell.detailTextLabel?.text = actualAlbum[indexPath.row].title
         } else{
             cell.textLabel?.text = "N/A"
         }

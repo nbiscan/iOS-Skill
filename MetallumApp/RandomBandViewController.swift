@@ -15,6 +15,10 @@ class RandomBandViewController: UIViewController {
     @IBOutlet weak var yearsactiveLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var saveFavoriteBtn: UIButton!
+    @IBAction func refesh(_ sender: UIButton) {
+        loadRandomBand()
+        
+    }
     
     var artistId:String?
     
@@ -33,24 +37,24 @@ class RandomBandViewController: UIViewController {
     var bio : String?
     
     let datastore = DataStore()
-
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadRandomBand()
-
+        
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(RandomBandViewController.tapFunction))
         let fav = UITapGestureRecognizer(target: self, action: #selector(RandomBandViewController.favFunc))
         
-
+        
         bandnameLabel.isUserInteractionEnabled = true
         bandnameLabel.addGestureRecognizer(tap)
         
         saveFavoriteBtn.addGestureRecognizer(fav)
-                
+        
         
     }
     
@@ -73,7 +77,7 @@ class RandomBandViewController: UIViewController {
         print("saved to DB")
         
     }
-
+    
     
     
     func loadRandomBand(){
@@ -97,7 +101,7 @@ class RandomBandViewController: UIViewController {
         task.resume()
         
     }
-
+    
     
     private func extract_json(_ data : Data){
         let json = try? JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
@@ -110,17 +114,21 @@ class RandomBandViewController: UIViewController {
             let photoURLJ = results["photo"] as? String
             let bioJ = results["bio"] as? String
             
-            bandnameLabel.text = name
             
-            id = idJ
-            name = nameJ
-            logoURL = logoURLJ
-            photoURL = photoURLJ
-            bio = bioJ
+            DispatchQueue.main.async{
+                self.id = idJ
+                self.name = nameJ
+                self.logoURL = logoURLJ
+                self.photoURL = photoURLJ
+                self.bio = bioJ
+                self.bandnameLabel.text = nameJ
+            }
+            
+            
             
             //skidanje slike
             
-            if let checkedUrl = URL(string: (logoURL)!) {
+            if let checkedUrl = URL(string: (logoURLJ)!) {
                 
                 getDataFromUrl(url: checkedUrl) { (data, response, error)  in
                     guard let data = data, error == nil else { return }
@@ -130,7 +138,7 @@ class RandomBandViewController: UIViewController {
                 }
                 
             }
-
+            
             
             
             if let details = results["details"] as? [String:AnyObject]{
@@ -143,19 +151,22 @@ class RandomBandViewController: UIViewController {
                 let currentLabelJ = details["current label"] as? String
                 let yearsActiveJ = details["years active"] as? String
                 
-                location = locationJ
-                countryOfOrigin = countryOfOriginJ
-                status = statusJ
-                formedIn = formedInJ
-                genre = genreJ
-                lyricalThemes = lyricalThemesJ
-                currentlabel = currentLabelJ
-                yearsActive = yearsActiveJ
-
-                
-                genreLabel.text = genreJ
-                statusLabel.text = statusJ
-                yearsactiveLabel.text = yearsActiveJ
+                DispatchQueue.main.async
+                    {
+                        self.location = locationJ
+                        self.countryOfOrigin = countryOfOriginJ
+                        self.status = statusJ
+                        self.formedIn = formedInJ
+                        self.genre = genreJ
+                        self.lyricalThemes = lyricalThemesJ
+                        self.currentlabel = currentLabelJ
+                        self.yearsActive = yearsActiveJ
+                        
+                        
+                        self.genreLabel.text = genreJ
+                        self.statusLabel.text = statusJ
+                        self.yearsactiveLabel.text = yearsActiveJ
+                }
                 
                 var albums : [Album] = []
                 if let discography = results["discography"] as? [[String : AnyObject]]{
@@ -169,6 +180,11 @@ class RandomBandViewController: UIViewController {
                     
                 }
             }
+            
+            
+            
+            
+            
             
             var artists : [Artist] = []
             if let lineup = results["current_lineup"] as? [[String : AnyObject]]{
@@ -195,7 +211,7 @@ class RandomBandViewController: UIViewController {
     
     func tapFunction(){
         print("finish this")
-
+        
     }
-
+    
 }

@@ -41,6 +41,7 @@ class AlbumViewController: UIViewController {
         bandLabel.addGestureRecognizer(tap)
         
         homeBtn.addGestureRecognizer(tapHome)
+        
 
     }
     
@@ -93,6 +94,7 @@ class AlbumViewController: UIViewController {
                         self.title = title
                         
                         self.bandLabel.text = bandName
+                        self.bandLabel.textColor = UIColor.purple
                         self.typeLabel.text = type
                         self.titleLabel.text = title
                         self.formatLabel.text = format
@@ -145,7 +147,7 @@ class AlbumViewController: UIViewController {
     }
     
     func tapFunction(sender:UITapGestureRecognizer) {
-        let thirdViewController = ArtistsTableViewController(id: bandID!)
+        let thirdViewController = BandPageViewController(id: bandID!, random:false)
         navigationController?.pushViewController(thirdViewController, animated: true)
     }
 

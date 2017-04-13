@@ -63,9 +63,9 @@ class ViewController: UIViewController {
                 let currentLabel = details["current label"] as? String
                 let yearsActive = details["years active"] as? String
                 
-                dataStore.insertBand(id: Int32(id!)!, name: name!, location: location!, countryOfOrigin: countryOfOrigin!, genre: genre!, logoURL: logoURL!, lyricalThemes: lyricalThemes!, photoURL: photoURL!, status: status!, formedIn: formedIn!, currentlabel: currentLabel!, yearsActive: yearsActive!, bio: bio!)
-                
-                dataStore.printDatabaseStatistics()
+//                dataStore.insertBand(id: Int32(id!)!, name: name!, location: location!, countryOfOrigin: countryOfOrigin!, genre: genre!, logoURL: logoURL!, lyricalThemes: lyricalThemes!, photoURL: photoURL!, status: status!, formedIn: formedIn!, currentlabel: currentLabel!, yearsActive: yearsActive!, bio: bio!)
+//                
+//                dataStore.printDatabaseStatistics()
             }
             
             

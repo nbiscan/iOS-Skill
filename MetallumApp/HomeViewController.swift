@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
     }
     
     func tapFunctionRandom(){
-        let newViewController = RandomBandViewController()
+        let newViewController = BandPageViewController(id: "0",random: true)
         navigationController?.pushViewController(newViewController, animated: true)
     }
 
