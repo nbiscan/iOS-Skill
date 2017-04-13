@@ -30,7 +30,7 @@ class BandArtistsViewController: UIViewController, UITableViewDelegate, UITableV
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: cell)
+        tableView.register(UINib(nibName: "NoImageCellTableViewCell", bundle: nil), forCellReuseIdentifier: cell)
         
     }
     
@@ -41,12 +41,12 @@ class BandArtistsViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.cell, for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.cell, for: indexPath) as! NoImageCellTableViewCell
         
         let artist = artists[indexPath.row]
         
-        cell.mainLabel?.text = artist.name?.replacingOccurrences(of: "&quot;", with: "")
-        cell.label?.text = artist.instrument?.replacingOccurrences(of: "&nbsp;", with: "")
+        cell.textLabel?.text = artist.name?.replacingOccurrences(of: "&quot;", with: "")
+        cell.detailTextLabel?.text = artist.instrument?.replacingOccurrences(of: "&nbsp;", with: "")
         
         return cell
         
@@ -54,6 +54,7 @@ class BandArtistsViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // TODO NAKON ARTIST VIEW - a
+        self.tableView.deselectRow(at: indexPath, animated: false)
     }
 
     

@@ -36,6 +36,8 @@
 		52BE70571E9E112300A1E11E /* BandArtistsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE70551E9E112300A1E11E /* BandArtistsViewController.xib */; };
 		52BE705A1E9E1DE400A1E11E /* BandAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70581E9E1DE400A1E11E /* BandAlbumsViewController.swift */; };
 		52BE705B1E9E1DE400A1E11E /* BandAlbumsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE70591E9E1DE400A1E11E /* BandAlbumsViewController.xib */; };
+		52BE705E1E9F641900A1E11E /* NoImageCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE705C1E9F641900A1E11E /* NoImageCellTableViewCell.swift */; };
+		52BE705F1E9F641900A1E11E /* NoImageCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE705D1E9F641900A1E11E /* NoImageCellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		52BE70551E9E112300A1E11E /* BandArtistsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BandArtistsViewController.xib; sourceTree = "<group>"; };
 		52BE70581E9E1DE400A1E11E /* BandAlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandAlbumsViewController.swift; sourceTree = "<group>"; };
 		52BE70591E9E1DE400A1E11E /* BandAlbumsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BandAlbumsViewController.xib; sourceTree = "<group>"; };
+		52BE705C1E9F641900A1E11E /* NoImageCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoImageCellTableViewCell.swift; sourceTree = "<group>"; };
+		52BE705D1E9F641900A1E11E /* NoImageCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoImageCellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 				52BE70551E9E112300A1E11E /* BandArtistsViewController.xib */,
 				52BE70581E9E1DE400A1E11E /* BandAlbumsViewController.swift */,
 				52BE70591E9E1DE400A1E11E /* BandAlbumsViewController.xib */,
+				52BE705C1E9F641900A1E11E /* NoImageCellTableViewCell.swift */,
+				52BE705D1E9F641900A1E11E /* NoImageCellTableViewCell.xib */,
 			);
 			name = Favourites;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 				5276F10A1E9D1E9C0038AFF8 /* PageViewController.xib in Resources */,
 				5276F0FC1E9CE5310038AFF8 /* FavouriteBandViewController.xib in Resources */,
 				52BE705B1E9E1DE400A1E11E /* BandAlbumsViewController.xib in Resources */,
+				52BE705F1E9F641900A1E11E /* NoImageCellTableViewCell.xib in Resources */,
 				5276F1021E9D0BE70038AFF8 /* BandBioViewController.xib in Resources */,
 				5276F0F21E9CCA530038AFF8 /* FavouriteBandsViewController.xib in Resources */,
 				52BE70571E9E112300A1E11E /* BandArtistsViewController.xib in Resources */,
@@ -248,6 +255,7 @@
 				5276F0CD1E9BBCF60038AFF8 /* DataStore.swift in Sources */,
 				52270FD01E9B8E82004A41D0 /* AppDelegate.swift in Sources */,
 				5276F0F71E9CD07F0038AFF8 /* TableViewCell.swift in Sources */,
+				52BE705E1E9F641900A1E11E /* NoImageCellTableViewCell.swift in Sources */,
 				5276F0C91E9BBB4F0038AFF8 /* Band+CoreDataClass.swift in Sources */,
 				5276F1091E9D1E9C0038AFF8 /* PageViewController.swift in Sources */,
 				5276F0CA1E9BBB4F0038AFF8 /* Band+CoreDataProperties.swift in Sources */,

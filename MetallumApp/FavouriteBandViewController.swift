@@ -21,6 +21,13 @@ class FavouriteBandViewController: UIViewController {
     @IBOutlet weak var lyricalThemesLabel: UILabel!
     @IBOutlet weak var yearsActiveLabel: UILabel!
    
+    @IBAction func removeButton(_ sender: UIButton) {
+        dataStore?.deleteBand(band: band!)
+        if let navigation = self.navigationController {
+           navigation.popViewController(animated: true)
+        }
+    }
+    
     convenience init(dataStore : DataStore, band : Band){
         self.init()
         self.dataStore = dataStore

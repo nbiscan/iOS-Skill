@@ -28,7 +28,7 @@ class BandAlbumsViewController: UIViewController, UITableViewDataSource, UITable
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: c)
+        tableView.register(UINib(nibName: "NoImageCellTableViewCell", bundle: nil), forCellReuseIdentifier: c)
     }
     
     
@@ -37,18 +37,19 @@ class BandAlbumsViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.c, for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.c, for: indexPath) as! NoImageCellTableViewCell
         
         let album = albums[indexPath.row]
         
-        cell.mainLabel?.text = album.title
-        cell.label?.text = album.year
+        cell.textLabel?.text = album.title
+        cell.detailTextLabel?.text = album.year
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // DOTO AFTER IMPLEMENTING ALBUM VIEW
+        self.tableView.deselectRow(at: indexPath, animated: false)
     }
 
     
