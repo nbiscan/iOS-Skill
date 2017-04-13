@@ -49,6 +49,7 @@ extension SearchTypeViewController {
         
         DispatchQueue.main.async(execute: {
             self.tableView.reloadData()
+            self.tableView.setContentOffset(.zero, animated: true)
         })
         
     }
@@ -101,6 +102,7 @@ extension SearchTypeViewController {
         
         DispatchQueue.main.async(execute: {
             self.tableView.reloadData()
+            self.tableView.setContentOffset(.zero, animated: true)
         })
         
     }

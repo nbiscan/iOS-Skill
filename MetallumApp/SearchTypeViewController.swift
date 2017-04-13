@@ -49,11 +49,18 @@ class SearchTypeViewController: UIViewController, UITableViewDelegate, UITableVi
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        
+     
         tableView.register(UINib(nibName: "NoImageCellTableViewCell", bundle: nil), forCellReuseIdentifier: identification)
+        
+        self.segmentedControl.addTarget(self, action: #selector(detectChange), for: .valueChanged)
         
     }
     
+    func detectChange(){
+        self.bandResults.removeAll()
+        self.albumResults.removeAll()
+        tableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch self.segmentedControl.selectedSegmentIndex {
