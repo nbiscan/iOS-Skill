@@ -63,6 +63,7 @@ class ViewController: UIViewController {
                 let currentLabel = details["current label"] as? String
                 let yearsActive = details["years active"] as? String
                 
+                // [artistStruct]
                 var albums : [Album] = []
                 if let discography = results["discography"] as? [[String : AnyObject]]{
                     for album in discography{
