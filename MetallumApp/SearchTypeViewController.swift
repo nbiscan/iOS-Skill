@@ -91,7 +91,7 @@ class SearchTypeViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TO DO
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     struct band {
