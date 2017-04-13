@@ -35,13 +35,17 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
         self.edgesForExtendedLayout = []
         
         self.loadBands()
-                
         
-        views.append(BandViewController(band:band!, artists:artists, albums:albums))
-        views.append(ArtistsTableViewController(band:band!, artists:artists, albums:albums))
-        views.append(BandBioViewController(band:band!, artists:artists, albums:albums))
+        print(band?.countryOfOrigin)
+        //
+        //        views.append(BandViewController(band:band!, artists:artists, albums:albums))
+        //        views.append(ArtistsTableViewController(band:band!, artists:artists, albums:albums))
+        //        views.append(BandBioViewController(band:band!, artists:artists, albums:albums))
+        //
+        //
+        //        self.setViewControllers([views[0]], direction: .forward, animated: true, completion: nil)
         
-        self.setViewControllers([views[0]], direction: .forward, animated: true, completion: nil)
+        
         
     }
     
@@ -92,7 +96,11 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
     
     
     func loadBands(){
-        let urlString = "http://em.wemakesites.net/band/\(id!)?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
+        var urlString = ""
+        if id == "0"{
+             urlString = "http://em.wemakesites.net/band/random?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
+        } else{
+             urlString = "http://em.wemakesites.net/band/\(id!)?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"}
         guard let url = URL(string: urlString) else { return }
         let session = URLSession.shared
         
@@ -110,6 +118,9 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
             self.extract_json(data)
         }
         task.resume()
+        
+        
+        
         
     }
     
@@ -135,22 +146,22 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
                 let currentLabel = details["current label"] as? String
                 let yearsActive = details["years active"] as? String
                 
-                DispatchQueue.main.async{
-                    self.band?.id = Int32(id!)!
-                    self.band?.name = name
-                    self.band?.logoURL = logoURL
-                    self.band?.photoURL = photoURL
-                    self.band?.bio = bio
-                    
-                    self.band?.location = location
-                    self.band?.countryOfOrigin = countryOfOrigin
-                    self.band?.status = status
-                    self.band?.formedIn = formedIn
-                    self.band?.genre = genre
-                    self.band?.lyricalThemes = lyricalThemes
-                    self.band?.currentLabel = currentLabel
-                    self.band?.yearsActive = yearsActive
-                }
+                //  DispatchQueue.main.async{
+                self.band?.id = Int32(id!)!
+                self.band?.name = name
+                self.band?.logoURL = logoURL
+                self.band?.photoURL = photoURL
+                self.band?.bio = bio
+                
+                self.band?.location = location
+                self.band?.countryOfOrigin = countryOfOrigin
+                self.band?.status = status
+                self.band?.formedIn = formedIn
+                self.band?.genre = genre
+                self.band?.lyricalThemes = lyricalThemes
+                self.band?.currentLabel = currentLabel
+                self.band?.yearsActive = yearsActive
+                //      }
                 
                 
                 var albumsDB : [Album] = []
