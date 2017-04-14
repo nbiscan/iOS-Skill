@@ -140,7 +140,7 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
                 let yearsActive = details["years active"] as? String
                 
                 DispatchQueue.main.async{
-                    self.band.id = Int32(self.id!)!
+                    self.band.id = Int64(self.id!)!
                     self.band.name = name
                     self.band.logoURL = logoURL
                     self.band.photoURL = photoURL
@@ -169,7 +169,7 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
                         
                         var tmp = albumStruct()
                         tmp.title = title
-                        tmp.id = Int32(id!)!
+                        tmp.id = Int64(id!)!
                         tmp.type = type
                         tmp.year = year
                         
@@ -188,7 +188,7 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
                         
                         var tmp = artistStruct()
                         tmp.name = name
-                        tmp.id = Int32(id!)!
+                        tmp.id = Int64(id!)!
                         tmp.instrument = instrument
                         tmp.years = years
                         

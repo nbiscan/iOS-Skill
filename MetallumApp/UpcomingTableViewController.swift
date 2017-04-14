@@ -99,7 +99,7 @@ class UpcomingTableViewController: UITableViewController {
                             let title = albums["title"] as? String
                             let id = albums["id"] as? String
                             
-                            let tmpAlbum = upcomingAlbum(id: Int32(id!), name: name, title:title)
+                            let tmpAlbum = upcomingAlbum(id: Int64(id!), name: name, title:title)
                             actualAlbum.append(tmpAlbum)
                             
                         }
@@ -123,7 +123,7 @@ class UpcomingTableViewController: UITableViewController {
     
     
     struct upcomingAlbum {
-        var id:Int32?
+        var id:Int64?
         var name:String?
         var title:String?
         

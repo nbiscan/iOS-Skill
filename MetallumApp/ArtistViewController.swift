@@ -27,11 +27,8 @@ class ArtistViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-
-        
-        
+ 
+        print(id!)
         loadArtist()
         
     }
@@ -67,6 +64,7 @@ class ArtistViewController: UIViewController {
             let id = data["id"] as? String
             
             nameLabel.text = name
+            print(name!)
             
             if let details = data["details"] as? [String:AnyObject]{
                 let photo = details["photo"] as? String

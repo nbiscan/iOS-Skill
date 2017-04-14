@@ -25,20 +25,20 @@ class BandViewController: UIViewController {
         let dataStore = DataStore()
         var atistsA : [Artist] = []
         for a in artists{
-            if let artist = dataStore.insertArtist(id: a.id!, name: a.name, instrument: a.instrument, years: a.years){
+            if let artist = dataStore.insertArtist(id: Int32(a.id!), name: a.name, instrument: a.instrument, years: a.years){
                 atistsA.append(artist)
             }
         }
         
         var albumsA : [Album] = []
         for a in albums{
-            if let artist = dataStore.insertAlbum(id: a.id!, title: a.title, year: a.year, type: a.type){
+            if let artist = dataStore.insertAlbum(id: Int32(a.id!), title: a.title, year: a.year, type: a.type){
                 albumsA.append(artist)
             }
         }
         
         
-        dataStore.insertBand(id: (band?.id)!, name: (band?.name)!, location: (band?.location)!, countryOfOrigin: (band?.countryOfOrigin)!, genre: (band?.genre)!, logoURL: (band?.logoURL)!, lyricalThemes: (band?.lyricalThemes)!, photoURL: (band?.photoURL)!, status: (band?.status)!, formedIn: (band?.formedIn)!, currentlabel: (band?.currentLabel)!, yearsActive: (band?.yearsActive)!, bio: (band?.bio!)!, artists: atistsA, albums: albumsA)
+        dataStore.insertBand(id: Int32((band?.id)!), name: (band?.name)!, location: (band?.location)!, countryOfOrigin: (band?.countryOfOrigin)!, genre: (band?.genre)!, logoURL: (band?.logoURL)!, lyricalThemes: (band?.lyricalThemes)!, photoURL: (band?.photoURL)!, status: (band?.status)!, formedIn: (band?.formedIn)!, currentlabel: (band?.currentLabel)!, yearsActive: (band?.yearsActive)!, bio: (band?.bio!)!, artists: atistsA, albums: albumsA)
     }
     
     @IBAction func home(_ sender: UIButton) {

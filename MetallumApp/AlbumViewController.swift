@@ -26,9 +26,9 @@ class AlbumViewController: UIViewController {
     var actualBand:band?
     
     var bandID:String?
-    var albumid:Int32?
+    var albumid:Int64?
     
-    convenience init(albumid: Int32){
+    convenience init(albumid: Int64){
         self.init()
         self.albumid = albumid
     }
@@ -88,8 +88,8 @@ class AlbumViewController: UIViewController {
                     
                     DispatchQueue.main.async(execute: {
                         self.bandID = bandId
-                        self.actualBand = band(id: Int32(bandId!), name: bandName)
-                        self.actualAlbum = album(id: Int32(id!), type:type, title: title, albumCover: albumCover, format: format)
+                        self.actualBand = band(id: Int64(bandId!), name: bandName)
+                        self.actualAlbum = album(id: Int64(id!), type:type, title: title, albumCover: albumCover, format: format)
                         self.title = title
                         
                         self.bandLabel.text = bandName
@@ -124,7 +124,7 @@ class AlbumViewController: UIViewController {
     }
     
     struct album {
-        var id:Int32?
+        var id:Int64?
         var type:String?
         var title:String?
         var albumCover:String?
@@ -132,7 +132,7 @@ class AlbumViewController: UIViewController {
     }
     
     struct band{
-        var id:Int32?
+        var id:Int64?
         var name:String?
     }
     

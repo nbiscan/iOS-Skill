@@ -17,7 +17,7 @@ struct bandStruct{
     public var currentLabel: String?
     public var formedIn: String?
     public var genre: String?
-    public var id: Int32?
+    public var id: Int64?
     public var location: String?
     public var logoURL: String?
     public var lyricalThemes: String?
@@ -32,7 +32,7 @@ struct bandStruct{
 
 struct albumStruct {
     
-    public var id: Int32?
+    public var id: Int64?
     public var title: String?
     public var type: String?
     public var year: String?
@@ -41,7 +41,7 @@ struct albumStruct {
 
 struct artistStruct {
     
-     public var id: Int32?
+     public var id: Int64?
      public var instrument: String?
      public var name: String?
      public var years: String?
