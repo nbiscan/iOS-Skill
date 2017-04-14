@@ -12,7 +12,7 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
     
     var artists:[artistStruct]=[]
     var albums:[albumStruct] = []
-    var band:bandStruct?
+    var band = bandStruct()
     
     var id:String?
     var random:Bool?
@@ -90,7 +90,7 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
     
     func loadBands(){
         var urlString = ""
-        if id == "0"{
+        if random == true{
             urlString = "http://em.wemakesites.net/band/random?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
         } else{
             urlString = "http://em.wemakesites.net/band/\(id!)?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"}
@@ -123,7 +123,7 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
         //  let dataStore = DataStore()
         if let results = json?["data"] as? [String: AnyObject] {
             
-            let id = results["id"] as? String
+       //     let id = results["id"] as? String
             let name = results["band_name"] as? String
             let logoURL = results["logo"] as? String
             let photoURL = results["photo"] as? String
@@ -139,27 +139,28 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
                 let currentLabel = details["current label"] as? String
                 let yearsActive = details["years active"] as? String
                 
-                  DispatchQueue.main.async{
-                self.band?.id = Int32(id!)!
-                print(self.band?.id!)
-                self.band?.name = name
-                self.band?.logoURL = logoURL
-                self.band?.photoURL = photoURL
-                self.band?.bio = bio
+                DispatchQueue.main.async{
+                    self.band.id = Int32(self.id!)!
+                    self.band.name = name
+                    self.band.logoURL = logoURL
+                    self.band.photoURL = photoURL
+                    self.band.bio = bio
+                    
+                    print(self.band.name!)
+                    
+                    self.band.location = location
+                    self.band.countryOfOrigin = countryOfOrigin
+                    self.band.status = status
+                    self.band.formedIn = formedIn
+                    self.band.genre = genre
+                    self.band.lyricalThemes = lyricalThemes
+                    self.band.currentLabel = currentLabel
+                    self.band.yearsActive = yearsActive
+                }
                 
-                self.band?.location = location
-                self.band?.countryOfOrigin = countryOfOrigin
-                self.band?.status = status
-                self.band?.formedIn = formedIn
-                self.band?.genre = genre
-                self.band?.lyricalThemes = lyricalThemes
-                self.band?.currentLabel = currentLabel
-                self.band?.yearsActive = yearsActive
-                      }
                 
                 
-                
-        //        var albumsDB : [Album] = []
+                //        var albumsDB : [Album] = []
                 if let discography = results["discography"] as? [[String : AnyObject]]{
                     for album in discography{
                         let title = album["title"] as? String
@@ -178,7 +179,7 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
                     }
                 }
                 
-            //    var artistsDB : [artistStruct] = []
+                //    var artistsDB : [artistStruct] = []
                 if let lineup = results["current_lineup"] as? [[String : AnyObject]]{
                     for artist in lineup{
                         let name = artist["name"] as? String
@@ -198,13 +199,13 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
             }
         }
         
-        views.append(BandViewController(band:band!, artists:artists, albums:albums))
-        views.append(ArtistsTableViewController(band:band!, artists:artists, albums:albums))
-        views.append(BandBioViewController(band:band!, artists:artists, albums:albums))
+        views.append(BandViewController(band:band, artists:artists, albums:albums))
+        views.append(ArtistsTableViewController(band:band, artists:artists, albums:albums))
+        views.append(BandBioViewController(band:band, artists:artists, albums:albums))
         
         
         self.setViewControllers([views[0]], direction: .forward, animated: true, completion: nil)
-
+        
     }
     
     

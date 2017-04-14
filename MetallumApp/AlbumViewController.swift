@@ -47,9 +47,6 @@ class AlbumViewController: UIViewController {
 
     }
     
-    func tapHome(){
-        _ = navigationController?.popToRootViewController(animated: true)
-    }
     
     func loadUpcomingAlbums(){
         let urlString = "http://em.wemakesites.net/album/\(albumid!)?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
