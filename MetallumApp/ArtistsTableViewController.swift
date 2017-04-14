@@ -60,8 +60,7 @@ class ArtistsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let id="tmp"
-        let secondVC = ArtistViewController(id:id)
+        let secondVC = ArtistViewController(artist: artists[indexPath.row])
         navigationController?.pushViewController(secondVC, animated: true)
     }
     
