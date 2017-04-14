@@ -15,7 +15,11 @@ class AlbumViewController: UIViewController {
     @IBOutlet weak var formatLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var bandLabel: UILabel!
-    @IBOutlet weak var homeBtn: UIButton!
+    @IBAction func homeBtn(_ sender: UIButton) {
+        _ = navigationController?.popToRootViewController(animated: true)
+
+        
+    }
     
     
     var actualAlbum:album?
@@ -35,12 +39,10 @@ class AlbumViewController: UIViewController {
         loadUpcomingAlbums()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(AlbumViewController.tapFunction))
-        let tapHome = UITapGestureRecognizer(target: self, action: #selector(AlbumViewController.tapHome))
 
         bandLabel.isUserInteractionEnabled = true
         bandLabel.addGestureRecognizer(tap)
         
-        homeBtn.addGestureRecognizer(tapHome)
         
 
     }

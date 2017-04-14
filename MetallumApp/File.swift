@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+
 struct bandStruct{
     
     public var bio: String?
@@ -24,8 +26,8 @@ struct bandStruct{
     public var status: String?
     public var yearsActive: String?
     
-    public var albumsStructs:[albumStruct]
-    public var artistsStructs:[artistStruct]
+    public var albumsStructs:[albumStruct] = []
+    public var artistsStructs:[artistStruct] = []
 }
 
 struct albumStruct {

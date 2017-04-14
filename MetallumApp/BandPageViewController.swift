@@ -36,14 +36,7 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
         
         self.loadBands()
         
-        print(band?.countryOfOrigin)
-        //
-        //        views.append(BandViewController(band:band!, artists:artists, albums:albums))
-        //        views.append(ArtistsTableViewController(band:band!, artists:artists, albums:albums))
-        //        views.append(BandBioViewController(band:band!, artists:artists, albums:albums))
-        //
-        //
-        //        self.setViewControllers([views[0]], direction: .forward, animated: true, completion: nil)
+        
         
         
         
@@ -98,9 +91,9 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
     func loadBands(){
         var urlString = ""
         if id == "0"{
-             urlString = "http://em.wemakesites.net/band/random?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
+            urlString = "http://em.wemakesites.net/band/random?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
         } else{
-             urlString = "http://em.wemakesites.net/band/\(id!)?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"}
+            urlString = "http://em.wemakesites.net/band/\(id!)?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"}
         guard let url = URL(string: urlString) else { return }
         let session = URLSession.shared
         
@@ -146,8 +139,9 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
                 let currentLabel = details["current label"] as? String
                 let yearsActive = details["years active"] as? String
                 
-                //  DispatchQueue.main.async{
+                  DispatchQueue.main.async{
                 self.band?.id = Int32(id!)!
+                print(self.band?.id!)
                 self.band?.name = name
                 self.band?.logoURL = logoURL
                 self.band?.photoURL = photoURL
@@ -161,10 +155,11 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
                 self.band?.lyricalThemes = lyricalThemes
                 self.band?.currentLabel = currentLabel
                 self.band?.yearsActive = yearsActive
-                //      }
+                      }
                 
                 
-                var albumsDB : [Album] = []
+                
+        //        var albumsDB : [Album] = []
                 if let discography = results["discography"] as? [[String : AnyObject]]{
                     for album in discography{
                         let title = album["title"] as? String
@@ -183,7 +178,7 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
                     }
                 }
                 
-                var artistsDB : [artistStruct] = []
+            //    var artistsDB : [artistStruct] = []
                 if let lineup = results["current_lineup"] as? [[String : AnyObject]]{
                     for artist in lineup{
                         let name = artist["name"] as? String
@@ -202,6 +197,14 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
                 }
             }
         }
+        
+        views.append(BandViewController(band:band!, artists:artists, albums:albums))
+        views.append(ArtistsTableViewController(band:band!, artists:artists, albums:albums))
+        views.append(BandBioViewController(band:band!, artists:artists, albums:albums))
+        
+        
+        self.setViewControllers([views[0]], direction: .forward, animated: true, completion: nil)
+
     }
     
     

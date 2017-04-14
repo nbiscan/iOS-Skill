@@ -16,7 +16,9 @@ class ArtistViewController: UIViewController {
     @IBOutlet weak var instrumentLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var home: UIButton!
+    @IBAction func homeBtn(_ sender: UIButton) {
+        _ = navigationController?.popToRootViewController(animated: true)
+    }
     
     convenience init (id:String){
         self.init()
@@ -26,9 +28,7 @@ class ArtistViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ArtistViewController.tapFunction))
 
-        home.addGestureRecognizer(tap)
 
         
         
@@ -36,10 +36,6 @@ class ArtistViewController: UIViewController {
         
     }
     
-    func tapFunction(){
-        _ = navigationController?.popToRootViewController(animated: true)
-
-    }
     
     func loadArtist(){
         let urlString = "http://em.wemakesites.net/artist/\(id!)?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
