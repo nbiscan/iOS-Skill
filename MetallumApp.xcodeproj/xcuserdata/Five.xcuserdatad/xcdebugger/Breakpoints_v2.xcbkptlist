@@ -159,5 +159,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MetallumApp/RandomBandPageExtension.swift"
+            timestampString = "513863563.349583"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "extract_json(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetallumApp.RandomBandPageViewController.(extract_json in _FD25D134D80A5ABCC9B2546A7589AC76) (Foundation.Data) -&gt; ()"
+                  moduleName = "MetallumApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Five/Documents/Developer/MetallumApp/MetallumApp/RandomBandPageExtension.swift"
+                  timestampString = "513863752.537295"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "572">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetallumApp.RandomBandPageViewController.(extract_json in _FD25D134D80A5ABCC9B2546A7589AC76) (Foundation.Data) -&gt; ()"
+                  moduleName = "MetallumApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Five/Documents/Developer/MetallumApp/MetallumApp/RandomBandPageExtension.swift"
+                  timestampString = "513863752.541139"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "962">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MetallumApp/RandomBandPageExtension.swift"
+            timestampString = "513864080.097287"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "extract_json(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

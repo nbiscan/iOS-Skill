@@ -12,6 +12,7 @@ class RandomBandViewController: UIViewController {
     
     var dataStore : DataStore = (UIApplication.shared.delegate as! AppDelegate).dataStore
     var band : BandStructure?
+    var pageView : RandomBandPageViewController?
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var imageView: UIImageView!
@@ -25,7 +26,10 @@ class RandomBandViewController: UIViewController {
     
     @IBAction func newRandom(_ sender: UIButton) {
         
+        activityIndicator.alpha = 1
+        activityIndicator.startAnimating()
         
+        self.pageView?.loadBand()
         
     }
     
@@ -39,9 +43,10 @@ class RandomBandViewController: UIViewController {
         }
     }
     
-    convenience init(band : BandStructure){
+    convenience init(band : BandStructure, pageView : RandomBandPageViewController){
         self.init()
         self.band = band
+        self.pageView = pageView
     }
     
     override func viewDidLoad() {

@@ -18,9 +18,10 @@ class AlbumsViewController: UIViewController, UITableViewDataSource, UITableView
     
     convenience init(band : BandStructure){
         self.init()
-        let sorted = band.album.sorted(by: {
-            Int($0.year!)! > Int($1.year!)!
-        })
+        let sorted = band.album
+//            .sorted(by: {
+//            Int($0.year!)! > Int($1.year!)!
+//        })
         
         albums.append(contentsOf: sorted)
     }

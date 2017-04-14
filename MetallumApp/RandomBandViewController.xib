@@ -115,8 +115,9 @@
                         <action selector="newRandom:" destination="-1" eventType="touchUpInside" id="FDS-6g-cmf"/>
                     </connections>
                 </button>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="S34-Q9-osZ">
-                    <rect key="frame" x="177" y="577" width="20" height="20"/>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="S34-Q9-osZ">
+                    <rect key="frame" x="306" y="610" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -151,7 +152,6 @@
                 <constraint firstItem="1EZ-xp-iEh" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="aua-Th-Yle"/>
                 <constraint firstItem="a3P-2V-3Cs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ces-em-wEk"/>
                 <constraint firstItem="YUY-j2-LNe" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="crE-yA-Yhu"/>
-                <constraint firstItem="bSh-Kc-3Yc" firstAttribute="top" secondItem="S34-Q9-osZ" secondAttribute="bottom" constant="8" id="dCa-oG-kX7"/>
                 <constraint firstItem="k02-6S-y3k" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="dMQ-on-QHi"/>
                 <constraint firstItem="ekO-6F-nVF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iHq-G6-qiP"/>
                 <constraint firstItem="1EZ-xp-iEh" firstAttribute="top" secondItem="ekO-6F-nVF" secondAttribute="bottom" constant="8" id="kbx-tV-GcR"/>
@@ -165,7 +165,6 @@
                 <constraint firstItem="k02-6S-y3k" firstAttribute="top" secondItem="YJr-oN-ZCk" secondAttribute="bottom" constant="21" id="txE-9U-etI"/>
                 <constraint firstAttribute="trailing" secondItem="YJr-oN-ZCk" secondAttribute="trailing" constant="49" id="vN3-NZ-w4J"/>
                 <constraint firstItem="BtB-kW-DrD" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="xle-8I-NIq"/>
-                <constraint firstItem="S34-Q9-osZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ybb-xU-JPN"/>
                 <constraint firstItem="E12-ue-L8w" firstAttribute="top" secondItem="a3P-2V-3Cs" secondAttribute="bottom" constant="7" id="zCg-jJ-HeJ"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="108.5"/>

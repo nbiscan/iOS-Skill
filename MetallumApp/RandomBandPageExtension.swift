@@ -16,10 +16,11 @@ extension RandomBandPageViewController {
         guard let url = URL(string: urlString) else { return }
         let session = URLSession.shared
         
-        let request = NSMutableURLRequest(url: url)
-        request.httpMethod = "GET"
-        request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
+        var request = URLRequest(url: url)
         
+        request.httpMethod = "GET"
+        request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData
+        URLCache.shared.removeCachedResponse(for: request)
         
         let task = session.dataTask(with: request as URLRequest) {
             (data, response, error) in
@@ -64,7 +65,13 @@ extension RandomBandPageViewController {
                         album.title = title
                         album.id = Int64(id!)
                         album.type = type
-                        album.year = year
+                        
+                        if let y = year {
+                            album.year = y
+                        } else {
+                            album.year = "Unknown"
+                        }
+                        
                         self.band.album.append(album)
                     }
                     
@@ -80,7 +87,10 @@ extension RandomBandPageViewController {
                             artist.years = years
                             artist.instrument = instrument
                             self.band.artist.append(artist)
-                                                        
+                        }
+                        
+                        
+                        DispatchQueue.main.async {
                             self.band.id = band_id!
                             self.band.name = band_name
                             self.band.logoURL = logoURL
@@ -100,7 +110,9 @@ extension RandomBandPageViewController {
         }
         
         DispatchQueue.main.async {
-            self.views.append(RandomBandViewController(band:self.band))
+            self.views.removeAll()
+            self.reloadInputViews()
+            self.views.append(RandomBandViewController(band:self.band, pageView : self))
             self.views.append(ArtistsViewController(band:self.band))
             self.views.append(AlbumsViewController(band:self.band))
             self.setViewControllers([self.views[0]], direction: .forward, animated: true, completion: nil)
