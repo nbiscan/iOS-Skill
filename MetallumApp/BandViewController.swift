@@ -10,7 +10,7 @@ import UIKit
 
 class BandViewController: UIViewController {
     
-    var dataStore : DataStore?
+    var dataStore : DataStore = (UIApplication.shared.delegate as! AppDelegate).dataStore
     var band : BandStructure?
     
     @IBOutlet weak var imageView: UIImageView!
@@ -20,6 +20,7 @@ class BandViewController: UIViewController {
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var lyricalThemesLabel: UILabel!
     @IBOutlet weak var yearsActiveLabel: UILabel!
+    @IBOutlet weak var removeButtonOutlet: UIButton!
     
     @IBAction func removeButton(_ sender: UIButton) {
         if let navigation = self.navigationController {
@@ -33,6 +34,7 @@ class BandViewController: UIViewController {
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Band info"
@@ -43,6 +45,12 @@ class BandViewController: UIViewController {
         genreLabel.text = band?.genre
         lyricalThemesLabel.text = band?.lyricalThemes
         yearsActiveLabel.text = band?.yearsActive
+        
+        if (dataStore.checkIfBandExists(id: (band?.id)!)){
+            removeButtonOutlet.titleLabel?.text = "Remove"
+        } else {
+            removeButtonOutlet.titleLabel?.text = "Save band"
+        }
         
         if let logoURL = band?.logoURL {
             if let checkedUrl = URL(string: logoURL) {

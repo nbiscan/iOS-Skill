@@ -17,7 +17,6 @@ class SearchTypeViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func search(_ sender: UIButton) {
-        // let selected = segmentedControl.selectedSegmentIndex
         
         self.bandResults.removeAll()
         self.albumResults.removeAll()
@@ -44,6 +43,8 @@ class SearchTypeViewController: UIViewController, UITableViewDelegate, UITableVi
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        self.navigationItem.title = "Search"
      
         tableView.register(UINib(nibName: "NoImageCellTableViewCell", bundle: nil), forCellReuseIdentifier: identification)
         
@@ -89,7 +90,7 @@ class SearchTypeViewController: UIViewController, UITableViewDelegate, UITableVi
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             let band = bandResults[indexPath.row]
-            let view = BandPageViewController(id: band.id!)
+            let view = BandPageViewController(id: band.id!, random : false)
             self.navigationController?.pushViewController(view, animated: true)
             break
         default:

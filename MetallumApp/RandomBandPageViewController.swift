@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BandPageViewController: UIPageViewController, UIPageViewControllerDataSource {
+class RandomBandPageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     var views : [UIViewController] = []
     var band : BandStructure = BandStructure()
@@ -16,10 +16,8 @@ class BandPageViewController: UIPageViewController, UIPageViewControllerDataSour
     var random : Bool?
     
     
-    convenience init(id : Int64, random: Bool){
+    convenience init(){
         self.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        self.id = id
-        self.random = random
     }
 
     override func viewDidLoad() {
@@ -28,30 +26,26 @@ class BandPageViewController: UIPageViewController, UIPageViewControllerDataSour
         self.dataSource = self
         self.edgesForExtendedLayout = []
         
-        loadBand(id: id!, random: random!)
+        loadBand()
     }
 
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if (viewController is BandViewController){
             return views[1]
-        } else if (viewController is BioViewController){
-            return views[2]
         } else if (viewController is ArtistsViewController){
-            return views[3]
+            return views[2]
         }
         return views[0]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if (viewController is BioViewController){
+        if (viewController is ArtistsViewController){
             return views[0]
-        } else if (viewController is ArtistsViewController){
-            return views[1]
         } else if ( viewController is AlbumsViewController){
-            return views[2]
+            return views[1]
         }
-        return views[3]
+        return views[2]
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {

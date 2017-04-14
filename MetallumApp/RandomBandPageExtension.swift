@@ -8,17 +8,10 @@
 
 import Foundation
 
-extension BandPageViewController {
+extension RandomBandPageViewController {
     
-    func loadBand(id : Int64, random : Bool){
-        
-        var urlString = ""
-        
-        if (random){
-            urlString = "http://em.wemakesites.net/band/random?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
-        } else {
-            urlString = "http://em.wemakesites.net/band/\(id)?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
-        }
+    func loadBand(){        
+        let urlString = "http://em.wemakesites.net/band/random?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
         
         guard let url = URL(string: urlString) else { return }
         let session = URLSession.shared
@@ -45,11 +38,10 @@ extension BandPageViewController {
         //  let dataStore = DataStore()
         if let results = json?["data"] as? [String: AnyObject] {
             
-            let band_id = results["id"] as? String
+            let band_id = results["id"] as? Int64
             let band_name = results["band_name"] as? String
             let logoURL = results["logo"] as? String
             let photoURL = results["photo"] as? String
-            let bio = results["bio"] as? String
                         
             if let details = results["details"] as? [String:AnyObject]{
                 let location = details["location"] as? String
@@ -60,7 +52,6 @@ extension BandPageViewController {
                 let lyricalThemes = details["lyrical themes"] as? String
                 let currentLabel = details["current label"] as? String
                 let yearsActive = details["years active"] as? String
-                
                 
                 
                 if let discography = results["discography"] as? [[String : AnyObject]]{
@@ -75,8 +66,6 @@ extension BandPageViewController {
                         album.type = type
                         album.year = year
                         self.band.album.append(album)
-                        
-                        
                     }
                     
                     if let lineup = results["current_lineup"] as? [[String : AnyObject]]{
@@ -91,13 +80,11 @@ extension BandPageViewController {
                             artist.years = years
                             artist.instrument = instrument
                             self.band.artist.append(artist)
-                            
-                            
-                            self.band.id = Int64(band_id!)
+                                                        
+                            self.band.id = band_id!
                             self.band.name = band_name
                             self.band.logoURL = logoURL
                             self.band.photoURL = photoURL
-                            self.band.bio = bio
                             self.band.location = location
                             self.band.countryOfOrigin = countryOfOrigin
                             self.band.status = status
@@ -107,7 +94,6 @@ extension BandPageViewController {
                             self.band.currentLabel = currentLabel
                             self.band.yearsActive = yearsActive
                         }
-                        
                     }
                 }
             }
@@ -115,7 +101,6 @@ extension BandPageViewController {
         
         DispatchQueue.main.async {
             self.views.append(BandViewController(band:self.band))
-            self.views.append(BioViewController(band:self.band))
             self.views.append(ArtistsViewController(band:self.band))
             self.views.append(AlbumsViewController(band:self.band))
             self.setViewControllers([self.views[0]], direction: .forward, animated: true, completion: nil)

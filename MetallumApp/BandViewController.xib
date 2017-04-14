@@ -17,6 +17,7 @@
                 <outlet property="locationLabel" destination="a3P-2V-3Cs" id="j5b-m3-fti"/>
                 <outlet property="lyricalThemesLabel" destination="YUY-j2-LNe" id="MXe-2k-qiI"/>
                 <outlet property="nameLabel" destination="k02-6S-y3k" id="yYJ-lg-psk"/>
+                <outlet property="removeButtonOutlet" destination="W8W-AV-STN" id="RJG-BI-cdU"/>
                 <outlet property="statusLabel" destination="BtB-kW-DrD" id="vys-PY-RBP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="yearsActiveLabel" destination="g1c-b2-hN2" id="Dgr-hW-EVp"/>

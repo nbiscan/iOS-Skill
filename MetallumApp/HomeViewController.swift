@@ -22,6 +22,8 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func randomBand(_ sender: UIButton) {
+        let view = RandomBandPageViewController()
+        self.navigationController?.pushViewController(view, animated: true)
     }
     
     

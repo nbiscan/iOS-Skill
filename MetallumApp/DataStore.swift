@@ -68,7 +68,7 @@ class DataStore {
         }
     }
     
-    func checkIfBandExists(id : Int32) -> Bool {
+    func checkIfBandExists(id : Int64) -> Bool {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Band")
         request.predicate = NSPredicate(format: "id == %ld", id)
         

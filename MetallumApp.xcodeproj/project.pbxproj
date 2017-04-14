@@ -41,6 +41,8 @@
 		528464191EA0263200799850 /* ArtistsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528464171EA0263200799850 /* ArtistsViewController.xib */; };
 		5284641C1EA0279700799850 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284641A1EA0279700799850 /* AlbumsViewController.swift */; };
 		5284641D1EA0279700799850 /* AlbumsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5284641B1EA0279700799850 /* AlbumsViewController.xib */; };
+		528464211EA0BF4F00799850 /* RandomBandPageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284641F1EA0BF4F00799850 /* RandomBandPageExtension.swift */; };
+		528464221EA0BF4F00799850 /* RandomBandPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528464201EA0BF4F00799850 /* RandomBandPageViewController.swift */; };
 		52BE70561E9E112300A1E11E /* BandArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70541E9E112300A1E11E /* BandArtistsViewController.swift */; };
 		52BE70571E9E112300A1E11E /* BandArtistsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE70551E9E112300A1E11E /* BandArtistsViewController.xib */; };
 		52BE705A1E9E1DE400A1E11E /* BandAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70581E9E1DE400A1E11E /* BandAlbumsViewController.swift */; };
@@ -93,6 +95,8 @@
 		528464171EA0263200799850 /* ArtistsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistsViewController.xib; sourceTree = "<group>"; };
 		5284641A1EA0279700799850 /* AlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		5284641B1EA0279700799850 /* AlbumsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumsViewController.xib; sourceTree = "<group>"; };
+		5284641F1EA0BF4F00799850 /* RandomBandPageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomBandPageExtension.swift; sourceTree = "<group>"; };
+		528464201EA0BF4F00799850 /* RandomBandPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomBandPageViewController.swift; sourceTree = "<group>"; };
 		52BE70541E9E112300A1E11E /* BandArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandArtistsViewController.swift; sourceTree = "<group>"; };
 		52BE70551E9E112300A1E11E /* BandArtistsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BandArtistsViewController.xib; sourceTree = "<group>"; };
 		52BE70581E9E1DE400A1E11E /* BandAlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandAlbumsViewController.swift; sourceTree = "<group>"; };
@@ -138,8 +142,9 @@
 		52270FCE1E9B8E82004A41D0 /* MetallumApp */ = {
 			isa = PBXGroup;
 			children = (
-				52BE70721EA0081D00A1E11E /* DefaultViews */,
 				52BE706D1EA0024300A1E11E /* Home */,
+				5284641E1EA0BF4200799850 /* RandomBand */,
+				52BE70721EA0081D00A1E11E /* BandViews */,
 				52BE70671EA001D900A1E11E /* Search */,
 				5276F0EE1E9CCA160038AFF8 /* Favourites */,
 				5276F0CB1E9BBCDF0038AFF8 /* Services */,
@@ -202,6 +207,15 @@
 			name = Favourites;
 			sourceTree = "<group>";
 		};
+		5284641E1EA0BF4200799850 /* RandomBand */ = {
+			isa = PBXGroup;
+			children = (
+				5284641F1EA0BF4F00799850 /* RandomBandPageExtension.swift */,
+				528464201EA0BF4F00799850 /* RandomBandPageViewController.swift */,
+			);
+			name = RandomBand;
+			sourceTree = "<group>";
+		};
 		52BE70671EA001D900A1E11E /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,7 +235,7 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
-		52BE70721EA0081D00A1E11E /* DefaultViews */ = {
+		52BE70721EA0081D00A1E11E /* BandViews */ = {
 			isa = PBXGroup;
 			children = (
 				524C64F71EA00CC10010CD1C /* BandPageViewController.swift */,
@@ -235,7 +249,7 @@
 				5284641A1EA0279700799850 /* AlbumsViewController.swift */,
 				5284641B1EA0279700799850 /* AlbumsViewController.xib */,
 			);
-			name = DefaultViews;
+			name = BandViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528464211EA0BF4F00799850 /* RandomBandPageExtension.swift in Sources */,
 				52270FD21E9B8E82004A41D0 /* ViewController.swift in Sources */,
 				524C64FC1EA00DC70010CD1C /* Structures.swift in Sources */,
 				52BE70621E9F9C9000A1E11E /* SearchTypeViewController.swift in Sources */,
@@ -335,6 +350,7 @@
 				524C64FA1EA00D710010CD1C /* BandPageExtension.swift in Sources */,
 				528464141EA024AA00799850 /* BioViewController.swift in Sources */,
 				5276F0C71E9BBB4F0038AFF8 /* Artist+CoreDataClass.swift in Sources */,
+				528464221EA0BF4F00799850 /* RandomBandPageViewController.swift in Sources */,
 				52BE706A1EA0023200A1E11E /* HomeViewController.swift in Sources */,
 				5276F0CD1E9BBCF60038AFF8 /* DataStore.swift in Sources */,
 				52270FD01E9B8E82004A41D0 /* AppDelegate.swift in Sources */,

@@ -28,7 +28,9 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVV-nf-Zwb">
-                    <rect key="frame" x="-0.5" y="278" width="375" height="30"/>
+                    <rect key="frame" x="-1" y="278" width="376" height="33"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                     <state key="normal" title="Search Metallum">
                         <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -37,7 +39,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oed-4i-dEW">
-                    <rect key="frame" x="-0.5" y="318" width="375" height="30"/>
+                    <rect key="frame" x="-1" y="321" width="376" height="33"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                     <state key="normal" title="Upcoming albums">
                         <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -46,7 +49,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwL-rt-N66">
-                    <rect key="frame" x="-0.5" y="356" width="375" height="30"/>
+                    <rect key="frame" x="-1" y="362" width="376" height="33"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                     <state key="normal" title="Random Band">
                         <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -55,7 +59,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To6-3f-gjv">
-                    <rect key="frame" x="-0.5" y="394" width="375" height="30"/>
+                    <rect key="frame" x="-1" y="403" width="376" height="33"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                     <state key="normal" title="Saved Bands">
                         <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
