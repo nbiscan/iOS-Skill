@@ -56,6 +56,8 @@ class BandViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(band?.countryOfOrigin)
+        
         //skidanje slike
         
         if let checkedUrl = URL(string: (band?.photoURL)!) {

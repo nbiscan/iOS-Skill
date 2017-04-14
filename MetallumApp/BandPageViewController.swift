@@ -146,7 +146,6 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
                     self.band.photoURL = photoURL
                     self.band.bio = bio
                     
-                    print(self.band.name!)
                     
                     self.band.location = location
                     self.band.countryOfOrigin = countryOfOrigin
@@ -198,6 +197,10 @@ class BandPageViewController: UIPageViewController,UIPageViewControllerDataSourc
                 }
             }
         }
+        
+        print(self.band.name!)
+
+        
         
         views.append(BandViewController(band:band, artists:artists, albums:albums))
         views.append(ArtistsTableViewController(band:band, artists:artists, albums:albums))
