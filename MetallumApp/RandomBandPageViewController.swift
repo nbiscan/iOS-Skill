@@ -31,7 +31,7 @@ class RandomBandPageViewController: UIPageViewController, UIPageViewControllerDa
 
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if (viewController is BandViewController){
+        if (viewController is RandomBandViewController){
             return views[1]
         } else if (viewController is ArtistsViewController){
             return views[2]

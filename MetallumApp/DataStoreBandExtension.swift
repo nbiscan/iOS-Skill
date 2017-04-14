@@ -12,65 +12,48 @@ import CoreData
 extension DataStore {
     
     
-    func insertBand(id : Int64,
-                    name : String?,
-                    location : String?,
-                    countryOfOrigin: String?,
-                    genre: String?,
-                    logoURL : String?,
-                    lyricalThemes:String?,
-                    photoURL : String?,
-                    status : String?,
-                    formedIn : String?,
-                    currentlabel : String?,
-                    yearsActive : String?,
-                    bio : String?,
-                    artists : [Artist],
-                    albums : [Album]
+    func insertBand(band : BandStructure
         ) {
         
-        if let band = NSEntityDescription.insertNewObject(forEntityName: "Band", into: managedObjectContext) as? Band {
-            band.name = name
-            band.countryOfOrigin = countryOfOrigin
-            band.location = location
-            band.genre = genre
-            band.logoURL = logoURL
-            band.photoURL = photoURL
-            band.lyricalThemes = lyricalThemes
-            band.status = status
-            band.formedIn = formedIn
-            band.yearsActive = yearsActive
-            band.currentLabel = currentlabel
-            band.bio = bio
-            band.id = id
+        if let newBand = NSEntityDescription.insertNewObject(forEntityName: "Band", into: managedObjectContext) as? Band {
+            newBand.name = band.name
+            newBand.countryOfOrigin = band.countryOfOrigin
+            newBand.location = band.location
+            newBand.genre = band.genre
+            newBand.logoURL = band.logoURL
+            newBand.photoURL = band.photoURL
+            newBand.lyricalThemes = band.lyricalThemes
+            newBand.status = band.status
+            newBand.formedIn = band.formedIn
+            newBand.yearsActive = band.yearsActive
+            newBand.currentLabel = band.currentLabel
+            newBand.bio = band.bio
+            newBand.id = band.id!
             
-            for album in albums {
-                band.addToAlbum(album)
-            }
-            
-            for artist in artists {
-                band.addToArtist(artist)
-                
-                do {
-                    try managedObjectContext.save()
-                } catch  {
-                    print(error)
+            for album in band.album {
+                if let a = self.insertAlbum(album: album){
+                    newBand.addToAlbum(a)
                 }
             }
+            
+            for artist in band.artist {
+                if let a = self.insertArtist(artist: artist){
+                    newBand.addToArtist(a)
+                }
+            }
+            
+            saveContext()
         }
     }
     
-    func insertArtist(id : Int64,
-                      name : String?,
-                      instrument : String?,
-                      years : String?) -> Artist? {
+    func insertArtist(artist : ArtistStructure) -> Artist? {
         
-        if let artist = NSEntityDescription.insertNewObject(forEntityName: "Artist", into: managedObjectContext) as? Artist {
-        
-            artist.name = name
-            artist.years = years
-            artist.id = id
-            artist.instrument = instrument
+        if let newArtist = NSEntityDescription.insertNewObject(forEntityName: "Artist", into: managedObjectContext) as? Artist {
+            
+            newArtist.name = artist.name
+            newArtist.years = artist.years
+            newArtist.id = artist.id!
+            newArtist.instrument = artist.instrument
             
             do {
                 try managedObjectContext.save()
@@ -78,25 +61,20 @@ extension DataStore {
                 print(error)
             }
             
-            return artist
+            return newArtist
             
         }
         return nil
     }
     
-    func insertAlbum( id : Int64,
-                      title : String?,
-                      year : String?,
-                      type : String?) -> Album? {
+    func insertAlbum( album : AlbumStructure) -> Album? {
         
-        if let album = NSEntityDescription.insertNewObject(forEntityName: "Album", into: managedObjectContext) as? Album {
+        if let newAlbum = NSEntityDescription.insertNewObject(forEntityName: "Album", into: managedObjectContext) as? Album {
             
-            album.title = title
-            album.id = id
-            album.type = type
-            album.year = year
-            
-            // completion(album)
+            newAlbum.title = album.title
+            newAlbum.id = album.id!
+            newAlbum.type = album.type
+            newAlbum.year = album.year
             
             do {
                 try managedObjectContext.save()
@@ -104,7 +82,7 @@ extension DataStore {
                 print(error)
             }
             
-            return album
+            return newAlbum
         }
         return nil
     }

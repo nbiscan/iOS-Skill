@@ -10,8 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BandViewController" customModule="MetallumApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RandomBandViewController" customModule="MetallumApp" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="S34-Q9-osZ" id="XDz-Mc-RUX"/>
                 <outlet property="genreLabel" destination="ekO-6F-nVF" id="TfI-3d-uOZ"/>
                 <outlet property="imageView" destination="YJr-oN-ZCk" id="NAr-WR-6GC"/>
                 <outlet property="locationLabel" destination="a3P-2V-3Cs" id="j5b-m3-fti"/>
@@ -107,6 +108,16 @@
                         <action selector="removeButton:" destination="-1" eventType="touchUpInside" id="gqn-bd-NBh"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSh-Kc-3Yc">
+                    <rect key="frame" x="-1" y="605" width="376" height="30"/>
+                    <state key="normal" title="New random band"/>
+                    <connections>
+                        <action selector="newRandom:" destination="-1" eventType="touchUpInside" id="FDS-6g-cmf"/>
+                    </connections>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="S34-Q9-osZ">
+                    <rect key="frame" x="177" y="577" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -118,8 +129,10 @@
                 <constraint firstItem="gW3-vx-bOq" firstAttribute="top" secondItem="YUY-j2-LNe" secondAttribute="bottom" constant="8" id="7Dx-vi-Ppe"/>
                 <constraint firstItem="2hO-og-z9x" firstAttribute="top" secondItem="k02-6S-y3k" secondAttribute="bottom" constant="8" id="AaG-ur-UNw"/>
                 <constraint firstItem="k02-6S-y3k" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BM9-90-oac"/>
+                <constraint firstItem="W8W-AV-STN" firstAttribute="top" secondItem="bSh-Kc-3Yc" secondAttribute="bottom" constant="2" id="BQE-7c-GSm"/>
                 <constraint firstItem="E12-ue-L8w" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Emp-j4-tYP"/>
                 <constraint firstItem="TES-eR-UUx" firstAttribute="top" secondItem="BtB-kW-DrD" secondAttribute="bottom" constant="11" id="Esd-wh-1iH"/>
+                <constraint firstItem="bSh-Kc-3Yc" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Fhb-em-RJJ"/>
                 <constraint firstItem="YJr-oN-ZCk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="G1n-w8-51A"/>
                 <constraint firstItem="2hO-og-z9x" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JKT-Pg-ltM"/>
                 <constraint firstItem="ekO-6F-nVF" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="L7n-vZ-Dfz"/>
@@ -138,6 +151,7 @@
                 <constraint firstItem="1EZ-xp-iEh" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="aua-Th-Yle"/>
                 <constraint firstItem="a3P-2V-3Cs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ces-em-wEk"/>
                 <constraint firstItem="YUY-j2-LNe" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="crE-yA-Yhu"/>
+                <constraint firstItem="bSh-Kc-3Yc" firstAttribute="top" secondItem="S34-Q9-osZ" secondAttribute="bottom" constant="8" id="dCa-oG-kX7"/>
                 <constraint firstItem="k02-6S-y3k" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="dMQ-on-QHi"/>
                 <constraint firstItem="ekO-6F-nVF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iHq-G6-qiP"/>
                 <constraint firstItem="1EZ-xp-iEh" firstAttribute="top" secondItem="ekO-6F-nVF" secondAttribute="bottom" constant="8" id="kbx-tV-GcR"/>
@@ -147,9 +161,11 @@
                 <constraint firstItem="E12-ue-L8w" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pnv-dR-SaW"/>
                 <constraint firstItem="YJr-oN-ZCk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sQz-Lz-r7h"/>
                 <constraint firstItem="2hO-og-z9x" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="sxx-uR-YCx"/>
+                <constraint firstItem="bSh-Kc-3Yc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tpP-OY-cGc"/>
                 <constraint firstItem="k02-6S-y3k" firstAttribute="top" secondItem="YJr-oN-ZCk" secondAttribute="bottom" constant="21" id="txE-9U-etI"/>
                 <constraint firstAttribute="trailing" secondItem="YJr-oN-ZCk" secondAttribute="trailing" constant="49" id="vN3-NZ-w4J"/>
                 <constraint firstItem="BtB-kW-DrD" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="xle-8I-NIq"/>
+                <constraint firstItem="S34-Q9-osZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ybb-xU-JPN"/>
                 <constraint firstItem="E12-ue-L8w" firstAttribute="top" secondItem="a3P-2V-3Cs" secondAttribute="bottom" constant="7" id="zCg-jJ-HeJ"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="108.5"/>

@@ -8,11 +8,12 @@
 
 import UIKit
 
-class BandViewController: UIViewController {
+class RandomBandViewController: UIViewController {
     
     var dataStore : DataStore = (UIApplication.shared.delegate as! AppDelegate).dataStore
     var band : BandStructure?
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
@@ -21,6 +22,12 @@ class BandViewController: UIViewController {
     @IBOutlet weak var lyricalThemesLabel: UILabel!
     @IBOutlet weak var yearsActiveLabel: UILabel!
     @IBOutlet weak var removeButtonOutlet: UIButton!
+    
+    @IBAction func newRandom(_ sender: UIButton) {
+        
+        
+        
+    }
     
     @IBAction func removeButton(_ sender: UIButton) {
         if (removeButtonOutlet.currentTitle == "Remove"){
@@ -48,15 +55,14 @@ class BandViewController: UIViewController {
         lyricalThemesLabel.text = band?.lyricalThemes
         yearsActiveLabel.text = band?.yearsActive
         
+        activityIndicator.alpha = 0
+        
         removeButtonOutlet.setTitle("", for: .normal)
         
         if (dataStore.checkIfBandExists(id: (band?.id)!)){
             removeButtonOutlet.setTitle("Remove", for: .normal)
-            // removeButtonOutlet.setImage(#imageLiteral(resourceName: "star_filled"), for: .normal)
         } else {
             removeButtonOutlet.setTitle("Save band", for: .normal)
-            // removeButtonOutlet.setImage(#imageLiteral(resourceName: "star_empty"), for: .normal)
-            
         }
         
         if let logoURL = band?.logoURL {

@@ -10,97 +10,97 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let dataStore = DataStore()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // dataStore.deleteEverything()
-        dataStore.printDatabaseStatistics()
-        loadReviews()
-    }
-    
-    
-    func loadReviews(){
-        let urlString = "http://em.wemakesites.net/band/22?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
-        guard let url = URL(string: urlString) else { return }
-        let session = URLSession.shared
-        
-        let request = NSMutableURLRequest(url: url)
-        request.httpMethod = "GET"
-        request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
-        
-        
-        let task = session.dataTask(with: request as URLRequest) {
-            (data, response, error) in
-            guard let data = data, let _ = response else {
-                // handle error
-                return
-            }
-            self.extract_json(data)
-        }
-        task.resume()
-    }
-    
-    //extracts data from JSON
-    private func extract_json(_ data : Data){
-        let json = try? JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
-        //  let dataStore = DataStore()
-        if let results = json?["data"] as? [String: AnyObject] {
-            
-            let id = results["id"] as? String
-            let name = results["band_name"] as? String
-            let logoURL = results["logo"] as? String
-            let photoURL = results["photo"] as? String
-            let bio = results["bio"] as? String
-            
-            if let details = results["details"] as? [String:AnyObject]{
-                let location = details["location"] as? String
-                let countryOfOrigin = details["country of origin"] as? String
-                let status = details["status"] as? String
-                let formedIn = details["formed in"] as? String
-                let genre = details["genre"] as? String
-                let lyricalThemes = details["lyrical themes"] as? String
-                let currentLabel = details["current label"] as? String
-                let yearsActive = details["years active"] as? String
-                
-                // [artistStruct]
-                var albums : [Album] = []
-                if let discography = results["discography"] as? [[String : AnyObject]]{
-                    for album in discography{
-                        let title = album["title"] as? String
-                        let id = album["id"] as? String
-                        let type = album["type"] as? String
-                        let year = album["year"] as? String
-                       
-                        if let album = dataStore.insertAlbum(id: Int64(id!)!, title: title, year: year, type: type){
-                            albums.append(album)
-                        }
-                        
-                    }
-                }
-                
-                var artists : [Artist] = []
-                if let lineup = results["current_lineup"] as? [[String : AnyObject]]{
-                    for artist in lineup{
-                        let name = artist["name"] as? String
-                        let id = artist["id"] as? String
-                        let instrument = artist["instrument"] as? String
-                        let years = artist["years"] as? String
-                        if let artist = dataStore.insertArtist(id: Int64(id!)!, name: name, instrument: instrument, years: years){
-                            artists.append(artist)
-                        }
-                    }
-                }
-                
-                dataStore.insertBand(id: Int64(id!)!, name: name, location: location, countryOfOrigin: countryOfOrigin, genre: genre, logoURL: logoURL, lyricalThemes: lyricalThemes, photoURL: photoURL, status: status, formedIn: formedIn, currentlabel: currentLabel, yearsActive: yearsActive, bio: bio, artists: artists, albums: albums)
-                
-                dataStore.printDatabaseStatistics()
-                
-            }
-            
-            
-        }
-    }
+//    let dataStore = DataStore()
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // dataStore.deleteEverything()
+//        dataStore.printDatabaseStatistics()
+//        loadReviews()
+//    }
+//    
+//    
+//    func loadReviews(){
+//        let urlString = "http://em.wemakesites.net/band/22?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
+//        guard let url = URL(string: urlString) else { return }
+//        let session = URLSession.shared
+//        
+//        let request = NSMutableURLRequest(url: url)
+//        request.httpMethod = "GET"
+//        request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
+//        
+//        
+//        let task = session.dataTask(with: request as URLRequest) {
+//            (data, response, error) in
+//            guard let data = data, let _ = response else {
+//                // handle error
+//                return
+//            }
+//            self.extract_json(data)
+//        }
+//        task.resume()
+//    }
+//    
+//    //extracts data from JSON
+//    private func extract_json(_ data : Data){
+//        let json = try? JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String:Any]
+//        //  let dataStore = DataStore()
+//        if let results = json?["data"] as? [String: AnyObject] {
+//            
+//            let id = results["id"] as? String
+//            let name = results["band_name"] as? String
+//            let logoURL = results["logo"] as? String
+//            let photoURL = results["photo"] as? String
+//            let bio = results["bio"] as? String
+//            
+//            if let details = results["details"] as? [String:AnyObject]{
+//                let location = details["location"] as? String
+//                let countryOfOrigin = details["country of origin"] as? String
+//                let status = details["status"] as? String
+//                let formedIn = details["formed in"] as? String
+//                let genre = details["genre"] as? String
+//                let lyricalThemes = details["lyrical themes"] as? String
+//                let currentLabel = details["current label"] as? String
+//                let yearsActive = details["years active"] as? String
+//                
+//                // [artistStruct]
+//                var albums : [Album] = []
+//                if let discography = results["discography"] as? [[String : AnyObject]]{
+//                    for album in discography{
+//                        let title = album["title"] as? String
+//                        let id = album["id"] as? String
+//                        let type = album["type"] as? String
+//                        let year = album["year"] as? String
+//                       
+////                        if let album = dataStore.insertAlbum(id: Int64(id!)!, title: title, year: year, type: type){
+////                            albums.append(album)
+////                        }
+////                        
+//                    }
+//                }
+//                
+//                var artists : [Artist] = []
+//                if let lineup = results["current_lineup"] as? [[String : AnyObject]]{
+//                    for artist in lineup{
+//                        let name = artist["name"] as? String
+//                        let id = artist["id"] as? String
+//                        let instrument = artist["instrument"] as? String
+//                        let years = artist["years"] as? String
+////                        if let artist = dataStore.insertArtist(id: Int64(id!)!, name: name, instrument: instrument, years: years){
+////                            artists.append(artist)
+////                        }
+//                    }
+//                }
+//                
+////                dataStore.insertBand(id: Int64(id!)!, name: name, location: location, countryOfOrigin: countryOfOrigin, genre: genre, logoURL: logoURL, lyricalThemes: lyricalThemes, photoURL: photoURL, status: status, formedIn: formedIn, currentlabel: currentLabel, yearsActive: yearsActive, bio: bio, artists: artists, albums: albums)
+////                
+////                dataStore.printDatabaseStatistics()
+//                
+//            }
+//            
+//            
+//        }
+//    }
     
     
     

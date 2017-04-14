@@ -100,7 +100,7 @@ extension RandomBandPageViewController {
         }
         
         DispatchQueue.main.async {
-            self.views.append(BandViewController(band:self.band))
+            self.views.append(RandomBandViewController(band:self.band))
             self.views.append(ArtistsViewController(band:self.band))
             self.views.append(AlbumsViewController(band:self.band))
             self.setViewControllers([self.views[0]], direction: .forward, animated: true, completion: nil)

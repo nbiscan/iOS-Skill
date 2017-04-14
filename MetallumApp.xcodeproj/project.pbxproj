@@ -43,6 +43,8 @@
 		5284641D1EA0279700799850 /* AlbumsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5284641B1EA0279700799850 /* AlbumsViewController.xib */; };
 		528464211EA0BF4F00799850 /* RandomBandPageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284641F1EA0BF4F00799850 /* RandomBandPageExtension.swift */; };
 		528464221EA0BF4F00799850 /* RandomBandPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528464201EA0BF4F00799850 /* RandomBandPageViewController.swift */; };
+		528464251EA0E00300799850 /* RandomBandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528464231EA0E00300799850 /* RandomBandViewController.swift */; };
+		528464261EA0E00300799850 /* RandomBandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528464241EA0E00300799850 /* RandomBandViewController.xib */; };
 		52BE70561E9E112300A1E11E /* BandArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70541E9E112300A1E11E /* BandArtistsViewController.swift */; };
 		52BE70571E9E112300A1E11E /* BandArtistsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE70551E9E112300A1E11E /* BandArtistsViewController.xib */; };
 		52BE705A1E9E1DE400A1E11E /* BandAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70581E9E1DE400A1E11E /* BandAlbumsViewController.swift */; };
@@ -97,6 +99,8 @@
 		5284641B1EA0279700799850 /* AlbumsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumsViewController.xib; sourceTree = "<group>"; };
 		5284641F1EA0BF4F00799850 /* RandomBandPageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomBandPageExtension.swift; sourceTree = "<group>"; };
 		528464201EA0BF4F00799850 /* RandomBandPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomBandPageViewController.swift; sourceTree = "<group>"; };
+		528464231EA0E00300799850 /* RandomBandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomBandViewController.swift; sourceTree = "<group>"; };
+		528464241EA0E00300799850 /* RandomBandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RandomBandViewController.xib; sourceTree = "<group>"; };
 		52BE70541E9E112300A1E11E /* BandArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandArtistsViewController.swift; sourceTree = "<group>"; };
 		52BE70551E9E112300A1E11E /* BandArtistsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BandArtistsViewController.xib; sourceTree = "<group>"; };
 		52BE70581E9E1DE400A1E11E /* BandAlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandAlbumsViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +216,8 @@
 			children = (
 				5284641F1EA0BF4F00799850 /* RandomBandPageExtension.swift */,
 				528464201EA0BF4F00799850 /* RandomBandPageViewController.swift */,
+				528464231EA0E00300799850 /* RandomBandViewController.swift */,
+				528464241EA0E00300799850 /* RandomBandViewController.xib */,
 			);
 			name = RandomBand;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528464261EA0E00300799850 /* RandomBandViewController.xib in Resources */,
 				52270FDA1E9B8E82004A41D0 /* LaunchScreen.storyboard in Resources */,
 				5276F0F81E9CD07F0038AFF8 /* TableViewCell.xib in Resources */,
 				52BE706B1EA0023200A1E11E /* HomeViewController.xib in Resources */,
@@ -342,6 +349,7 @@
 				528464211EA0BF4F00799850 /* RandomBandPageExtension.swift in Sources */,
 				52270FD21E9B8E82004A41D0 /* ViewController.swift in Sources */,
 				524C64FC1EA00DC70010CD1C /* Structures.swift in Sources */,
+				528464251EA0E00300799850 /* RandomBandViewController.swift in Sources */,
 				52BE70621E9F9C9000A1E11E /* SearchTypeViewController.swift in Sources */,
 				5276F1011E9D0BE70038AFF8 /* BandBioViewController.swift in Sources */,
 				528464181EA0263200799850 /* ArtistsViewController.swift in Sources */,

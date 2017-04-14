@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/DataStoreBandExtension.swift"
-            timestampString = "513533562.712096"
+            timestampString = "513857441.968531"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "insertBand(id:name:location:countryOfOrigin:genre:logoURL:lyricalThemes:photoURL:status:formedIn:currentlabel:yearsActive:bio:artists:albums:)"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "insertBand(band:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -141,6 +141,22 @@
                   offsetFromSymbolStart = "962">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MetallumApp/BandViewController.swift"
+            timestampString = "513858396.454258"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

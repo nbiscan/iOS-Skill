@@ -77,6 +77,16 @@ class DataStore {
         }
         return false
     }
+    
+    func deleteBand(with id : Int64){
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Band")
+        request.predicate = NSPredicate(format: "id == %ld", id)
+        
+        if let band = (try? managedObjectContext.fetch(request))?.first as? Band {
+            managedObjectContext.delete(band)
+            saveContext()
+        }
+    }
 
     
 }
