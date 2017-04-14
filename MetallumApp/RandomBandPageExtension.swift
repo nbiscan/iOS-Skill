@@ -10,26 +10,27 @@ import Foundation
 
 extension RandomBandPageViewController {
     
-    func loadBand(){        
+    func loadBand(){
         let urlString = "http://em.wemakesites.net/band/random?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
         
         guard let url = URL(string: urlString) else { return }
         let session = URLSession.shared
         
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 60)
         
         request.httpMethod = "GET"
-        request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData
-        URLCache.shared.removeCachedResponse(for: request)
+        // request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData
         
         let task = session.dataTask(with: request as URLRequest) {
             (data, response, error) in
             guard let data = data, let _ = response else {
-                // handle error
                 return
             }
             self.extract_json(data)
         }
+        
+        URLCache.shared.removeCachedResponse(for: request)
+        
         task.resume()
     }
     
@@ -43,7 +44,7 @@ extension RandomBandPageViewController {
             let band_name = results["band_name"] as? String
             let logoURL = results["logo"] as? String
             let photoURL = results["photo"] as? String
-                        
+            
             if let details = results["details"] as? [String:AnyObject]{
                 let location = details["location"] as? String
                 let countryOfOrigin = details["country of origin"] as? String
@@ -76,7 +77,7 @@ extension RandomBandPageViewController {
                     }
                     
                     if let lineup = results["current_lineup"] as? [[String : AnyObject]]{
-                        for artist in lineup{
+                        for artist in lineup {
                             let name = artist["name"] as? String
                             let id = artist["id"] as? String
                             let instrument = artist["instrument"] as? String

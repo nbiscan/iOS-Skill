@@ -46,15 +46,16 @@ class FavouriteBandViewController: UIViewController {
         lyricalThemesLabel.text = band?.lyricalThemes
         yearsActiveLabel.text = band?.yearsActive
         
-        if let checkedUrl = URL(string: (band?.logoURL)!) {
-            
-            DataStore.getDataFromUrl(url: checkedUrl) { (data, response, error)  in
-                guard let data = data, error == nil else { return }
-                DispatchQueue.main.async() { () -> Void in
-                    self.imageView.image = UIImage(data: data)
+        if let logoURL = band?.logoURL{
+            if let checkedUrl = URL(string: logoURL) {
+                DataStore.getDataFromUrl(url: checkedUrl) { (data, response, error)  in
+                    guard let data = data, error == nil else { return }
+                    DispatchQueue.main.async() { () -> Void in
+                        self.imageView.image = UIImage(data: data)
+                    }
                 }
             }
-            
+
         }
         
     }

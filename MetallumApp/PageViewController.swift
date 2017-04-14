@@ -38,8 +38,12 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
+        
         if (viewController is FavouriteBandViewController){
-            return views[1]
+            if let _ = band?.bio{
+                return views[1]
+            }
+            return views[2]
         } else if (viewController is BandBioViewController){
             return views[2]
         } else if (viewController is BandArtistsViewController) {
@@ -56,7 +60,10 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         } else if (viewController is BandBioViewController){
             return views[0]
         } else if (viewController is BandArtistsViewController) {
-            return views[1]
+            if let _ = band?.bio{
+                return views[1]
+            }
+            return views[0]
         } else {
             return views[2]
         }
@@ -67,7 +74,10 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return views.count
+        if let _ = band?.bio{
+            return views.count
+        }
+        return views.count - 1 
     }
     
 }

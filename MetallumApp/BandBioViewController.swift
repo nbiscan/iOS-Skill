@@ -9,7 +9,7 @@
 import UIKit
 
 class BandBioViewController: UIViewController {
-
+    
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     
@@ -27,19 +27,20 @@ class BandBioViewController: UIViewController {
         self.navigationItem.title = "Band biography"
         textView.text = band?.bio
         
-        if let checkedUrl = URL(string: (band?.photoURL)!) {
-            
-            DataStore.getDataFromUrl(url: checkedUrl) { (data, response, error)  in
-                guard let data = data, error == nil else { return }
-                DispatchQueue.main.async() { () -> Void in
-                    self.imageView.image = UIImage(data: data)
+        if let photoURL = band?.photoURL {
+            if let checkedUrl = URL(string: photoURL) {                
+                DataStore.getDataFromUrl(url: checkedUrl) { (data, response, error)  in
+                    guard let data = data, error == nil else { return }
+                    DispatchQueue.main.async() { () -> Void in
+                        self.imageView.image = UIImage(data: data)
+                    }
                 }
+                
             }
-            
         }
-
+        
         
     }
-
+    
     
 }

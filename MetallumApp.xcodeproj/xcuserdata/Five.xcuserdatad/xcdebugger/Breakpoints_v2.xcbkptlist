@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/PageViewController.swift"
-            timestampString = "513702731.792652"
+            timestampString = "513871346.531854"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80">
+            startingLineNumber = "90"
+            endingLineNumber = "90">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/PageViewController.swift"
-            timestampString = "513702731.792652"
+            timestampString = "513871346.531854"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90">
+            startingLineNumber = "100"
+            endingLineNumber = "100">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -166,11 +166,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/RandomBandPageExtension.swift"
-            timestampString = "513863563.349583"
+            timestampString = "513868833.074465"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "extract_json(_:)"
             landmarkType = "7">
             <Locations>
@@ -182,7 +182,7 @@
                   moduleName = "MetallumApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Five/Documents/Developer/MetallumApp/MetallumApp/RandomBandPageExtension.swift"
-                  timestampString = "513863752.537295"
+                  timestampString = "513864677.680321"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
@@ -197,7 +197,7 @@
                   moduleName = "MetallumApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Five/Documents/Developer/MetallumApp/MetallumApp/RandomBandPageExtension.swift"
-                  timestampString = "513863752.541139"
+                  timestampString = "513864677.687841"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
@@ -214,12 +214,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/RandomBandPageExtension.swift"
-            timestampString = "513864080.097287"
+            timestampString = "513864652.940139"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "extract_json(_:)"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "loadBand()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
