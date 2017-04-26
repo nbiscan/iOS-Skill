@@ -182,11 +182,11 @@
                   moduleName = "MetallumApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Five/Documents/Developer/MetallumApp/MetallumApp/RandomBandPageExtension.swift"
-                  timestampString = "513864677.680321"
+                  timestampString = "514942305.795366"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
                   offsetFromSymbolStart = "572">
                </Location>
                <Location
@@ -197,11 +197,11 @@
                   moduleName = "MetallumApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Five/Documents/Developer/MetallumApp/MetallumApp/RandomBandPageExtension.swift"
-                  timestampString = "513864677.687841"
+                  timestampString = "514942305.802616"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
                   offsetFromSymbolStart = "962">
                </Location>
             </Locations>

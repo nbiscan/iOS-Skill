@@ -77,7 +77,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         if let _ = band?.bio{
             return views.count
         }
-        return views.count - 1 
+        return views.count - 1
     }
     
 }

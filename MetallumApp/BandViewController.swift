@@ -39,7 +39,7 @@ class BandViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Band info"
+        
         
         nameLabel.text = band?.name
         locationLabel.text = band?.location

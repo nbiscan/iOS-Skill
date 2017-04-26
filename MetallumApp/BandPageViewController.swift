@@ -24,7 +24,8 @@ class BandPageViewController: UIPageViewController, UIPageViewControllerDataSour
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Band info"
+        
         self.dataSource = self
         self.edgesForExtendedLayout = []
         
@@ -34,23 +35,31 @@ class BandPageViewController: UIPageViewController, UIPageViewControllerDataSour
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if (viewController is BandViewController){
+            self.title = "Band info"
             return views[1]
         } else if (viewController is BioViewController){
+            self.title = "Biography"
             return views[2]
         } else if (viewController is ArtistsViewController){
+            self.title = "Artists"
             return views[3]
         }
+        self.title = "Albums"
         return views[0]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if (viewController is BioViewController){
+            self.title = "Biography"
             return views[0]
         } else if (viewController is ArtistsViewController){
+            self.title = "Artists"
             return views[1]
         } else if ( viewController is AlbumsViewController){
+            self.title = "Albums"
             return views[2]
         }
+        self.title = "Band info"
         return views[3]
     }
     

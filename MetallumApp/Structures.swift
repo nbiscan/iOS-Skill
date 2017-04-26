@@ -40,3 +40,22 @@ struct ArtistStructure{
     var name: String?
     var years: String?
 }
+
+struct AlbumViewStructure {
+    var bandName : String?
+    var bandID : Int64?
+    
+    var title : String?
+    var albumCover : String?
+    var type : String?
+    var releaseDate : String?
+    var label : String?
+    var reviews : String?
+    
+    var songs : [Song] = []
+}
+
+struct Song {
+    var title : String?
+    var lenght : String?
+}

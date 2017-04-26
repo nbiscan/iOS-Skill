@@ -22,6 +22,8 @@ class RandomBandPageViewController: UIPageViewController, UIPageViewControllerDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Random band"
 
         self.dataSource = self
         self.edgesForExtendedLayout = []
