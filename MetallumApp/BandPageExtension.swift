@@ -116,7 +116,7 @@ extension BandPageViewController {
         DispatchQueue.main.async {
             self.views.append(BandViewController(band:self.band))
             self.views.append(BioViewController(band:self.band))
-            self.views.append(ArtistsViewController(band:self.band))
+            self.views.append(ArtistsViewController(artists:self.band.artist))
             self.views.append(AlbumsViewController(band:self.band))
             self.setViewControllers([self.views[0]], direction: .forward, animated: true, completion: nil)
             self.reloadInputViews()

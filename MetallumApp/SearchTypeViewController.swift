@@ -93,6 +93,10 @@ class SearchTypeViewController: UIViewController, UITableViewDelegate, UITableVi
             let view = BandPageViewController(id: band.id!, random : false)
             self.navigationController?.pushViewController(view, animated: true)
             break
+        case 1:
+            let album = albumResults[indexPath.row]
+            let view = PageViewAlbumViewController(id : album.id!)
+            self.navigationController?.pushViewController(view, animated: true)
         default:
             break
         }

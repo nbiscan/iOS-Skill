@@ -33,9 +33,14 @@ class ImageDownloadOperation: Operation {
             guard let _:Data = data, let _:URLResponse = response  , error == nil else {
                 return
             }
-            DispatchQueue.main.async {
-                self.completion(UIImage(data : data!)!)
+            if let data = data {
+                DispatchQueue.main.async {
+                    if let image = UIImage(data:data){
+                        self.completion(image)
+                    }
+                }
             }
+            
         })
         task.resume()
 
@@ -71,6 +76,9 @@ class TableViewCell: UITableViewCell {
         self.label?.text = band.countryOfOrigin
         
         if let imageURL = band.logoURL {
+            if imageURL.characters.count != 0 {
+                
+            }
             let downloadOperation = imageDownloadOperation(with: imageURL) { [weak self] result in
             self?.newImageView?.image = result
             self?.setNeedsLayout()

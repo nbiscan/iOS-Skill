@@ -53,6 +53,7 @@ struct AlbumViewStructure {
     var reviews : String?
     
     var songs : [Song] = []
+    var personnel : [ArtistStructure] = []
 }
 
 struct Song {

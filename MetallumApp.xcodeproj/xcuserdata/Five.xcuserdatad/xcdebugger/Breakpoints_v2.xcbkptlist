@@ -165,12 +165,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MetallumApp/RandomBandPageExtension.swift"
-            timestampString = "513868833.074465"
+            filePath = "MetallumApp/Extension.swift"
+            timestampString = "515106759.066914"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "extract_json(_:)"
             landmarkType = "7">
             <Locations>
@@ -178,30 +178,30 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MetallumApp.RandomBandPageViewController.(extract_json in _FD25D134D80A5ABCC9B2546A7589AC76) (Foundation.Data) -&gt; ()"
+                  symbolName = "MetallumApp.PageViewAlbumViewController.(extract_json in _97183672AD5F276F4CD7E7068CCFC275) (Foundation.Data) -&gt; ()"
                   moduleName = "MetallumApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Five/Documents/Developer/MetallumApp/MetallumApp/RandomBandPageExtension.swift"
-                  timestampString = "514942305.795366"
+                  urlString = "file:///Users/Five/Documents/Developer/zavrsni/MetallumApp/Extension.swift"
+                  timestampString = "515109193.216211"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
                   offsetFromSymbolStart = "572">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MetallumApp.RandomBandPageViewController.(extract_json in _FD25D134D80A5ABCC9B2546A7589AC76) (Foundation.Data) -&gt; ()"
+                  symbolName = "MetallumApp.PageViewAlbumViewController.(extract_json in _97183672AD5F276F4CD7E7068CCFC275) (Foundation.Data) -&gt; ()"
                   moduleName = "MetallumApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Five/Documents/Developer/MetallumApp/MetallumApp/RandomBandPageExtension.swift"
-                  timestampString = "514942305.802616"
+                  urlString = "file:///Users/Five/Documents/Developer/zavrsni/MetallumApp/Extension.swift"
+                  timestampString = "515109193.221415"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
                   offsetFromSymbolStart = "962">
                </Location>
             </Locations>
@@ -213,13 +213,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MetallumApp/RandomBandPageExtension.swift"
-            timestampString = "513864652.940139"
+            filePath = "MetallumApp/AlbumViewController.swift"
+            timestampString = "515113292.756897"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "loadBand()"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MetallumApp/PageViewAlbumViewController.swift"
+            timestampString = "515115234.323406"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "presentationCount(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

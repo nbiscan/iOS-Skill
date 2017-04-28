@@ -47,6 +47,11 @@
 		528464221EA0BF4F00799850 /* RandomBandPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528464201EA0BF4F00799850 /* RandomBandPageViewController.swift */; };
 		528464251EA0E00300799850 /* RandomBandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528464231EA0E00300799850 /* RandomBandViewController.swift */; };
 		528464261EA0E00300799850 /* RandomBandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528464241EA0E00300799850 /* RandomBandViewController.xib */; };
+		52B661EB1EB3D4D5002B42EB /* PageViewAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B661E91EB3D4D5002B42EB /* PageViewAlbumViewController.swift */; };
+		52B661EC1EB3D4D5002B42EB /* PageViewAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B661EA1EB3D4D5002B42EB /* PageViewAlbumViewController.xib */; };
+		52B661EE1EB3D5E4002B42EB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B661ED1EB3D5E4002B42EB /* Extension.swift */; };
+		52B661F11EB3D742002B42EB /* SongsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B661EF1EB3D742002B42EB /* SongsTableViewController.swift */; };
+		52B661F21EB3D742002B42EB /* SongsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B661F01EB3D742002B42EB /* SongsTableViewController.xib */; };
 		52BE70561E9E112300A1E11E /* BandArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70541E9E112300A1E11E /* BandArtistsViewController.swift */; };
 		52BE70571E9E112300A1E11E /* BandArtistsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE70551E9E112300A1E11E /* BandArtistsViewController.xib */; };
 		52BE705A1E9E1DE400A1E11E /* BandAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE70581E9E1DE400A1E11E /* BandAlbumsViewController.swift */; };
@@ -105,6 +110,11 @@
 		528464201EA0BF4F00799850 /* RandomBandPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomBandPageViewController.swift; sourceTree = "<group>"; };
 		528464231EA0E00300799850 /* RandomBandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomBandViewController.swift; sourceTree = "<group>"; };
 		528464241EA0E00300799850 /* RandomBandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RandomBandViewController.xib; sourceTree = "<group>"; };
+		52B661E91EB3D4D5002B42EB /* PageViewAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewAlbumViewController.swift; sourceTree = "<group>"; };
+		52B661EA1EB3D4D5002B42EB /* PageViewAlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageViewAlbumViewController.xib; sourceTree = "<group>"; };
+		52B661ED1EB3D5E4002B42EB /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		52B661EF1EB3D742002B42EB /* SongsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsTableViewController.swift; sourceTree = "<group>"; };
+		52B661F01EB3D742002B42EB /* SongsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongsTableViewController.xib; sourceTree = "<group>"; };
 		52BE70541E9E112300A1E11E /* BandArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandArtistsViewController.swift; sourceTree = "<group>"; };
 		52BE70551E9E112300A1E11E /* BandArtistsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BandArtistsViewController.xib; sourceTree = "<group>"; };
 		52BE70581E9E1DE400A1E11E /* BandAlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandAlbumsViewController.swift; sourceTree = "<group>"; };
@@ -186,8 +196,13 @@
 		52550C521EA153BB00E2CEE8 /* AlbumViews */ = {
 			isa = PBXGroup;
 			children = (
+				52B661E91EB3D4D5002B42EB /* PageViewAlbumViewController.swift */,
+				52B661ED1EB3D5E4002B42EB /* Extension.swift */,
+				52B661EA1EB3D4D5002B42EB /* PageViewAlbumViewController.xib */,
 				52550C531EA153D100E2CEE8 /* AlbumViewController.swift */,
 				52550C541EA153D100E2CEE8 /* AlbumViewController.xib */,
+				52B661EF1EB3D742002B42EB /* SongsTableViewController.swift */,
+				52B661F01EB3D742002B42EB /* SongsTableViewController.xib */,
 			);
 			name = AlbumViews;
 			sourceTree = "<group>";
@@ -335,7 +350,9 @@
 				528464261EA0E00300799850 /* RandomBandViewController.xib in Resources */,
 				52270FDA1E9B8E82004A41D0 /* LaunchScreen.storyboard in Resources */,
 				5276F0F81E9CD07F0038AFF8 /* TableViewCell.xib in Resources */,
+				52B661F21EB3D742002B42EB /* SongsTableViewController.xib in Resources */,
 				52BE706B1EA0023200A1E11E /* HomeViewController.xib in Resources */,
+				52B661EC1EB3D4D5002B42EB /* PageViewAlbumViewController.xib in Resources */,
 				528464191EA0263200799850 /* ArtistsViewController.xib in Resources */,
 				52270FD71E9B8E82004A41D0 /* Assets.xcassets in Resources */,
 				5276F10A1E9D1E9C0038AFF8 /* PageViewController.xib in Resources */,
@@ -385,7 +402,9 @@
 				5276F1091E9D1E9C0038AFF8 /* PageViewController.swift in Sources */,
 				5276F0CA1E9BBB4F0038AFF8 /* Band+CoreDataProperties.swift in Sources */,
 				5276F0C61E9BBB4F0038AFF8 /* Album+CoreDataProperties.swift in Sources */,
+				52B661F11EB3D742002B42EB /* SongsTableViewController.swift in Sources */,
 				52BE707B1EA00B4400A1E11E /* BandViewController.swift in Sources */,
+				52B661EE1EB3D5E4002B42EB /* Extension.swift in Sources */,
 				5276F0F41E9CCB900038AFF8 /* FavouriteBandsNSFetch.swift in Sources */,
 				52270FE41E9B8EC4004A41D0 /* DataBase.xcdatamodeld in Sources */,
 				5276F0F11E9CCA530038AFF8 /* FavouriteBandsViewController.swift in Sources */,
@@ -394,6 +413,7 @@
 				524C64F81EA00CC10010CD1C /* BandPageViewController.swift in Sources */,
 				52BE70561E9E112300A1E11E /* BandArtistsViewController.swift in Sources */,
 				5276F0FB1E9CE5310038AFF8 /* FavouriteBandViewController.swift in Sources */,
+				52B661EB1EB3D4D5002B42EB /* PageViewAlbumViewController.swift in Sources */,
 				52BE70651E9FA6C500A1E11E /* SearchExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

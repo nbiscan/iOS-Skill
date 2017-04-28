@@ -18,9 +18,9 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var artists : [ArtistStructure] = []
     
-    convenience init( band : BandStructure ){
+    convenience init( artists : [ArtistStructure] ){
         self.init()
-        self.artists.append(contentsOf: band.artist)
+        self.artists.append(contentsOf: artists)
     }
 
     override func viewDidLoad() {

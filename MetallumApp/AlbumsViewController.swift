@@ -52,8 +52,10 @@ class AlbumsViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // DOTO AFTER IMPLEMENTING ALBUM VIEW
         self.tableView.deselectRow(at: indexPath, animated: false)
+        let album = albums[indexPath.row]
+        let albumViewController = PageViewAlbumViewController(id : (album.id)!)
+        navigationController?.pushViewController(albumViewController, animated: true)
     }
 
     

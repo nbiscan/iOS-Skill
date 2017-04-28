@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlbumViewController" customModule="MetallumApp" customModuleProvider="target">
             <connections>
+                <outlet property="buttonBandName" destination="oQ1-Le-OhM" id="sm5-wZ-mUo"/>
                 <outlet property="formatLabel" destination="YUY-j2-LNe" id="bxb-ny-ETd"/>
                 <outlet property="imageView" destination="YJr-oN-ZCk" id="YwP-cM-Blg"/>
                 <outlet property="label" destination="ekO-6F-nVF" id="C2D-da-YTf"/>
@@ -44,15 +45,6 @@
                     <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxj-qw-dSN">
-                    <rect key="frame" x="0.0" y="234" width="375" height="30"/>
-                    <state key="normal" title="band name">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="bandButton:" destination="-1" eventType="touchUpInside" id="MBl-xf-WRm"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="release date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E12-ue-L8w">
                     <rect key="frame" x="140.5" y="267" width="94" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -101,16 +93,26 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQ1-Le-OhM">
+                    <rect key="frame" x="0.0" y="234" width="375" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="band name">
+                        <color key="titleColor" red="0.96357280015945435" green="0.87062340974807739" blue="0.86120474338531494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="BTJ-TU-WJa"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="BtB-kW-DrD" firstAttribute="top" secondItem="E12-ue-L8w" secondAttribute="bottom" constant="8" id="2oQ-rC-LYj"/>
-                <constraint firstItem="E12-ue-L8w" firstAttribute="top" secondItem="Uxj-qw-dSN" secondAttribute="bottom" constant="3" id="33v-bM-2um"/>
                 <constraint firstItem="YUY-j2-LNe" firstAttribute="top" secondItem="1EZ-xp-iEh" secondAttribute="bottom" constant="8" id="4aL-F7-vl7"/>
                 <constraint firstItem="BtB-kW-DrD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4iq-VF-iLH"/>
                 <constraint firstItem="YJr-oN-ZCk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="5Eh-zm-RKl"/>
                 <constraint firstItem="gW3-vx-bOq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5WW-Dh-Jnn"/>
+                <constraint firstItem="E12-ue-L8w" firstAttribute="top" secondItem="oQ1-Le-OhM" secondAttribute="bottom" constant="3" id="673-tz-huu"/>
                 <constraint firstItem="1EZ-xp-iEh" firstAttribute="top" secondItem="ekO-6F-nVF" secondAttribute="bottom" constant="8" id="911-OF-0VY"/>
                 <constraint firstItem="k02-6S-y3k" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="9Gg-3v-hb5"/>
                 <constraint firstItem="2hO-og-z9x" firstAttribute="top" secondItem="k02-6S-y3k" secondAttribute="bottom" constant="8" id="ArE-gI-KxQ"/>
@@ -122,18 +124,18 @@
                 <constraint firstItem="TES-eR-UUx" firstAttribute="top" secondItem="BtB-kW-DrD" secondAttribute="bottom" constant="11" id="Nu1-Yp-sxo"/>
                 <constraint firstItem="E12-ue-L8w" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OsE-3e-tjW"/>
                 <constraint firstItem="ekO-6F-nVF" firstAttribute="top" secondItem="TES-eR-UUx" secondAttribute="bottom" constant="8" id="T9y-DR-M5L"/>
-                <constraint firstItem="Uxj-qw-dSN" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="cPU-V0-DAt"/>
+                <constraint firstItem="oQ1-Le-OhM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cfK-Y9-U16"/>
                 <constraint firstItem="gW3-vx-bOq" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="diF-U3-ewj"/>
                 <constraint firstItem="YUY-j2-LNe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="exx-yP-azX"/>
-                <constraint firstItem="Uxj-qw-dSN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="git-NY-Gvy"/>
                 <constraint firstItem="YUY-j2-LNe" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="jKW-Yp-qjH"/>
                 <constraint firstItem="1EZ-xp-iEh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kT9-aY-BwP"/>
                 <constraint firstItem="YJr-oN-ZCk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="49" id="kvD-tr-sew"/>
                 <constraint firstItem="ekO-6F-nVF" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="leI-V9-zqg"/>
+                <constraint firstItem="oQ1-Le-OhM" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="lsx-3k-dKk"/>
                 <constraint firstItem="g1c-b2-hN2" firstAttribute="top" secondItem="gW3-vx-bOq" secondAttribute="bottom" constant="8" id="oHZ-S6-doN"/>
                 <constraint firstItem="TES-eR-UUx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pQ8-1A-Lsa"/>
-                <constraint firstItem="Uxj-qw-dSN" firstAttribute="top" secondItem="2hO-og-z9x" secondAttribute="bottom" constant="3" id="qM7-TM-6HJ"/>
                 <constraint firstItem="ekO-6F-nVF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rBA-T5-WM3"/>
+                <constraint firstItem="oQ1-Le-OhM" firstAttribute="top" secondItem="2hO-og-z9x" secondAttribute="bottom" constant="3" id="tFx-g1-OhR"/>
                 <constraint firstItem="gW3-vx-bOq" firstAttribute="top" secondItem="YUY-j2-LNe" secondAttribute="bottom" constant="8" id="tat-rv-uUA"/>
                 <constraint firstItem="g1c-b2-hN2" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="wFn-AC-Juk"/>
                 <constraint firstItem="2hO-og-z9x" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zWT-TI-yWf"/>
