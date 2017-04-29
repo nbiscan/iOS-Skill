@@ -162,7 +162,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/Extension.swift"
@@ -175,14 +175,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MetallumApp.PageViewAlbumViewController.(extract_json in _97183672AD5F276F4CD7E7068CCFC275) (Foundation.Data) -&gt; ()"
                   moduleName = "MetallumApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Five/Documents/Developer/zavrsni/MetallumApp/Extension.swift"
-                  timestampString = "515109193.216211"
+                  timestampString = "515145758.332901"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
@@ -190,14 +190,14 @@
                   offsetFromSymbolStart = "572">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MetallumApp.PageViewAlbumViewController.(extract_json in _97183672AD5F276F4CD7E7068CCFC275) (Foundation.Data) -&gt; ()"
                   moduleName = "MetallumApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Five/Documents/Developer/zavrsni/MetallumApp/Extension.swift"
-                  timestampString = "515109193.221415"
+                  timestampString = "515145758.336914"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
@@ -210,7 +210,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/AlbumViewController.swift"
@@ -226,7 +226,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/PageViewAlbumViewController.swift"
@@ -237,6 +237,70 @@
             endingLineNumber = "59"
             landmarkName = "presentationCount(for:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MetallumApp/UpcomingExtension.swift"
+            timestampString = "515122618.862207"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "extract_json(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MetallumApp/UpcomingExtension.swift"
+            timestampString = "515145395.525886"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "extract_json(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetallumApp.UpcomingAlbumsTableViewController.(extract_json in _BC3C6F701D3E328025D7FAE2A0CDCE07) (Foundation.Data) -&gt; ()"
+                  moduleName = "MetallumApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Five/Documents/Developer/zavrsni/MetallumApp/UpcomingExtension.swift"
+                  timestampString = "515145758.367757"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "572">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetallumApp.UpcomingAlbumsTableViewController.(extract_json in _BC3C6F701D3E328025D7FAE2A0CDCE07) (Foundation.Data) -&gt; ()"
+                  moduleName = "MetallumApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Five/Documents/Developer/zavrsni/MetallumApp/UpcomingExtension.swift"
+                  timestampString = "515145758.371889"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "962">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

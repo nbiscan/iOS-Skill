@@ -18,6 +18,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func upcomingAlbums(_ sender: UIButton) {
+        let view = UpcomingAlbumsTableViewController()
+        self.navigationController?.pushViewController(view, animated: true)
     }
     
     

@@ -44,6 +44,7 @@ struct ArtistStructure{
 struct AlbumViewStructure {
     var bandName : String?
     var bandID : Int64?
+    var albumID : Int64?
     
     var title : String?
     var albumCover : String?
