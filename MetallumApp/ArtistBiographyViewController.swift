@@ -1,33 +1,34 @@
 //
-//  BandBioViewController.swift
+//  ArtistBiographyViewController.swift
 //  MetallumApp
 //
-//  Created by Five on 11/04/2017.
+//  Created by Five on 02/05/2017.
 //  Copyright © 2017 Five. All rights reserved.
 //
 
 import UIKit
 
-class BioViewController: UIViewController {
+class ArtistBiographyViewController: UIViewController {
 
-    @IBOutlet weak var textView: UITextView!
+    
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var texView: UITextView!
     
-    var band : BandStructure?
+    var artist : ArtistViewStructure?
     
-    convenience init(band : BandStructure){
+    convenience init(artist : ArtistViewStructure){
         self.init()
-        self.band = band
+        self.artist = artist
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Band biography"
-        textView.text = band?.bio
+        if let bio = artist?.bio {
+            self.texView.text = bio
+        }
         
-        if let photoURL = band?.photoURL {
+        if let photoURL = artist?.photoURL {
             if let checkedUrl = URL(string: photoURL) {
-                
                 DataStore.getDataFromUrl(url: checkedUrl) { (data, response, error)  in
                     guard let data = data, error == nil else { return }
                     DispatchQueue.main.async() { () -> Void in
@@ -40,4 +41,7 @@ class BioViewController: UIViewController {
     }
 
     
+
+   
+
 }

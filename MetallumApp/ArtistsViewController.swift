@@ -52,8 +52,10 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO NAKON ARTIST VIEW - a
         self.tableView.deselectRow(at: indexPath, animated: false)
+        let artist = artists[indexPath.row].id
+        let view = ArtistPageViewController(id:artist!)
+        navigationController?.pushViewController(view, animated: true)
     }
 
     

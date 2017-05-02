@@ -45,12 +45,12 @@ extension PageViewAlbumViewController {
                 
                 if let album = results["album"] as? [String: AnyObject]{
                     let title = album["title"] as? String
-                    let id = album["id"] as? String
+                    _ = album["id"] as? String
                     let album_cover = album["album_cover"] as? String
                     let type = album["type"] as? String
                     let releaseDate = album["release date"] as? String
                     let label = album["label"] as? String
-                    let format = album["format"] as? String
+                    _ = album["format"] as? String
                     let reviews = album["reviews"] as? String
                     
                     var songsArray : [Song] = []

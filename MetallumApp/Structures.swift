@@ -61,3 +61,20 @@ struct Song {
     var title : String?
     var lenght : String?
 }
+
+struct ArtistViewStructure {
+    var name : String?
+    var bio : String?
+    var photoURL : String?
+    var realName : String?
+    var age : String?
+    var origin : String?
+    var gender : String?
+    var activeBands : [BandProjects] = []
+    var pastBands : [BandProjects] = []
+}
+
+struct BandProjects {
+    var name : String?
+    var id : Int64?
+}
