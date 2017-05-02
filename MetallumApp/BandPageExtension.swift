@@ -10,15 +10,10 @@ import Foundation
 
 extension BandPageViewController {
     
-    func loadBand(id : Int64, random : Bool){
+    func loadBand(id : Int64){
         
-        var urlString = ""
+        let urlString = "http://em.wemakesites.net/band/\(id)?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
         
-        if (random){
-            urlString = "http://em.wemakesites.net/band/random?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
-        } else {
-            urlString = "http://em.wemakesites.net/band/\(id)?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
-        }
         
         guard let url = URL(string: urlString) else { return }
         let session = URLSession.shared

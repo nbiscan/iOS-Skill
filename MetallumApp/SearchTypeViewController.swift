@@ -90,7 +90,7 @@ class SearchTypeViewController: UIViewController, UITableViewDelegate, UITableVi
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             let band = bandResults[indexPath.row]
-            let view = BandPageViewController(id: band.id!, random : false)
+            let view = BandPageViewController(id: band.id!)
             self.navigationController?.pushViewController(view, animated: true)
             break
         case 1:

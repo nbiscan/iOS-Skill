@@ -13,13 +13,10 @@ class BandPageViewController: UIPageViewController, UIPageViewControllerDataSour
     var views : [UIViewController] = []
     var band : BandStructure = BandStructure()
     var id : Int64?
-    var random : Bool?
     
-    
-    convenience init(id : Int64, random: Bool){
+    convenience init(id : Int64){
         self.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         self.id = id
-        self.random = random
     }
 
     override func viewDidLoad() {
@@ -29,7 +26,7 @@ class BandPageViewController: UIPageViewController, UIPageViewControllerDataSour
         self.dataSource = self
         self.edgesForExtendedLayout = []
         
-        loadBand(id: id!, random: random!)
+        loadBand(id: id!)
     }
 
     

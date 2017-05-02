@@ -17,7 +17,7 @@ class AlbumViewController: UIViewController {
     @IBOutlet weak var buttonBandName: UIButton!
     
     @IBAction func buttonAction(_ sender: UIButton) {
-        let bandPageViewController = BandPageViewController(id : (album?.bandID)!, random : false)
+        let bandPageViewController = BandPageViewController(id : (album?.bandID)!)
         navigationController?.pushViewController(bandPageViewController, animated: true)
     }
     

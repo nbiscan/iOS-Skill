@@ -18,6 +18,9 @@ extension RandomBandPageViewController {
         
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 60)
         
+        
+        request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
+        
         request.httpMethod = "GET"
         // request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData
         
