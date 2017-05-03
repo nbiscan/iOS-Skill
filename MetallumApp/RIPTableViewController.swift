@@ -20,6 +20,7 @@ class RIPTableViewController: UITableViewController {
         self.tableView.register(UINib(nibName: "NoImageCellTableViewCell", bundle: nil), forCellReuseIdentifier: cell)
         
         loadDeceasedArtists()
+        self.title = "Deceased artists"
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -26,9 +26,20 @@ class BandViewController: UIViewController {
         if (removeButtonOutlet.currentTitle == "Remove"){
             dataStore.deleteBand(with: (band?.id!)!)
             removeButtonOutlet.setTitle("Save band", for: .normal)
+            
+            let alert = UIAlertController(title: "Success", message: "Band removed!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil ))
+            self.present(alert, animated: true, completion: nil)
+
+            
         } else {
             dataStore.insertBand(band: band!)
             removeButtonOutlet.setTitle("Remove", for: .normal)
+            
+            let alert = UIAlertController(title: "Success", message: "Band saved!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil ))
+            self.present(alert, animated: true, completion: nil)
+            
         }
     }
     
@@ -52,10 +63,10 @@ class BandViewController: UIViewController {
         
         if (dataStore.checkIfBandExists(id: (band?.id)!)){
             removeButtonOutlet.setTitle("Remove", for: .normal)
-            // removeButtonOutlet.setImage(#imageLiteral(resourceName: "star_filled"), for: .normal)
+            
         } else {
             removeButtonOutlet.setTitle("Save band", for: .normal)
-            // removeButtonOutlet.setImage(#imageLiteral(resourceName: "star_empty"), for: .normal)
+            
             
         }
         
