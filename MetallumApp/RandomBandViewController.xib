@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RandomBandViewController" customModule="MetallumApp" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="S34-Q9-osZ" id="XDz-Mc-RUX"/>
                 <outlet property="genreLabel" destination="ekO-6F-nVF" id="TfI-3d-uOZ"/>
                 <outlet property="imageView" destination="YJr-oN-ZCk" id="NAr-WR-6GC"/>
                 <outlet property="locationLabel" destination="a3P-2V-3Cs" id="j5b-m3-fti"/>
@@ -109,16 +108,12 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSh-Kc-3Yc">
-                    <rect key="frame" x="-1" y="605" width="376" height="30"/>
+                    <rect key="frame" x="-0.5" y="605" width="375" height="30"/>
                     <state key="normal" title="New random band"/>
                     <connections>
                         <action selector="newRandom:" destination="-1" eventType="touchUpInside" id="FDS-6g-cmf"/>
                     </connections>
                 </button>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="S34-Q9-osZ">
-                    <rect key="frame" x="306" y="610" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>

@@ -86,11 +86,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/BandViewController.swift"
-            timestampString = "515497183.43126"
+            timestampString = "515500029.039545"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -246,11 +246,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/ArtistExtension.swift"
-            timestampString = "515494749.07311"
+            timestampString = "515500938.611887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "extract_json(_:)"
             landmarkType = "7">
             <Locations>
@@ -294,11 +294,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/ArtistExtension.swift"
-            timestampString = "515494749.07311"
+            timestampString = "515500938.611887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "loadArtist(id:)"
             landmarkType = "7">
             <Locations>

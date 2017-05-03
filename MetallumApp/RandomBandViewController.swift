@@ -14,7 +14,6 @@ class RandomBandViewController: UIViewController {
     var band : BandStructure?
     var pageView : RandomBandPageViewController?
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
@@ -25,12 +24,7 @@ class RandomBandViewController: UIViewController {
     @IBOutlet weak var removeButtonOutlet: UIButton!
     
     @IBAction func newRandom(_ sender: UIButton) {
-        
-        activityIndicator.alpha = 1
-        activityIndicator.startAnimating()
-        
         self.pageView?.loadBand()
-        
     }
     
     @IBAction func removeButton(_ sender: UIButton) {
@@ -55,7 +49,11 @@ class RandomBandViewController: UIViewController {
             
             // add an action (button)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil ))
-            
+            alert.addAction(UIAlertAction(title: "Go to favourites", style: UIAlertActionStyle.default, handler: {action in
+                let view = FavouriteBandsViewController()
+                self.navigationController?.pushViewController(view, animated: true)
+            }))
+
             // show the alert
             self.present(alert, animated: true, completion: nil)
 
@@ -78,8 +76,6 @@ class RandomBandViewController: UIViewController {
         genreLabel.text = band?.genre
         lyricalThemesLabel.text = band?.lyricalThemes
         yearsActiveLabel.text = band?.yearsActive
-        
-        activityIndicator.alpha = 0
         
         removeButtonOutlet.setTitle("", for: .normal)
         

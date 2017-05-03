@@ -15,6 +15,7 @@ class RandomBandPageViewController: UIPageViewController, UIPageViewControllerDa
     var id : Int64?
     var random : Bool?
     
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
     
     convenience init(){
         self.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
@@ -29,6 +30,14 @@ class RandomBandPageViewController: UIPageViewController, UIPageViewControllerDa
         self.edgesForExtendedLayout = []
         
         loadBand()
+        
+        activityIndicator.center = CGPoint(x: self.view.bounds.size.width/2, y: self.view.bounds.size.height/2)
+        activityIndicator.color = UIColor.white
+        activityIndicator.backgroundColor = UIColor.black
+        activityIndicator.alpha = 0.8
+        self.view.addSubview(activityIndicator)
+        
+//        activityIndicator.startAnimating()
     }
 
     

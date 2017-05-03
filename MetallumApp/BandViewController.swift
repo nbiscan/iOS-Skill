@@ -38,6 +38,10 @@ class BandViewController: UIViewController {
             
             let alert = UIAlertController(title: "Success", message: "Band saved!", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil ))
+            alert.addAction(UIAlertAction(title: "Go to favourites", style: UIAlertActionStyle.default, handler: {action in
+                    let view = FavouriteBandsViewController()
+                    self.navigationController?.pushViewController(view, animated: true)
+            }))
             self.present(alert, animated: true, completion: nil)
             
         }

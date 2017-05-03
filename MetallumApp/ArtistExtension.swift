@@ -13,6 +13,8 @@ extension ArtistPageViewController {
     
     func loadArtist(id : Int64){
         
+        self.activityIndicator.startAnimating()
+        
         let urlString = "http://em.wemakesites.net/artist/\(id)?api_key=c7005c75-a41c-474f-89c4-6ae11c1bbd19"
         
         guard let url = URL(string: urlString) else { return }
@@ -87,6 +89,8 @@ extension ArtistPageViewController {
                 self.views.append(PastBandsTableViewController(pastBands: artist.pastBands))
                 self.setViewControllers([self.views[0]], direction: .forward, animated: true, completion: nil)
                 self.reloadInputViews()
+                
+                self.activityIndicator.stopAnimating()
                 
             }
         } else {
