@@ -14,6 +14,8 @@ class BandPageViewController: UIPageViewController, UIPageViewControllerDataSour
     var band : BandStructure = BandStructure()
     var id : Int64?
     
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+    
     convenience init(id : Int64){
         self.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         self.id = id
@@ -36,6 +38,13 @@ class BandPageViewController: UIPageViewController, UIPageViewControllerDataSour
         let barButton = UIBarButtonItem.init(customView: button)
         self.navigationItem.rightBarButtonItem = barButton
         
+        activityIndicator.center = CGPoint(x: self.view.bounds.size.width/2, y: self.view.bounds.size.height/2)
+        activityIndicator.color = UIColor.white
+        activityIndicator.backgroundColor = UIColor.black
+        activityIndicator.alpha = 0.8
+        self.view.addSubview(activityIndicator)
+
+    
     }
     
     func homePressed(){

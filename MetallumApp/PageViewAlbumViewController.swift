@@ -12,6 +12,7 @@ class PageViewAlbumViewController: UIPageViewController, UIPageViewControllerDat
     
     var views : [UIViewController] = []
     var id : Int64?
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
     
     convenience init(id : Int64){
         self.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
@@ -33,6 +34,12 @@ class PageViewAlbumViewController: UIPageViewController, UIPageViewControllerDat
         button.frame = CGRect.init(x: 0, y: 0, width: dim, height: dim) //CGRectMake(0, 0, 30, 30)
         let barButton = UIBarButtonItem.init(customView: button)
         self.navigationItem.rightBarButtonItem = barButton
+        
+        activityIndicator.center = CGPoint(x: self.view.bounds.size.width/2, y: self.view.bounds.size.height/2)
+        activityIndicator.color = UIColor.white
+        activityIndicator.backgroundColor = UIColor.black
+        activityIndicator.alpha = 0.8
+        self.view.addSubview(activityIndicator)
     }
     
     func homePressed(){

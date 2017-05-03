@@ -36,26 +36,30 @@ class RandomBandPageViewController: UIPageViewController, UIPageViewControllerDa
         activityIndicator.backgroundColor = UIColor.black
         activityIndicator.alpha = 0.8
         self.view.addSubview(activityIndicator)
-        
-//        activityIndicator.startAnimating()
     }
 
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if (viewController is RandomBandViewController){
+            self.title = "Random band"
             return views[1]
         } else if (viewController is ArtistsViewController){
+            self.title = "Artists"
             return views[2]
         }
+        self.title = "Albums"
         return views[0]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if (viewController is ArtistsViewController){
+            self.title = "Artists"
             return views[0]
         } else if ( viewController is AlbumsViewController){
+            self.title = "Albums"
             return views[1]
         }
+        self.title = "Random band"
         return views[2]
     }
     
