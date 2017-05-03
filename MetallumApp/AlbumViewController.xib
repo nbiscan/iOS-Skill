@@ -95,9 +95,9 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQ1-Le-OhM">
                     <rect key="frame" x="0.0" y="234" width="375" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                     <state key="normal" title="band name">
-                        <color key="titleColor" red="0.96357280015945435" green="0.87062340974807739" blue="0.86120474338531494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="BTJ-TU-WJa"/>
