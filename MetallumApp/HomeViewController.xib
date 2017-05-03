@@ -28,7 +28,7 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVV-nf-Zwb">
-                    <rect key="frame" x="-1" y="278" width="376" height="33"/>
+                    <rect key="frame" x="-0.5" y="278" width="375" height="33"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                     <state key="normal" title="Search Metallum">
@@ -39,7 +39,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oed-4i-dEW">
-                    <rect key="frame" x="-1" y="321" width="376" height="33"/>
+                    <rect key="frame" x="-0.5" y="321" width="375" height="33"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                     <state key="normal" title="Upcoming albums">
                         <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,7 +49,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwL-rt-N66">
-                    <rect key="frame" x="-1" y="362" width="376" height="33"/>
+                    <rect key="frame" x="-0.5" y="362" width="375" height="33"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                     <state key="normal" title="Random Band">
                         <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -59,7 +59,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To6-3f-gjv">
-                    <rect key="frame" x="-1" y="403" width="376" height="33"/>
+                    <rect key="frame" x="-0.5" y="403" width="375" height="33"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                     <state key="normal" title="Saved Bands">
                         <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,11 +68,22 @@
                         <action selector="savedBands:" destination="-1" eventType="touchUpInside" id="vWX-Zy-0KI"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUk-TZ-d6S">
+                    <rect key="frame" x="164" y="444" width="46" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                    <state key="normal" title="R.I.P.">
+                        <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="ripAction:" destination="-1" eventType="touchUpInside" id="xRu-mg-BAI"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="cwL-rt-N66" firstAttribute="top" secondItem="oed-4i-dEW" secondAttribute="bottom" constant="8" id="4CH-kn-QAn"/>
                 <constraint firstItem="PSi-dV-XWk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="81" id="58w-Ry-wzG"/>
+                <constraint firstItem="WUk-TZ-d6S" firstAttribute="top" secondItem="To6-3f-gjv" secondAttribute="bottom" constant="8" id="CLd-zF-HDn"/>
                 <constraint firstItem="fVV-nf-Zwb" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="H0V-s7-aw3"/>
                 <constraint firstAttribute="bottom" secondItem="PSi-dV-XWk" secondAttribute="bottom" constant="446" id="KKd-Um-xk2"/>
                 <constraint firstItem="cwL-rt-N66" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="L2T-wG-by5"/>
@@ -82,6 +93,7 @@
                 <constraint firstItem="cwL-rt-N66" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XLt-VE-xQ5"/>
                 <constraint firstItem="fVV-nf-Zwb" firstAttribute="top" secondItem="PSi-dV-XWk" secondAttribute="bottom" constant="57" id="ZZs-qO-cJh"/>
                 <constraint firstItem="oed-4i-dEW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iQC-Fb-cge"/>
+                <constraint firstItem="WUk-TZ-d6S" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="r6w-5h-sdP"/>
                 <constraint firstItem="PSi-dV-XWk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sQG-jf-GPb"/>
                 <constraint firstItem="To6-3f-gjv" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="tMA-Xy-61h"/>
                 <constraint firstItem="To6-3f-gjv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tO9-Y8-B4n"/>

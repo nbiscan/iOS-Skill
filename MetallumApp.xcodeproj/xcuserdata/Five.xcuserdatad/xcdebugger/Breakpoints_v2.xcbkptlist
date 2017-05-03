@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/PageViewController.swift"
-            timestampString = "513871346.531854"
+            timestampString = "515490303.051349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90">
+            startingLineNumber = "102"
+            endingLineNumber = "102">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/PageViewController.swift"
-            timestampString = "513871346.531854"
+            timestampString = "515490303.051349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100">
+            startingLineNumber = "112"
+            endingLineNumber = "112">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -59,8 +59,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "extract_json(_:)"
-            landmarkType = "7">
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -166,11 +166,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/PageViewAlbumViewController.swift"
-            timestampString = "515115234.323406"
+            timestampString = "515490303.051349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "presentationCount(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -242,27 +242,43 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MetallumApp/BandPageViewController.swift"
+            timestampString = "515490029.062652"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/ArtistExtension.swift"
-            timestampString = "515428554.083014"
+            timestampString = "515494749.07311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "extract_json(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MetallumApp.ArtistPageViewController.(extract_json in _FCDE8917F4CAAAD90E6D1E6C9DEE2D7D) (Foundation.Data) -&gt; ()"
                   moduleName = "MetallumApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Five/Documents/Developer/zavrsni/MetallumApp/ArtistExtension.swift"
-                  timestampString = "515429386.331594"
+                  timestampString = "515494648.447675"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
@@ -270,14 +286,14 @@
                   offsetFromSymbolStart = "572">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MetallumApp.ArtistPageViewController.(extract_json in _FCDE8917F4CAAAD90E6D1E6C9DEE2D7D) (Foundation.Data) -&gt; ()"
                   moduleName = "MetallumApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Five/Documents/Developer/zavrsni/MetallumApp/ArtistExtension.swift"
-                  timestampString = "515429386.336964"
+                  timestampString = "515494648.453056"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
@@ -290,33 +306,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MetallumApp/ArtistsViewController.swift"
-            timestampString = "515428760.363701"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "tableView(_:didSelectRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MetallumApp/ArtistExtension.swift"
-            timestampString = "515428854.274223"
+            timestampString = "515494749.07311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "loadArtist(id:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetallumApp.ArtistPageViewController.(loadArtist (id : Swift.Int64) -&gt; ()).(closure #1)"
+                  moduleName = "MetallumApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Five/Documents/Developer/zavrsni/MetallumApp/ArtistExtension.swift"
+                  timestampString = "515494648.460822"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetallumApp.ArtistPageViewController.(loadArtist (id : Swift.Int64) -&gt; ()).(closure #1)"
+                  moduleName = "MetallumApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Five/Documents/Developer/zavrsni/MetallumApp/ArtistExtension.swift"
+                  timestampString = "515494648.464027"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "65">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -27,6 +27,19 @@ class BandPageViewController: UIPageViewController, UIPageViewControllerDataSour
         self.edgesForExtendedLayout = []
         
         loadBand(id: id!)
+        
+        let dim = (navigationController?.navigationBar.frame.size.height)! / 2
+        let button = UIButton.init(type: .custom)
+        button.setImage(UIImage.init(named: "home"), for: UIControlState.normal)
+        button.addTarget(self, action:#selector(homePressed), for: UIControlEvents.touchUpInside)
+        button.frame = CGRect.init(x: 0, y: 0, width: dim, height: dim) //CGRectMake(0, 0, 30, 30)
+        let barButton = UIBarButtonItem.init(customView: button)
+        self.navigationItem.rightBarButtonItem = barButton
+        
+    }
+    
+    func homePressed(){
+        self.navigationController?.popToRootViewController(animated: true)
     }
 
     

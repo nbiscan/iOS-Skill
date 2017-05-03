@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension ArtistPageViewController {
     
@@ -88,6 +89,16 @@ extension ArtistPageViewController {
                 self.reloadInputViews()
                 
             }
+        } else {
+            let alert = UIAlertController(title: "Alert", message: "Artist info not available!", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
+                self.navigationController?.popViewController(animated: true)
+            }))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
         }
     }
     

@@ -49,7 +49,10 @@ class SearchTypeViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.register(UINib(nibName: "NoImageCellTableViewCell", bundle: nil), forCellReuseIdentifier: identification)
         
         self.segmentedControl.addTarget(self, action: #selector(detectChange), for: .valueChanged)
-        
+    }
+    
+    func homePressed(){
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func detectChange(){
